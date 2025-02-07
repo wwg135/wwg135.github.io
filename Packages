@@ -5347,6 +5347,23 @@ Description: 最新威锋去广告（支持7.0版本）
 Author: M哥
 Name: 威锋
 
+Package: com.wkk.didihook
+Version: 1.0
+Architecture: iphoneos-arm64
+Maintainer: wkk
+Installed-Size: 400
+Depends: mobilesubstrate (>= 0.9.5000)
+Filename: ./debs/com.wkk.didihook_1.0_iphoneos-arm64.deb
+Size: 3380
+MD5sum: 64061163a193d8ee2b88d842b6a1090b
+SHA1: 35ade973916f75d38484f2255cf50325749cd210
+SHA256: 24006c7887e641fa9baa7b8bd9c1af8b3aea211c1317f8ba30b76b36217aca8f
+Section: 去广告
+Description: 去滴滴开屏广告，测试版本：7.0.0.其他版本自测，自用这个版本，流畅稳定，推荐。
+Author: wkk
+Icon: https://s1.imagehub.cc/images/2025/02/07/fbbb3ee1bb742f01530324aecc450222.png
+Name: 滴滴出行NoAds
+
 Package: com.wkk.gaodehook
 Version: 1.0
 Architecture: iphoneos-arm64
