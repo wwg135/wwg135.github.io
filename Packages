@@ -6219,22 +6219,6 @@ Description: 离线版本，长期使用，真正无限制的使用！
 Author: x✨
 Name: Fuck·抖音图层
 
-Package: com.xx.dyhook
-Version: 2.0.8+81
-Architecture: iphoneos-arm64
-Maintainer: x✨
-Installed-Size: 13908
-Depends: mobilesubstrate (>= 0.9.5000)
-Filename: ./debs/抖音图层2.0.8+8畅爽版（万能版）.deb
-Size: 2893552
-MD5sum: 2609162c37cfe14ea496cb27571f330e
-SHA1: 97043d249b0c7d02e485ad628b9bf1c08959902c
-SHA256: ecbd8b222f578c61a1a8069d731161dce98c87c6df2bb3a70b00625fc8faff8a
-Section: Tweaks
-Description: 抖音离线版本，长期使用，真正无限制的使用！只需安装这个插件，小红书图层也可以用，快手图层也可以用！（无需安装官方版图层）
-Author: x✨
-Name: Fuck·抖音图层
-
 Package: com.xx.ecnyhook
 Version: 1.0.0
 Architecture: iphoneos-arm64
