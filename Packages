@@ -3005,6 +3005,24 @@ Description: 仅供学习交流，请在 24 小时内自觉删除。
 Author: huami
 Name: DYYY
 
+Package: com.huami.dyyy
+Version: 1.9-6
+Architecture: iphoneos-arm64
+Maintainer: huami
+Installed-Size: 268
+Depends: firmware (>= 5.0), mobilesubstrate
+Filename: ./debs/com.huami.dyyy_1.9-6_iphoneos-arm64.deb
+Size: 30122
+MD5sum: 837ac107ac6e667e8e38c9806891202d
+SHA1: 30722d47fb3bfb572dbfe785212be3668a824b30
+SHA256: 3528a41a9e8d5ec13c5e4a2f855036630e09a2596debe6df43e38dc8140a686a
+Section: Tweaks
+Priority: optional
+Homepage: https://github.com/huami1314/DYYY
+Description: 仅供学习交流，请在 24 小时内自觉删除。
+Author: huami
+Name: DYYY
+
 Package: com.huami.wbnoads
 Version: 1.0.0
 Architecture: iphoneos-arm64
@@ -4476,6 +4494,44 @@ Section: Tweaks
 Description: 音量管理，就是这么简单。包含功能：混响、多元化音量。
 Author: sunshinesong
 Name: VolumeManager
+
+Package: com.susu.nopreferencetips
+Version: 1.0.4
+Architecture: iphoneos-arm64
+Maintainer: 苏苏
+Installed-Size: 168
+Depends: mobilesubstrate (>= 0.9.5000), firmware (>= 14.5)
+Filename: ./debs/com.susu.nopreferencetips_1.0.4_iphoneos-arm64.deb
+Size: 5386
+MD5sum: b9e7e36b4800edff79ce0540e800e81d
+SHA1: d6a55d46e3233007838ecdb4e13a13914f580f89
+SHA256: f5830ad34a7c4b1e63cd2af2dac0d8da13d949481b56dfb145fd9d704592003d
+Section: 调整
+Description: 此插件偏向于更换非官方电池的用户(一“件”全包)
+   * 支持 iOS15-iOS16
+   * 移除“设置-电池-电池健康与充电”的提醒并显示健康值
+   * 移除桌面上的设置角标（只显示 15 天）
+   * 移除“关于本机”页面中-部件和服务历史记录下的未知部件提醒（如：电池-未知部件）
+Author: 苏苏
+Icon: https://www.susubaby.top/images/Preferences.png
+Name: NoPreferencesTips
+
+Package: com.susu.suawemehook
+Version: 1.2
+Architecture: iphoneos-arm64
+Installed-Size: 236
+Depends: firmware (>= 5.0), mobilesubstrate
+Filename: ./debs/com.susu.suawemehook_1.2_iphoneos-arm64.deb
+Size: 20268
+MD5sum: ed95667f0038353475753e19339b6c43
+SHA1: 8893da4ca5a7111662fd0b8605a9425f0e59f043
+SHA256: 2fdec37056a3d5581f5c2fb114299a098da3c63e52dd6c729c84ac2c2dccf37d
+Section: Tweaks
+Priority: optional
+Description: 仅供学习交流
+Author: susu
+Icon: https://www.susubaby.top/images/douyin.png
+Name: SuAwemeHook
 
 Package: com.swing.aweme
 Version: 1.0.6-1
