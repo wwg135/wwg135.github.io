@@ -3041,6 +3041,24 @@ Description: 仅供学习交流，请在 24 小时内自觉删除。
 Author: huami
 Name: DYYY
 
+Package: com.huami.dyyy
+Version: 1.9-8
+Architecture: iphoneos-arm64
+Maintainer: huami
+Installed-Size: 272
+Depends: firmware (>= 5.0), mobilesubstrate
+Filename: ./debs/com.huami.dyyy_1.9-8_iphoneos-arm64.deb
+Size: 34396
+MD5sum: 3e9e92a4b7dac002ad6963344ada3896
+SHA1: 8e316a55d39c9d82f239010fb228ffc37d56c2dd
+SHA256: c07b95788244f5661eb7a271487a6ef50bb46696429833d7e307fd212f8ddb2e
+Section: Tweaks
+Priority: optional
+Homepage: https://github.com/huami1314/DYYY
+Description: 仅供学习交流，请在 24 小时内自觉删除。
+Author: huami
+Name: DYYY
+
 Package: com.huami.wbnoads
 Version: 1.0.0
 Architecture: iphoneos-arm64
@@ -4544,6 +4562,23 @@ Size: 20268
 MD5sum: ed95667f0038353475753e19339b6c43
 SHA1: 8893da4ca5a7111662fd0b8605a9425f0e59f043
 SHA256: 2fdec37056a3d5581f5c2fb114299a098da3c63e52dd6c729c84ac2c2dccf37d
+Section: Tweaks
+Priority: optional
+Description: 仅供学习交流
+Author: susu
+Icon: https://www.susubaby.top/images/douyin.png
+Name: SuAwemeHook
+
+Package: com.susu.suawemehook
+Version: 1.2-1
+Architecture: iphoneos-arm64
+Installed-Size: 236
+Depends: firmware (>= 5.0), mobilesubstrate
+Filename: ./debs/com.susu.suawemehook_1.2-1_iphoneos-arm64.deb
+Size: 20496
+MD5sum: dd6b2e8733cff98074edd2f13fdedd87
+SHA1: 1369ffee80a447deaddf197428eff643707efc85
+SHA256: 6b25a5faa1d38e4098f59a47ce6205893114b769cfa61b68c4b26b02fa2d3644
 Section: Tweaks
 Priority: optional
 Description: 仅供学习交流
