@@ -3059,6 +3059,42 @@ Description: 仅供学习交流，请在 24 小时内自觉删除。
 Author: huami
 Name: DYYY
 
+Package: com.huami.dyyy
+Version: 1.9-9
+Architecture: iphoneos-arm64
+Maintainer: huami
+Installed-Size: 272
+Depends: firmware (>= 5.0), mobilesubstrate
+Filename: ./debs/com.huami.dyyy_1.9-9_iphoneos-arm64.deb
+Size: 34036
+MD5sum: 27d2d83ad493907af0fd669605f141bc
+SHA1: 9b256391e43d2d51ad687b0f42e203c5a24bde88
+SHA256: d23e74d54868a298ec6a4b56d26ec39a172fb1adfb20caf329623bb3aef36391
+Section: Tweaks
+Priority: optional
+Homepage: https://github.com/huami1314/DYYY
+Description: 仅供学习交流，请在 24 小时内自觉删除。
+Author: huami
+Name: DYYY
+
+Package: com.huami.dyyy
+Version: 1.9-9+1
+Architecture: iphoneos-arm64
+Maintainer: huami
+Installed-Size: 272
+Depends: firmware (>= 5.0), mobilesubstrate
+Filename: ./debs/com.huami.dyyy_1.9-9+1_iphoneos-arm64.deb
+Size: 33744
+MD5sum: 0c0460d8d4f9e16e998bb04fbbea1f60
+SHA1: 34e157fbf70e34e4b18a562ca7e3932fa7d62043
+SHA256: 92af691b5cd3df14c314e9470af7e351691ef1f7df8726040a00bdd7872e5a7c
+Section: Tweaks
+Priority: optional
+Homepage: https://github.com/huami1314/DYYY
+Description: 仅供学习交流，请在 24 小时内自觉删除。
+Author: huami
+Name: DYYY
+
 Package: com.huami.wbnoads
 Version: 1.0.0
 Architecture: iphoneos-arm64
@@ -3701,6 +3737,23 @@ Size: 161692
 MD5sum: 9cc3509ee595b7de443142e5bb4c6cd3
 SHA1: 5436d0b41de5b23899c7e667e855a6e87ffe6b0a
 SHA256: 248dcee14290e59ac10b96c413c4c2734658754ce43a8714abc63591fda93429
+Section: Netskao-Tweaks
+Description: Aweme HomePage Full Screen. Tested only on version 31.9.0
+Author: Netskao
+Name: AwemeFullScreen
+Sileodepiction: https://jailrepo.initnil.com/Depictions/com.netskao.awemefullscreen.json
+
+Package: com.netskao.awemefullscreen
+Version: 1.2-5
+Architecture: iphoneos-arm64
+Maintainer: Nets
+Installed-Size: 400
+Depends: firmware (>= 12.0), mobilesubstrate
+Filename: ./debs/com.netskao.awemefullscreen_1.2-5_iphoneos-arm64.deb
+Size: 164848
+MD5sum: 63febd2f17e65a0c531c1633a1aa0aa4
+SHA1: 90b3de59f438c808c1caaceb992230d53924eeb9
+SHA256: 5bdcbe0dc37d06f59da9707ab349661218fc373345602833741409d0ee5a1733
 Section: Netskao-Tweaks
 Description: Aweme HomePage Full Screen. Tested only on version 31.9.0
 Author: Netskao
@@ -4551,6 +4604,39 @@ Description: 此插件偏向于更换非官方电池的用户(一“件”全包
 Author: 苏苏
 Icon: https://www.susubaby.top/images/Preferences.png
 Name: NoPreferencesTips
+
+Package: com.susu.photos
+Version: 1.0
+Architecture: iphoneos-arm64
+Maintainer: 苏苏
+Installed-Size: 712
+Depends: mobilesubstrate, preferenceloader, com.opa334.altlist
+Filename: ./debs/com.susu.photos_1.0_iphoneos-arm64.deb
+Size: 4016
+MD5sum: 6088123f6b576f8fb7984a621ec76401
+SHA1: acfb1420c828293c5a593cd559f7a60623091644
+SHA256: 210facad9279d3f407b2694d469e2be6c19bc612263e4d58185b15067a1c9dc6
+Section: 系统
+Author: 苏苏
+Icon: https://www.susubaby.top/images/photos.png
+Name: 相册增强
+
+Package: com.susu.springanimation
+Version: 1.0.7
+Architecture: iphoneos-arm64
+Maintainer: 苏苏
+Installed-Size: 172
+Depends: mobilesubstrate (>= 0.9.5000)
+Filename: ./debs/com.susu.springanimation_1.0.7_iphoneos-arm64.deb
+Size: 7820
+MD5sum: 2c1bd9e0c6905c4d929853e68f50de41
+SHA1: 494fa24dbe045343971f25d49bfc97da9e9fc6e1
+SHA256: 5c35bb1e3063487b2322daa259eed437f8169961ed7de4f0a35a4933a1c1a19a
+Section: 插件
+Description: 桌面交互动画，仅自用
+Author: 苏苏
+Icon: https://www.susubaby.top/images/springanimations.png
+Name: SuSuAnimation
 
 Package: com.susu.suawemehook
 Version: 1.2
@@ -6345,6 +6431,21 @@ Section: Tweaks
 Description: 离线版本，长期使用，真正无限制的使用！
 Author: x✨
 Name: Fuck·抖音图层
+
+Package: com.xx.dyhook
+Version: 2.1.0
+Architecture: iphoneos-arm64
+Maintainer: x✨+逆无止境
+Depends: mobilesubstrate (>= 0.9.5000)
+Filename: ./debs/com.xx.dyhook_2.1.0_iphoneos-arm64.deb
+Size: 2835216
+MD5sum: 17c28831e974c11b9c2ceb2442c444f4
+SHA1: ca9e29d42a78e7ce591028d3397d6202bbc9d10b
+SHA256: 1a0d27bd20fda54c235ac6f0d2c92c33bc5118ec6644ffecf1f4626c1b66fd85
+Section: Tweaks
+Description: 仅越狱食用，逆无止境破解使用期限！
+Author: x✨+逆无止境
+Name: 抖音图层畅快用
 
 Package: com.xx.ecnyhook
 Version: 1.0.0
@@ -8912,10 +9013,10 @@ Maintainer: M哥
 Installed-Size: 168
 Depends: mobilesubstrate
 Filename: ./debs/leisu_2.0.0_iphoneos-arm64.deb
-Size: 18948
-MD5sum: 2ca63817e9be489f75bdfc5cd251914e
-SHA1: 37438e5eb3d182f6e4cd353430ec4ed3afec1f61
-SHA256: a3e51a53cf6025d0b52649097e06214686dc48940329ecefaefce907b78b7e98
+Size: 58560
+MD5sum: f2d927783639360745eb3d3c1ba508f0
+SHA1: 7daf7b7577fffb9334561470b3acd930c65959a5
+SHA256: 060585bf1e9f4619275e5aae7a59fa88146ab2a14e168a5b620860d176fbf656
 Section: Tweaks
 Description: 雷速体育去启动广告、屏蔽更新，新增支持9.0+版本。
 Author: M哥
