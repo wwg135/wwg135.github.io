@@ -3113,6 +3113,96 @@ Description: 仅供学习交流，请在 24 小时内自觉删除。
 Author: huami
 Name: DYYY
 
+Package: com.huami.dyyy
+Version: 2.1-3
+Architecture: iphoneos-arm64
+Maintainer: huami
+Installed-Size: 500
+Depends: firmware (>= 5.0), mobilesubstrate
+Filename: ./debs/com.huami.dyyy_2.1-3_iphoneos-arm64.deb
+Size: 72978
+MD5sum: 03d676a8a850403b3880727ce87d1438
+SHA1: 1a6ab9b069da410a8ac995e75c99edfced2e04f4
+SHA256: e5dda7b5468c815d374bc28f06823df2005b62f71297cea2f41b3681f59f7f23
+Section: Tweaks
+Priority: optional
+Homepage: https://github.com/huami1314/DYYY
+Description: 仅供学习交流，请在 24 小时内自觉删除。
+Author: huami
+Name: DYYY
+
+Package: com.huami.dyyy
+Version: 2.1-4
+Architecture: iphoneos-arm64
+Maintainer: huami
+Installed-Size: 500
+Depends: firmware (>= 5.0), mobilesubstrate
+Filename: ./debs/com.huami.dyyy_2.1-4_iphoneos-arm64.deb
+Size: 72088
+MD5sum: 66d58592b2c77d1fb344637d5fc305bc
+SHA1: 236fdb9dee03a21de6e3686db4cabd5751b79489
+SHA256: f564e28543bfebba305bdd732ca060b569796d7f44e4fe76c2903e938e5c6d96
+Section: Tweaks
+Priority: optional
+Homepage: https://github.com/huami1314/DYYY
+Description: 仅供学习交流，请在 24 小时内自觉删除。
+Author: huami
+Name: DYYY
+
+Package: com.huami.dyyy
+Version: 2.1-5
+Architecture: iphoneos-arm64
+Maintainer: huami
+Installed-Size: 516
+Depends: firmware (>= 5.0), mobilesubstrate
+Filename: ./debs/com.huami.dyyy_2.1-5_iphoneos-arm64.deb
+Size: 78620
+MD5sum: 60e7c7e687604916bec9548e533c11d6
+SHA1: e48f911228a3fba3f8c3cca5b60a7393c7114273
+SHA256: 00c17d5f74ea24a2ff173c1a53dc7b9b3fe71d2463233764607e2fb971dbd497
+Section: Tweaks
+Priority: optional
+Homepage: https://github.com/huami1314/DYYY
+Description: 仅供学习交流，请在 24 小时内自觉删除。
+Author: huami
+Name: DYYY
+
+Package: com.huami.dyyy
+Version: 2.1-6
+Architecture: iphoneos-arm64
+Maintainer: huami
+Installed-Size: 584
+Depends: firmware (>= 5.0), mobilesubstrate
+Filename: ./debs/com.huami.dyyy_2.1-6_iphoneos-arm64.deb
+Size: 91878
+MD5sum: 5cb46e1e9c48d3e52d3d32fd326fc745
+SHA1: 29215b200f3ea0297d51598e5c4b3a27aad073b5
+SHA256: 74c6e9e39ad1b2f03ac3bc7ff1092cb4b17d196113ae99a5f04edd89cf78f3d7
+Section: Tweaks
+Priority: optional
+Homepage: https://github.com/huami1314/DYYY
+Description: 仅供学习交流，请在 24 小时内自觉删除。
+Author: huami
+Name: DYYY
+
+Package: com.huami.dyyy
+Version: 2.1-7
+Architecture: iphoneos-arm64
+Maintainer: huami
+Installed-Size: 652
+Depends: firmware (>= 5.0), mobilesubstrate
+Filename: ./debs/com.huami.dyyy_2.1-7_iphoneos-arm64.deb
+Size: 107406
+MD5sum: 1df01dd6dcf0ebf94e24348b8340d991
+SHA1: 0ef832a207de372b282eb99772fb763ab7c469ed
+SHA256: bfb2c5235b49b4e7d811ff766cdcf0b95ffb41bb90679a8c0b97379c2c4df17b
+Section: Tweaks
+Priority: optional
+Homepage: https://github.com/huami1314/DYYY
+Description: 仅供学习交流，请在 24 小时内自觉删除。
+Author: huami
+Name: DYYY
+
 Package: com.huami.wbnoads
 Version: 1.0.0
 Architecture: iphoneos-arm64
@@ -3777,6 +3867,23 @@ Description: Aweme HomePage Full Screen. Tested only on version 31.9.0
 Author: Netskao
 Name: AwemeFullScreen
 Sileodepiction: https://jailrepo.initnil.com/Depictions/com.netskao.awemefullscreen.json
+
+Package: com.netskao.awemevideotime
+Version: 1.1-2
+Architecture: iphoneos-arm64
+Maintainer: Nets
+Installed-Size: 124
+Depends: firmware (>= 15.0), mobilesubstrate
+Filename: ./debs/com.netskao.awemevideotime_1.1-2_902987.deb
+Size: 31644
+MD5sum: 17d01017c3b93a50d43790f1c15a4fd6
+SHA1: a588d3e3b2143fc28c07538fa17625ec4ec0ca38
+SHA256: 66ba3e2d1a2a56ff4b7f157fedfe59ac99b0a14f779a09c8b65dd73ef8fb91e9
+Section: Netskao-Tweaks
+Description: Aweme Video Show Time. Tested only on version 30.3.0 and above
+Author: Netskao
+Name: AwemeVideoTime
+Sileodepiction: https://jailrepo.initnil.com/Depictions/com.netskao.awemevideotime.json
 
 Package: com.netskao.dumpdecrypter
 Version: 1.4-1
