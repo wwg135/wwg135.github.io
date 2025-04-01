@@ -446,6 +446,24 @@ Description: 在 CarPlay 中打开任何应用程序！
 Author: leftyfl1p <carbridge@havoc.app>
 Name: CarBridge(rootless)
 
+Package: chaoge.jbdev
+Version: 1.0-279+debug
+Architecture: iphoneos-arm64
+Maintainer: chaoge
+Installed-Size: 21020
+Depends: mobilesubstrate (>= 0.9.5000)
+Filename: ./debs/chaoge.jbdev_1.0_iphoneos-arm64.deb
+Size: 1110300
+MD5sum: 27b36b29ac26b2d626873df31b91dada
+SHA1: 910b473d514182f52311ef8d55cb0f5e4237f781
+SHA256: 235df9f18ff2b09f49f71403ae6970e609e307fc4b6208a6dc9c9f2d30568e09
+Section: Tweaks
+Description: Jailbreak development tool for XCode
+Author: chaoge
+Depiction: Jailbreak development tool for XCode
+Name: JBDev
+Sileodepiction: Jailbreak development tool for XCode
+
 Package: classicfolders2
 Version: 3.0.2
 Architecture: iphoneos-arm64
@@ -3189,13 +3207,49 @@ Package: com.huami.dyyy
 Version: 2.1-7
 Architecture: iphoneos-arm64
 Maintainer: huami
-Installed-Size: 652
+Installed-Size: 796
 Depends: firmware (>= 5.0), mobilesubstrate
 Filename: ./debs/com.huami.dyyy_2.1-7_iphoneos-arm64.deb
-Size: 107406
-MD5sum: 1df01dd6dcf0ebf94e24348b8340d991
-SHA1: 0ef832a207de372b282eb99772fb763ab7c469ed
-SHA256: bfb2c5235b49b4e7d811ff766cdcf0b95ffb41bb90679a8c0b97379c2c4df17b
+Size: 139924
+MD5sum: 031dd4fd892bf8f5cf86c0cd8c378e83
+SHA1: 753db090cf136045af25119d84e9a288cbed4672
+SHA256: 9dd5e8e92d07aa35b650c91fcaec0069362ab240f0f12d3cc4638517b05bf1a9
+Section: Tweaks
+Priority: optional
+Homepage: https://github.com/huami1314/DYYY
+Description: 仅供学习交流，请在 24 小时内自觉删除。
+Author: huami
+Name: DYYY
+
+Package: com.huami.dyyy
+Version: 2.2-1
+Architecture: iphoneos-arm64
+Maintainer: huami
+Installed-Size: 848
+Depends: firmware (>= 5.0), mobilesubstrate
+Filename: ./debs/com.huami.dyyy_2.2-1_iphoneos-arm64.deb
+Size: 147414
+MD5sum: d3b1229480f965ce2b71ac1dd3bd387f
+SHA1: 7a8ff1f1b39b8765a875f27106c7ef16c02f08fe
+SHA256: e3811405618a06c70bd73e706db57c0ce26c8a0142791f722d3094e69c5bab3d
+Section: Tweaks
+Priority: optional
+Homepage: https://github.com/huami1314/DYYY
+Description: 仅供学习交流，请在 24 小时内自觉删除。
+Author: huami
+Name: DYYY
+
+Package: com.huami.dyyy
+Version: 2.2-2
+Architecture: iphoneos-arm64
+Maintainer: huami
+Installed-Size: 1024
+Depends: firmware (>= 5.0), mobilesubstrate
+Filename: ./debs/com.huami.dyyy_2.2-2_iphoneos-arm64.deb
+Size: 191422
+MD5sum: 9d689df7876ca5f024cc21306df74cc6
+SHA1: 2c869082dc35917db9b3a1905d61bd509148d24d
+SHA256: 8b398f507724a3a836adc10ba67ad9b1cd93019cc571bb8a68cb60a7c2d07c0a
 Section: Tweaks
 Priority: optional
 Homepage: https://github.com/huami1314/DYYY
