@@ -3922,6 +3922,30 @@ Author: Netskao
 Name: AwemeFullScreen
 Sileodepiction: https://jailrepo.initnil.com/Depictions/com.netskao.awemefullscreen.json
 
+Package: com.netskao.awemenoads
+Version: 1.1-3
+Architecture: iphoneos-arm64
+Maintainer: Nets
+Installed-Size: 140
+Depends: firmware (>= 15.0), mobilesubstrate
+Filename: ./debs/抖音去广告 AwemeNoAds_1.1-3_iphoneos-arm64.deb
+Size: 32772
+MD5sum: 392b335c387b1a5acfd161ab785de530
+SHA1: bdedbde565b26fc66fb0968720f6cee7497ef9c0
+SHA256: 75c0be81c9267ebe98968ed1438ecfe7ef8e1845f06e57f7029d78d2f1dbdec1
+Section: 抖音插件
+Description: 抖音去广告插件
+ * 默认生效
+ * 去启动广告
+ * 去视频流广告
+ * 去青少年提醒
+ * 小程序跳广告，单独开关控制
+ * 内存清理功能，单独开关控制
+Author: Netskao
+Icon: https://TrollStoreX.Github.io/sileodepiction/AwemeNoAds/icon.png
+Name: 抖音去广告 AwemeNoAds
+Sileodepiction: https://TrollStoreX.Github.io/sileodepiction/AwemeNoAds/js.json
+
 Package: com.netskao.awemevideotime
 Version: 1.1-2
 Architecture: iphoneos-arm64
