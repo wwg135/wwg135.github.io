@@ -5939,14 +5939,14 @@ Maintainer: wwg135
 Installed-Size: 220
 Depends: firmware (>= 5.0), mobilesubstrate
 Filename: ./debs/com.wwg135.leisu_1.0.2_iphoneos-arm64.deb
-Size: 19502
-MD5sum: 3ba3d729e4c310086fbabf72394d3156
-SHA1: f5142aad03a7ab187f7036aed4818cdfa9a8adc9
-SHA256: 110b0a5617845eaef3bedaa3fb91fef62a0f2dbedefd8d91d43914cee1f0d4f2
+Size: 19656
+MD5sum: 4b1fad0d58b7d53a95268fab5c49964f
+SHA1: 273f145f7e63935fa85d0c53cf268dc2f0434759
+SHA256: 38ad480e5eef54db2090abd9bb5b21311222095fd805dd084a88d50f68bfb6d8
 Section: Tweaks
 Priority: optional
 Homepage: https://github.com/wwg135
-Description: 雷速体育功能隐藏，无设置选项，自己选择使用。
+Description: 长按底栏菜单弹出功能，自己选择使用，仅供学习使用。
 Author: wwg135
 Name: 雷速体育Plus
 
