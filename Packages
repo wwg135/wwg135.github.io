@@ -2937,6 +2937,22 @@ Priority: optional
 Author: huami
 Name: RenameWCCardCellTitle
 
+Package: com.huami.WCFullSwipe
+Version: 1.1
+Architecture: iphoneos-arm64
+Maintainer: huami
+Installed-Size: 168
+Depends: mobilesubstrate (>= 0.9.5000)
+Filename: ./debs/com.huami.WCFullSwipe_1.1_iphoneos-arm64.deb
+Size: 4166
+MD5sum: c42f46c3d9a2b2f888b4f68ef8c2f7ea
+SHA1: c088f746f0b65849191c04c5e0e0eed8b52523e2
+SHA256: 3df022be08435e7dfba1b5e07f26ada9f224482bbe0e8dffbe5949e7a4eb7fc3
+Section: Tweaks
+Description: 为微信扩展全屏滑动返回
+Author: huami
+Name: WCFullSwipe
+
 Package: com.huami.bilinoad
 Version: 1.0.0
 Architecture: iphoneos-arm64
@@ -2970,6 +2986,22 @@ Priority: optional
 Description: BiliBili净化开屏广告
 Author: huami
 Name: BiliNoAd
+
+Package: com.huami.dyenablepanelmodernstyle
+Version: 1.0.0
+Architecture: iphoneos-arm64
+Maintainer: huami
+Installed-Size: 168
+Depends: mobilesubstrate (>= 0.9.5000)
+Filename: ./debs/com.huami.dyenablepanelmodernstyle_1.0.0_iphoneos-arm64.deb
+Size: 3362
+MD5sum: 2f22aaac6117bddf994b76d16cf36851
+SHA1: a01ab32a43432029a2262c7957f0a6b518d5c4c0
+SHA256: c812743e883eaf80c6befe2a5fb94f02aab94c22b742b800a2be479fda1bcdab
+Section: Tweaks
+Description: 强制启用新版抖音长按 UI（现代风）
+Author: huami
+Name: DYEnablePanelModernStyle
 
 Package: com.huami.dyyy
 Version: 1.6-2
@@ -3243,19 +3275,71 @@ Package: com.huami.dyyy
 Version: 2.2-2
 Architecture: iphoneos-arm64
 Maintainer: huami
-Installed-Size: 1056
+Installed-Size: 1768
 Depends: firmware (>= 5.0), mobilesubstrate
 Filename: ./debs/com.huami.dyyy_2.2-2_iphoneos-arm64.deb
-Size: 191160
-MD5sum: 9956df336b1034bfb8ddb49db0974ecb
-SHA1: 306f0ce45d73b8e6553eacd14d9801f096785b58
-SHA256: d1a077ddb382e3ea34bb7c0668e875855fd716d15beab6534629b969a8f0797f
+Size: 322986
+MD5sum: 4285f661cda8493acfb694c96aab2665
+SHA1: 5e5f80c32b4ac55820c23965695600a9cff3d677
+SHA256: 22d0f7b75d95b40aa0466d7dd06997186ef0804b39cdb2709efccb65e6d93140
 Section: Tweaks
 Priority: optional
 Homepage: https://github.com/huami1314/DYYY
 Description: 仅供学习交流，请在 24 小时内自觉删除。
 Author: huami
 Name: DYYY
+
+Package: com.huami.dyyy
+Version: 2.2-3
+Architecture: iphoneos-arm64
+Maintainer: huami
+Installed-Size: 1816
+Depends: firmware (>= 5.0), mobilesubstrate
+Filename: ./debs/com.huami.dyyy_2.2-3_iphoneos-arm64.deb
+Size: 332628
+MD5sum: f5dc20ed4bbd760167a2f65fd44dd606
+SHA1: bc702c881d9762d5aaf6aa6c124dc30104d8a1ca
+SHA256: 0e2036fee01991c830fcc86f0211e455e7359fdae8af497601815eeffc592b89
+Section: Tweaks
+Priority: optional
+Homepage: https://github.com/huami1314/DYYY
+Description: 仅供学习交流，请在 24 小时内自觉删除。
+Author: huami
+Name: DYYY
+
+Package: com.huami.dyyy
+Version: 2.2-4
+Architecture: iphoneos-arm64
+Maintainer: huami
+Installed-Size: 1832
+Depends: firmware (>= 5.0), mobilesubstrate
+Filename: ./debs/com.huami.dyyy_2.2-4_iphoneos-arm64.deb
+Size: 336066
+MD5sum: e849213a8cabc5ebcb103e08e0e91312
+SHA1: 06674571386483d0b13d394fc31dca8852eb496b
+SHA256: b43255862692d86c8eccf245362e79ca1ed94f3a8a9d84886cbde0574d330861
+Section: Tweaks
+Priority: optional
+Homepage: https://github.com/huami1314/DYYY
+Description: 仅供学习交流，请在 24 小时内自觉删除。
+Author: huami
+Name: DYYY
+
+Package: com.huami.kbstyle
+Version: 1.0
+Architecture: iphoneos-arm64
+Maintainer: huami
+Installed-Size: 372
+Depends: mobilesubstrate (>= 0.9.5000), preferenceloader (>= 2.2.3)
+Filename: ./debs/com.huami.kbstyle_1.0_iphoneos-arm64.deb
+Size: 35870
+MD5sum: 07c4245ecad41d564beb297cfc4bffe6
+SHA1: 235abfd4e95ec0dc3bece1544e542789ca66a2c3
+SHA256: 9ba2f5e5e9d887db1f3be4ed846c95c243d0a64470bf58b9f50953cc0f08564a
+Section: Tweaks
+Description: An awesome MobileSubstrate tweak!
+Author: huami
+Name: KBStyle
 
 Package: com.huami.wbnoads
 Version: 1.0.0
@@ -3288,6 +3372,22 @@ Priority: optional
 Description: Give you a pure Weibo
 Author: huami
 Name: WBNoAds
+
+Package: com.huami.wcnicknameavatarstyle
+Version: 2.1
+Architecture: iphoneos-arm64
+Maintainer: huami
+Installed-Size: 320
+Depends: mobilesubstrate (>= 0.9.5000)
+Filename: ./debs/com.huami.wcnicknameavatarstyle_2.1_iphoneos-arm64.deb
+Size: 50578
+MD5sum: 596147f6da4979e752f419bd25fe137c
+SHA1: da9d09b8f9d811364b882f7cd92bc8f50031de8a
+SHA256: 1869075182ec0e8757d0d0668353d3098d7c6beeb79a9252251479851910bcd1
+Section: Tweaks
+Description: 为微信聊天界面标题添加头像
+Author: huami
+Name: WCNicknameAvatarStyle
 
 Package: com.huami.xhstranslator
 Version: 1.0
@@ -4211,6 +4311,24 @@ Section: Tweaks
 Description: BigSurCenter轻量级的iOS控制中心。                                                     1、安装插件后会弹出空间重启英文界面，选空间重启。                                                                                                                 2、在设置中激活BigSurCenter的时候需要关闭VPN。                                                                                           3、加入北凉小刀刀汉化。
 Author: nicho1asdev
 Name: BigSurCenter（破解版）
+
+Package: com.nightwind.rootless-patcher
+Version: 0.0.1
+Architecture: iphoneos-arm64
+Maintainer: Nightwind
+Installed-Size: 116
+Depends: odcctools, ldid
+Filename: ./debs/com.nightwind.rootless-patcher_0.0.1_iphoneos-arm64.deb
+Size: 23914
+MD5sum: 6e6ecca9bd8d6f6518c2b1cde85ed640
+SHA1: 8a09a5a62c0c9599ce517d3e20fc02be7a374886
+SHA256: 014204c7a1505739e2f84c2f70df04001956859b11dbf88fc64e009674a5b7bd
+Section: System
+Description: A CLI rootful to rootless patcher.
+ Utilizes a technique that does not require Xina-style symlinks.
+Tag: role::hacker
+Author: Nightwind and staturnz
+Name: rootless-patcher
 
 Package: com.noisyflake.velvet2
 Version: 2.1.2-2
@@ -5814,6 +5932,24 @@ Author: wkk
 Icon: https://s1.imagehub.cc/images/2025/02/06/dde5946f39d42917d28148d8f1a07901.png
 Name: 腾讯视频NoAds
 
+Package: com.wwg135.leisu
+Version: 1.0.2
+Architecture: iphoneos-arm64
+Maintainer: wwg135
+Installed-Size: 220
+Depends: firmware (>= 5.0), mobilesubstrate
+Filename: ./debs/com.wwg135.leisu_1.0.2_iphoneos-arm64.deb
+Size: 19502
+MD5sum: 3ba3d729e4c310086fbabf72394d3156
+SHA1: f5142aad03a7ab187f7036aed4818cdfa9a8adc9
+SHA256: 110b0a5617845eaef3bedaa3fb91fef62a0f2dbedefd8d91d43914cee1f0d4f2
+Section: Tweaks
+Priority: optional
+Homepage: https://github.com/wwg135
+Description: 雷速体育功能隐藏，无设置选项，自己选择使用。
+Author: wwg135
+Name: 雷速体育Plus
+
 Package: com.wwg135.terminal
 Version: 1.0
 Architecture: iphoneos-arm64
@@ -5827,6 +5963,24 @@ Section: Applications
 Description: iOS Terminal
 Author: Tim Apple
 Name: Terminal
+
+Package: com.wwg135.zhibo8
+Version: 1.0.0
+Architecture: iphoneos-arm64
+Maintainer: wwg135
+Installed-Size: 168
+Depends: firmware (>= 5.0), mobilesubstrate
+Filename: ./debs/com.wwg135.zhibo8_1.0.0_iphoneos-arm64.deb
+Size: 9360
+MD5sum: b3e516a32dd377dd0facb7bbde7b9d24
+SHA1: 5c01553406272bc6d036ab3e9b8200cec6b1436f
+SHA256: d3d54ea3347171248d9166a97223ad2abdcda7c91cb077ba92d75088b60067a4
+Section: Tweaks
+Priority: optional
+Homepage: https://github.com/wwg135
+Description: 直播吧去广告，无设置选项，自己选择使用。
+Author: wwg135
+Name: 直播吧Plus
 
 Package: com.xina.blacklist
 Version: 0.0.2-10+debug
