@@ -2953,6 +2953,22 @@ Description: 为微信扩展全屏滑动返回
 Author: huami
 Name: WCFullSwipe
 
+Package: com.huami.WCPluginsOrder
+Version: 1.0-2
+Architecture: iphoneos-arm64
+Maintainer: huami
+Installed-Size: 204
+Depends: mobilesubstrate (>= 0.9.5000)
+Filename: ./debs/com.huami.WCPluginsOrder_1.0-2_iphoneos-arm64.deb
+Size: 15702
+MD5sum: 84df29cffc8fffcb379fa6a7181df517
+SHA1: c10cfcd17196fe7a43155cfec3d0696af43a1de6
+SHA256: 146eded64fa7916a72d30e0b61e800887f26da327c40f0d2f302cffc92844f5a
+Section: Tweaks
+Description: An awesome MobileSubstrate tweak!
+Author: huami
+Name: WCPluginsOrder
+
 Package: com.huami.bilinoad
 Version: 1.0.0
 Architecture: iphoneos-arm64
@@ -3311,13 +3327,13 @@ Package: com.huami.dyyy
 Version: 2.2-4
 Architecture: iphoneos-arm64
 Maintainer: huami
-Installed-Size: 1832
+Installed-Size: 1896
 Depends: firmware (>= 5.0), mobilesubstrate
 Filename: ./debs/com.huami.dyyy_2.2-4_iphoneos-arm64.deb
-Size: 336066
-MD5sum: e849213a8cabc5ebcb103e08e0e91312
-SHA1: 06674571386483d0b13d394fc31dca8852eb496b
-SHA256: b43255862692d86c8eccf245362e79ca1ed94f3a8a9d84886cbde0574d330861
+Size: 353196
+MD5sum: 9f330aa3294e2ff0ed1431048532673d
+SHA1: 0cba448aa967676cdab637c48e1b555172fffe90
+SHA256: 2bfa25e9d00a0bdc5eeb4c7e3036015a88668858a035aad05267d6068a2d7a61
 Section: Tweaks
 Priority: optional
 Homepage: https://github.com/huami1314/DYYY
