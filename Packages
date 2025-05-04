@@ -3327,13 +3327,31 @@ Package: com.huami.dyyy
 Version: 2.2-4
 Architecture: iphoneos-arm64
 Maintainer: huami
-Installed-Size: 1896
+Installed-Size: 1964
 Depends: firmware (>= 5.0), mobilesubstrate
 Filename: ./debs/com.huami.dyyy_2.2-4_iphoneos-arm64.deb
-Size: 353196
-MD5sum: 9f330aa3294e2ff0ed1431048532673d
-SHA1: 0cba448aa967676cdab637c48e1b555172fffe90
-SHA256: 2bfa25e9d00a0bdc5eeb4c7e3036015a88668858a035aad05267d6068a2d7a61
+Size: 370074
+MD5sum: b962160c0a8ea06a0715305a04c9ed75
+SHA1: 2e2d0ac16c856ded6fe2cc8940ed61470018d233
+SHA256: 9a8f6d2fd16cbb269aba1eded0ef798e7c7103804b1f3c530dc4ca621a8b5c51
+Section: Tweaks
+Priority: optional
+Homepage: https://github.com/huami1314/DYYY
+Description: 仅供学习交流，请在 24 小时内自觉删除。
+Author: huami
+Name: DYYY
+
+Package: com.huami.dyyy
+Version: 2.2-5
+Architecture: iphoneos-arm64
+Maintainer: huami
+Installed-Size: 2012
+Depends: firmware (>= 5.0), mobilesubstrate
+Filename: ./debs/com.huami.dyyy_2.2-5_iphoneos-arm64.deb
+Size: 387128
+MD5sum: 7c35646d916005807d764c0f1d0fe611
+SHA1: 54f6193524e01a7afbb44f4a1025f844b192dec6
+SHA256: 527d6d4f5bd21005c5879ace661040b88f3d2bbe89c11ea8af53896fa9a7ab22
 Section: Tweaks
 Priority: optional
 Homepage: https://github.com/huami1314/DYYY
@@ -3400,6 +3418,22 @@ Size: 50578
 MD5sum: 596147f6da4979e752f419bd25fe137c
 SHA1: da9d09b8f9d811364b882f7cd92bc8f50031de8a
 SHA256: 1869075182ec0e8757d0d0668353d3098d7c6beeb79a9252251479851910bcd1
+Section: Tweaks
+Description: 为微信聊天界面标题添加头像
+Author: huami
+Name: WCNicknameAvatarStyle
+
+Package: com.huami.wcnicknameavatarstyle
+Version: 2.2
+Architecture: iphoneos-arm64
+Maintainer: huami
+Installed-Size: 524
+Depends: mobilesubstrate (>= 0.9.5000)
+Filename: ./debs/com.huami.wcnicknameavatarstyle_2.2_iphoneos-arm64.deb
+Size: 76948
+MD5sum: e61e3484715e238a1f7202ac6b261c80
+SHA1: 27fbb6bf0ae9c9435c7bb6b297a8c42d9fda1e3c
+SHA256: 12c017e3274da190e94a6e631f7bbb8d8a02ac800575509335afc65845319852
 Section: Tweaks
 Description: 为微信聊天界面标题添加头像
 Author: huami
