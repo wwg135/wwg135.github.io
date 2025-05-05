@@ -2344,6 +2344,23 @@ Description: WiFi和蜂窝数据之间智能切换，控制中心连接WiFi关�
 Author: Bruno Andrade <brubiluco@globo.com>
 Name: WiCellSwitcher(rootless)
 
+Package: com.dopamine.swapforcer
+Version: 0.0.2-7+debug
+Architecture: iphoneos-arm64
+Maintainer: Dopamine User
+Installed-Size: 76
+Depends: mobilesubstrate
+Filename: ./debs/com.dopamine.swapforcer_0.0.2-7+debug_iphoneos-arm64.deb
+Size: 5880
+MD5sum: 0ca474b86bc8f312d9d9729ab64684a5
+SHA1: 1e6a4dfbb3056bf24c123f61a96c03cac8dcaee9
+SHA256: 2a93b49bbf0015831302376afe0db1d0b22a8b329cc4f1b06f23f9997d95290a
+Section: Tweaks
+Description: 强制启用并稳定运行iOS 16的Swap机制,提高应用留存率。
+Author: colorBlack
+Name: SwapForcer
+Prefix: /var/jb
+
 Package: com.dumpapp.wechat-rootless
 Version: 2.0.3
 Architecture: iphoneos-arm64
@@ -5882,6 +5899,22 @@ Section: Tweaks
 Description: 美团外卖去广告
 Author: M哥
 Name: 美团外卖NoAd-rootless
+
+Package: com.wangdonghua.backgroundretainer
+Version: 0.0.1-6+debug
+Architecture: iphoneos-arm64
+Maintainer: Your Name
+Installed-Size: 472
+Depends: mobilesubstrate (>= 0.9.5000), preferenceloader
+Filename: ./debs/com.wangdonghua.backgroundretainer_0.0.1-6+debug_iphoneos-arm64.deb
+Size: 74092
+MD5sum: d5094c53bed3575cc55cdecf1f0fd18c
+SHA1: 0cbab21427bdd384fc3a1f4464d735a28cb1405a
+SHA256: 502beeb8cfd71fa542d20d0083e58c6e36282fd9219e4727e8628f29d33eed23
+Section: Tweaks
+Description: 基于iOS墓碑机制的后台应用留存增强插件
+Author: Your Name
+Name: BackgroundRetainer
 
 Package: com.weibo
 Version: 1.0
