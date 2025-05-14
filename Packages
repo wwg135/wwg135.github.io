@@ -3050,6 +3050,22 @@ Description: WCPulse
 Author: huami
 Name: WCPulse
 
+Package: com.huami.WCPulse
+Version: 1.0-5
+Architecture: iphoneos-arm64
+Maintainer: huami
+Installed-Size: 336
+Depends: mobilesubstrate (>= 0.9.5000)
+Filename: ./debs/WCPulse_1.0-5-arm64.deb
+Size: 51042
+MD5sum: c6151712c3cc667e1dd66467130c3deb
+SHA1: dc1c276024ee8365757747c20e5b6c7235d11845
+SHA256: 9e1d698cceb2c92d1d5e9ff7206c3be2561b909094d33caa6339cdbe3f4b654c
+Section: Tweaks
+Description: WCPulse
+Author: huami
+Name: WCPulse
+
 Package: com.huami.bilinoad
 Version: 1.0.0
 Architecture: iphoneos-arm64
