@@ -2410,6 +2410,22 @@ Description: The most complete tweak to customize WiFi / mobile data and Bluetoo
 Author: elias
 Name: SmartNetwork iOS 15-16
 
+Package: com.flex.lib
+Version: 1.0-3+debug
+Architecture: iphoneos-arm
+Maintainer: pxx917144686
+Installed-Size: 9264
+Depends: firmware (>= 9.0)
+Filename: ./debs/com.flex.lib_1.0-3+debug_iphoneos-arm.deb
+Size: 1747976
+MD5sum: 09db37fb6f255981c647b2b4593f6d4d
+SHA1: 3ebc7af925a4b925f93d493f3ec775620c95e335
+SHA256: f4c99b50173b7ab37273d877d3dea54bc29df6b52e72fe2c94f6d40cad796a6b
+Section: Development
+Description: FLEX (中文版) - 支持iOS 9.0及以上设备。触发功能：三指-长按任意界面，触发工具栏
+Author: FLEX Team & pxx917144686
+Name: FLEX 调试工具
+
 Package: com.github.wxsmalltabs
 Version: 0.0.1-5
 Architecture: iphoneos-arm64
@@ -2986,6 +3002,54 @@ Description: An awesome MobileSubstrate tweak!
 Author: huami
 Name: WCPluginsOrder
 
+Package: com.huami.WCPulse
+Version: 1.0-1
+Architecture: iphoneos-arm64
+Maintainer: huami
+Installed-Size: 240
+Depends: mobilesubstrate (>= 0.9.5000)
+Filename: ./debs/com.huami.WCPulse_1.0-1_iphoneos-arm64.deb
+Size: 24640
+MD5sum: b1e6893a1e6d82e810ef74047fb45ad9
+SHA1: fa4cf11eb8e0f42ac9648348f8a5d8439becff90
+SHA256: dc251bac86abf53083832315509a453e4357fc23bd0589c869227dca70d7206a
+Section: Tweaks
+Description: WCPulse
+Author: huami
+Name: WCPulse
+
+Package: com.huami.WCPulse
+Version: 1.0-2
+Architecture: iphoneos-arm64
+Maintainer: huami
+Installed-Size: 272
+Depends: mobilesubstrate (>= 0.9.5000)
+Filename: ./debs/WCPulse_1.0-2-arm64.deb
+Size: 37936
+MD5sum: 10fda1944511a00eff3003eae0ac5a4a
+SHA1: 86452cbc381eb249e2d76f656ae537150b9f524c
+SHA256: c56292580bb134846ace63eb72bd387ec3a9e0aec42918b78a01004c22cfd21c
+Section: Tweaks
+Description: WCPulse
+Author: huami
+Name: WCPulse
+
+Package: com.huami.WCPulse
+Version: 1.0-4
+Architecture: iphoneos-arm64
+Maintainer: huami
+Installed-Size: 304
+Depends: mobilesubstrate (>= 0.9.5000)
+Filename: ./debs/WCPulse_1.0-4-arm64.deb
+Size: 46822
+MD5sum: 75dc72db4b4664154e6bf57d4fa898b0
+SHA1: d99e1f5e2dec9acbfeb7c39d0df4879743c51c38
+SHA256: 8c5403a17f2dc31ff66d48dbfd744216e89a07092cdedae335bc725fa8f15916
+Section: Tweaks
+Description: WCPulse
+Author: huami
+Name: WCPulse
+
 Package: com.huami.bilinoad
 Version: 1.0.0
 Architecture: iphoneos-arm64
@@ -3369,6 +3433,42 @@ Size: 384478
 MD5sum: b37d0d01eca687f36a9cde413f9167bd
 SHA1: 06c249e7b48364c52455574924161aee034749d1
 SHA256: f6c95f119470bb9375517b4fba9ff7316de667fce5e131d779c7bb5f50b45593
+Section: Tweaks
+Priority: optional
+Homepage: https://github.com/huami1314/DYYY
+Description: 仅供学习交流，请在 24 小时内自觉删除。
+Author: huami
+Name: DYYY
+
+Package: com.huami.dyyy
+Version: 2.2-6
+Architecture: iphoneos-arm64
+Maintainer: huami
+Installed-Size: 2028
+Depends: firmware (>= 5.0), mobilesubstrate
+Filename: ./debs/com.huami.dyyy_2.2-6_iphoneos-arm64.deb
+Size: 394330
+MD5sum: a8411a5d323e773525f494f9c0f833cc
+SHA1: 4fc230dc971c5d9f68d55808c03f7c6f171605e5
+SHA256: c59c44570fdef2d78e36bf23eb6449fdf0009673d37b02fb3b33c4c8d9656502
+Section: Tweaks
+Priority: optional
+Homepage: https://github.com/huami1314/DYYY
+Description: 仅供学习交流，请在 24 小时内自觉删除。
+Author: huami
+Name: DYYY
+
+Package: com.huami.dyyy
+Version: 2.2-7
+Architecture: iphoneos-arm64
+Maintainer: huami
+Installed-Size: 2044
+Depends: firmware (>= 5.0), mobilesubstrate
+Filename: ./debs/com.huami.dyyy_2.2-7_iphoneos-arm64.deb
+Size: 396534
+MD5sum: 23963919e74af0d630003a5f7c1a0b20
+SHA1: 02f625b3247a1cbd18d5eee27b3de9489d10d0ea
+SHA256: d7bcba9130f06754cf578471998f4fb2d09d875b65b1e4fb4caaae33dfef4f68
 Section: Tweaks
 Priority: optional
 Homepage: https://github.com/huami1314/DYYY
@@ -4547,6 +4647,22 @@ Section: Tweaks
 Description: 闲鱼去启动广告
 Author: M哥
 Name: 闲鱼去启动广告-rootless
+
+Package: com.sergy.immortalizer
+Version: 2.0.1.1
+Architecture: iphoneos-arm64
+Maintainer: sergy
+Installed-Size: 660
+Depends: mobilesubstrate (>= 0.9.5000), preferenceloader, com.opa334.altlist, com.opa334.ccsupport
+Filename: ./debs/com.sergy.immortalizer_2.0.1.1_iphoneos-arm64.deb
+Size: 49504
+MD5sum: 015417da843c073ce37bd8b9867b91fc
+SHA1: 8904d82f9592f4ae70e0a40a352b94e14a5afe7b
+SHA256: b8cded44b83ececc0f516fe1bf5b8a1ddce42a8f595be9cb9b4733a1ed856341
+Section: tweaksn
+Description: 可将应用置于前台，达到「真后台」效果；应用图标长按菜单——开启/禁用「真后台」；CC模块控制，需先打开要控制的app，然后点击模块。
+Author: sergy
+Name: Immortalizer(rootless)
 
 Package: com.smokin1337.togglow
 Version: 1.0.8
