@@ -3066,6 +3066,22 @@ Description: WCPulse
 Author: huami
 Name: WCPulse
 
+Package: com.huami.WCPulse
+Version: 1.0-7
+Architecture: iphoneos-arm64
+Maintainer: huami
+Installed-Size: 372
+Depends: mobilesubstrate (>= 0.9.5000)
+Filename: ./debs/WCPulse_1.0-7-arm64.deb
+Size: 63080
+MD5sum: 0f928707ec679d13adb879e753c89ed0
+SHA1: 4cba7f0ab7b8e9082fcdc3f4ee7a5eebf9d79509
+SHA256: 1625a05802996141ff4d60631231dda435f41d51ce8f6e9aee3d4d250568ddab
+Section: Tweaks
+Description: WCPulse
+Author: huami
+Name: WCPulse
+
 Package: com.huami.bilinoad
 Version: 1.0.0
 Architecture: iphoneos-arm64
@@ -3478,13 +3494,13 @@ Package: com.huami.dyyy
 Version: 2.2-7
 Architecture: iphoneos-arm64
 Maintainer: huami
-Installed-Size: 2060
+Installed-Size: 2256
 Depends: firmware (>= 5.0), mobilesubstrate
 Filename: ./debs/com.huami.dyyy_2.2-7_iphoneos-arm64.deb
-Size: 399516
-MD5sum: 1343fab0323f55c20cc6a3045058b313
-SHA1: 7ae818a5f1132b22bac7d6c95f58e1b44f2ea396
-SHA256: 19ac1348ea9a8f53f710395add74f9396d6621d3637a2531820391e12324758a
+Size: 439996
+MD5sum: dd498331710c00b165c76b31c01800d7
+SHA1: 86d4ecc70e37d4ac52a6bcc0a5015aaaa12d4f25
+SHA256: 2b983ad68327dcf7a46771667cf509666ae706ffbac1ffd27e1b23b552f69c46
 Section: Tweaks
 Priority: optional
 Homepage: https://github.com/huami1314/DYYY
@@ -3920,6 +3936,22 @@ Description: Control your text or translate as you wish.
 Author: lclrc(SquidForce)
 Icon: file:///var/jb/Library/PreferenceBundles/HammerItPrefs.bundle/HammerIt@3x.png
 Name: Hammer It
+
+Package: com.liuf.dyjc
+Version: 0.0.1
+Architecture: iphoneos-arm64
+Maintainer: liuf <1602389262>
+Depends: mobilesubstrate
+Filename: ./debs/com.liuf.dyjc_0.0.1_iphoneos-arm64.deb
+Size: 4910
+MD5sum: 351bbfdbfd8933415ac76161f7476ecc
+SHA1: da9545089e7b9526095504a59728bf658f79aad4
+SHA256: bcfecfb004efdc96c43dc0f7fc9f23e197b99aaae51f9d324e456e5401834fd1
+Section: Tweaks
+Description: 抖音检测屏蔽 i!
+Author: liuf <1602389262>
+Icon: https://huayuarc.github.io/images/douyin.png
+Name: 抖音检测屏蔽(Rootless)
 
 Package: com.liuf.jpyj
 Version: 0.0.1
@@ -4614,6 +4646,22 @@ Section: Applications
 Description: Helper utility to install and manage TrollStore!
 Author: opa334
 Name: TrollStore Helper
+
+Package: com.photospluss
+Version: 1.0
+Architecture: iphoneos-arm64
+Maintainer: k
+Depends: mobilesubstrate (>= 0.9.5000)
+Filename: ./debs/com.photospluss_1.0_iphoneos-arm64.deb
+Size: 3988
+MD5sum: 7e4c6e4daf5f2b9b0d141311abcdcc95
+SHA1: c85057273c7d31e891c14a74dd931d6c831a6c4d
+SHA256: d39d205472b38e5eb09e5a3294a2b530edf1ff59361cde2a8f65002d2fe3694b
+Section: 插件
+Description: 去除相册一堆无用项目。精简相册。
+Author: iOSign
+Icon: https://www.susubaby.top/images/photos.png
+Name: 相册增强
 
 Package: com.pinduoduo
 Version: 1.1
