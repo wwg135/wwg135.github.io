@@ -3512,13 +3512,13 @@ Package: com.huami.dyyy
 Version: 2.2-8
 Architecture: iphoneos-arm64
 Maintainer: huami
-Installed-Size: 2340
+Installed-Size: 2388
 Depends: firmware (>= 5.0), mobilesubstrate
 Filename: ./debs/com.huami.dyyy_2.2-8_iphoneos-arm64.deb
-Size: 457806
-MD5sum: 6c2425c97f3b600a5157eaaf36d2f220
-SHA1: 68737e5be9aea34340c40693f1a3cbfc3da0d2a4
-SHA256: a56db35558608ce3d03350c90f3d3ea5d6a985ff00523d489fc552b09315c13b
+Size: 470406
+MD5sum: b9de6c63f37a5b7b0cb472b5b85c41b2
+SHA1: d8d29ed9b3a4935d43b250d5918d41a743c2a9e3
+SHA256: 34530afab813b55b1acdc8f66abf143b0f93fb9be1cad6368656a366cb98704d
 Section: Tweaks
 Priority: optional
 Homepage: https://github.com/huami1314/DYYY
@@ -4251,6 +4251,40 @@ SHA1: 90b3de59f438c808c1caaceb992230d53924eeb9
 SHA256: 5bdcbe0dc37d06f59da9707ab349661218fc373345602833741409d0ee5a1733
 Section: Netskao-Tweaks
 Description: Aweme HomePage Full Screen. Tested only on version 31.9.0
+Author: Netskao
+Name: AwemeFullScreen
+Sileodepiction: https://jailrepo.initnil.com/Depictions/com.netskao.awemefullscreen.json
+
+Package: com.netskao.awemefullscreen
+Version: 1.3-4
+Architecture: iphoneos-arm64
+Maintainer: Nets
+Installed-Size: 448
+Depends: firmware (>= 12.0), mobilesubstrate
+Filename: ./debs/com.netskao.awemefullscreen_1.3-4_586101.deb
+Size: 187888
+MD5sum: 7b46e48a551512f502c0857599889258
+SHA1: da0450ea45cca949f911e0d6b2975505474b87b6
+SHA256: e1743ff4c62c5b09c4b9f2a0c3e2f714963815e514a8ad65f3c39b95a0fb46ee
+Section: Netskao-Tweaks
+Description: Aweme HomePage Full Screen. Supported only for version 34.7.0 and above
+Author: Netskao
+Name: AwemeFullScreen
+Sileodepiction: https://jailrepo.initnil.com/Depictions/com.netskao.awemefullscreen.json
+
+Package: com.netskao.awemefullscreen
+Version: 1.3-5
+Architecture: iphoneos-arm64
+Maintainer: Nets
+Installed-Size: 432
+Depends: firmware (>= 12.0), mobilesubstrate
+Filename: ./debs/com.netskao.awemefullscreen_1.3-5_229813.deb
+Size: 179456
+MD5sum: 84d41b18d6c021ce45e804eceea2222e
+SHA1: 18ea7d37a3b68e4f3056529ded3d6b64e0230dbf
+SHA256: 128360f34547fea34db8e664f1ada05e9f08e0e6ab8cc6a59bf2931e6b439c1f
+Section: Netskao-Tweaks
+Description: Aweme HomePage Full Screen. Supported only for version 34.7.0 and above
 Author: Netskao
 Name: AwemeFullScreen
 Sileodepiction: https://jailrepo.initnil.com/Depictions/com.netskao.awemefullscreen.json
