@@ -7661,7 +7661,7 @@ Architecture: iphoneos-arm64
 Maintainer: x✨
 Installed-Size: 692
 Depends: mobilesubstrate (>= 0.9.5000)
-Filename: ./debs/com.xx.kshook_1.0.4_iphoneos-arm64.deb
+Filename: ./debs/快手图层1.0.4无根.deb
 Size: 196780
 MD5sum: bcef9761c549c312c95d5af26e35fb2f
 SHA1: 73e3f437a297a92903820a4ea5495a3740d3b31d
@@ -7677,7 +7677,7 @@ Architecture: iphoneos-arm64
 Maintainer: x✨
 Installed-Size: 692
 Depends: mobilesubstrate (>= 0.9.5000)
-Filename: ./debs/快手图层1.0.4无根.deb
+Filename: ./debs/com.xx.kshook_1.0.4_iphoneos-arm64.deb
 Size: 196780
 MD5sum: bcef9761c549c312c95d5af26e35fb2f
 SHA1: 73e3f437a297a92903820a4ea5495a3740d3b31d
