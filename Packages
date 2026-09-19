@@ -4035,6 +4035,37 @@ Description: 买单吧去启动广告
 Author: M哥
 Name: 买单吧NoAd-rootless
 
+Package: com.mg.adskip
+Version: 3.3.0
+Architecture: iphoneos-arm64e
+Maintainer: M哥
+Installed-Size: 144
+Pre-Depends: rootless-compat(>= 0.9)
+Filename: ./debs/广告跳过_3.3.0_iphoneos-arm64e.deb
+Size: 31768
+MD5sum: b52cc9ec2c1814180466626af82fc6a8
+SHA1: eaf2f0fda3051e64d5361e6772e3e95cf2a9620e
+SHA256: b3d2a36a291eb0544cbf76d8893d011e147d53fdffb30ac3218023b1c4b0798d
+Section: Tweaks
+Description: 跳过开屏广告，无黑名单·事件驱动秒跳·容器门控两级词表+防摇一摇+摇一摇带按钮秒跳+防误点广告主图+结构防自点，不影响无广告应用。
+Author: M哥
+Name: 广告跳过
+
+Package: com.mg.adskip
+Version: 3.3.0
+Architecture: iphoneos-arm64
+Maintainer: M哥
+Installed-Size: 144
+Filename: ./debs/广告跳过_3.3.0_iphoneos-arm64.deb
+Size: 24004
+MD5sum: 5d9beca0caf37aac8708c2fec155f03b
+SHA1: 72f06db3cbc04d35d5a08fa3a744c891a8b95d6b
+SHA256: 38fe13affa5b227ad5c216f30f664d5ee4cda3af86bfb85642c9da99470f1866
+Section: Tweaks
+Description: 跳过开屏广告，无黑名单·事件驱动秒跳·容器门控两级词表+防摇一摇+摇一摇带按钮秒跳+防误点广告主图+结构防自点，不影响无广告应用。
+Author: M哥
+Name: 广告跳过
+
 Package: com.mg.dsx
 Version: 0.5.8
 Architecture: iphoneos-arm64
