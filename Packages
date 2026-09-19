@@ -480,6 +480,41 @@ Description: An awesome MobileSubstrate tweak!
 Author: CoolStar
 Name: ClassicFolders 2
 
+Package: cn.llld.appfix
+Version: 1.0.0
+Architecture: iphoneos-arm64e
+Maintainer: 来了老弟
+Installed-Size: 1548
+Pre-Depends: rootless-compat (>= 0.9)
+Depends: firmware (>= 14.0), ellekit | mobilesubstrate
+Filename: ./debs/cn.llld.appfix_1.0.0_iphoneos-arm64e.deb
+Size: 478624
+MD5sum: a4167ba3ce45de6f36c491554e25c7fe
+SHA1: 9c7fce123b87544a4b98635a599da3fbde2f2b16
+SHA256: 3bb3b65e7ae25cdec32e417c547ee3b0fd03c855d5cbf9a6ae03e048378fcfdd
+Section: Development
+Description: appfix 应用修改器 ———  系统应用，用户应用，越狱应用的调整工具（Flex3 思路重写增强，1.0版本之后支持导入Flex3配置），支持自定义脚本代码，配置导出导入，一键开关，视图层级可视化 等等，不收费。
+Tag: purpose::uikit, compatible::ios14
+Author: 来了老弟
+Name: 应用修改器
+
+Package: cn.llld.appfix
+Version: 1.0.0
+Architecture: iphoneos-arm64
+Maintainer: 来了老弟
+Installed-Size: 1548
+Depends: firmware (>= 14.0), ellekit | mobilesubstrate
+Filename: ./debs/cn.llld.appfix_1.0.0_iphoneos-arm64.deb
+Size: 478672
+MD5sum: 9a0bb0bdfbaae4f3bc1f5019ba50698f
+SHA1: b415403205d75e12d6a04134c088794d1a8a3777
+SHA256: de38516eb39b0e60078364bc8f58a4b75706dc56c5e8658b8b841bd43a5f7640
+Section: Development
+Description: appfix 应用修改器 ———  系统应用，用户应用，越狱应用的调整工具（Flex3 思路重写增强，1.0版本之后支持导入Flex3配置），支持自定义脚本代码，配置导出导入，一键开关，视图层级可视化 等等，不收费。
+Tag: purpose::uikit, compatible::ios14
+Author: 来了老弟
+Name: 应用修改器
+
 Package: cn.llld.bbqzr
 Version: 0.1
 Architecture: iphoneos-arm64
@@ -2327,6 +2362,22 @@ Section: 嗨-工具
 Description: 去除微信的公众号/订阅号/文章的广告。
 Author: 秋名山
 Name: 微信免广告(rootless)
+
+Package: com.dao.saily
+Version: 3.0.1
+Architecture: iphoneos-arm64e
+Maintainer: Saily Team
+Pre-Depends: firmware (>= 13.0), dpkg, uikittools
+Conflicts: wiki.qaq.chromatic, wiki.qaq.chromatic.roothide, wiki.qaq.chromatic.rootless
+Filename: ./debs/Saily(RootHide)_3.0.1.deb
+Size: 3401420
+MD5sum: b74d6da4899fffd61339008ef8f801aa
+SHA1: 7403ced167410c169bf003ad34df3df4762c2d4b
+SHA256: 6e0b940ac07c6070dd6f395483fec39da90fe295e78e4f9f39f1b55521a21813
+Section: 嗨-系统
+Description: 现代化、美观、简洁的越狱软件包管理器！
+Author: Saily Team
+Name: Saily(RootHide)
 
 Package: com.daodao.wicellswitcher
 Version: 1.2
@@ -11750,21 +11801,6 @@ Size: 10936
 MD5sum: 3a680cbb6139992f4334eb4feedc82f3
 SHA1: 397b444a72963e53e42fdfdff0a12979bb845a22
 SHA256: 5307bbb2dc6dc8ceaaa8093b31bfefa1d09144cc2362b3b793bece747761057e
-Section: Tweaks
-Description: 适合xina和多巴胺越狱的插件及其配置的一键备份恢复工具。Filza进入/var/mobile/tweak_tool/目录，运行“一键备份和恢复工具.sh”文件即可。
-Author: 预言小猫
-Name: 一键备份和恢复工具-Rootless
-
-Package: tweaktool
-Version: 1.6.4
-Architecture: iphoneos-arm64
-Maintainer: 预言小猫
-Depends: sudo, bash (>= 5.0.3-2), coreutils (>= 8.31-1), grep (>= 3.1-1), sed (>= 4.5-1), gawk (>= 4.2.1-1), tar (>= 1.33-1)
-Filename: ./debs/tweaktool_1.6.4_iphoneos-arm64.deb
-Size: 10960
-MD5sum: 03012d92babf1463fc95604a2032f4d8
-SHA1: f917f38a61441d3b6cad6d9f95dbfe1b7377923f
-SHA256: 55716e8629018ca909aaed12231de7cf5305a670e96592188f5e06fbc61fce49
 Section: Tweaks
 Description: 适合xina和多巴胺越狱的插件及其配置的一键备份恢复工具。Filza进入/var/mobile/tweak_tool/目录，运行“一键备份和恢复工具.sh”文件即可。
 Author: 预言小猫
