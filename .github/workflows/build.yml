@@ -1,21 +1,16 @@
-# 越狱源自动构建：push 之后自动重建 Packages 索引（Packages / .bz2 / .xz）并部署 Pages
 name: Build Repo Index and Deploy Pages
 
 on:
   push:
     branches: ["main"]
 
-  # 允许在 Actions 页面手动触发（比如只想强制重建一次索引）
   workflow_dispatch:
 
-# GITHUB_TOKEN 权限：contents 必须为 write（要把新索引 push 回仓库）；
-# pages / id-token 供 Pages 部署使用
 permissions:
   contents: write
   pages: write
   id-token: write
 
-# 同一时间只跑一个 Pages 部署，但不打断进行中的部署
 concurrency:
   group: "pages"
   cancel-in-progress: false
@@ -30,7 +25,6 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v7.0.1
 
-      # ubuntu-latest 一般自带 dpkg-dev；只有缺失时才安装，避免每次都跑 apt update
       - name: Ensure dpkg-scanpackages is available
         run: |
           if ! command -v dpkg-scanpackages >/dev/null 2>&1; then
@@ -39,9 +33,6 @@ jobs:
           fi
           dpkg-scanpackages --version | head -1
 
-      # 与手机端 update.sh 的三行完全一致：在仓库根目录扫描，
-      # 生成的 Filename 形如 ./debs/xxx.deb
-      # （把扫描目录改成 debs/ 会让 Filename 变成 ./xxx.deb，Sileo 拼出的下载链接会 404）
       - name: Rebuild packages index
         run: |
           set -euo pipefail
@@ -51,7 +42,6 @@ jobs:
           echo "索引条目数：$(grep -c '^Package:' Packages || true)"
           grep -E '^(Package|Version|Architecture):' Packages || true
 
-      # 索引无变化时（例如只改了网页）不提交，避免因空 commit 报错
       - name: Commit index changes
         run: |
           set -euo pipefail
@@ -62,7 +52,6 @@ jobs:
             echo "索引无变化，跳过提交"
           else
             git commit -m "自动更新源索引 [skip ci]"
-            # 兜底：极少数情况下远端有新提交导致 push 被拒，rebase 后重推
             git push || (git pull --rebase --autostash && git push)
           fi
 
@@ -72,7 +61,6 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v5.0.0
         with:
-          # 上传整个仓库
           path: '.'
 
       - name: Deploy to GitHub Pages
