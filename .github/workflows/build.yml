@@ -36,7 +36,7 @@ jobs:
       - name: Rebuild packages index
         run: |
           set -euo pipefail
-          dpkg-scanpackages -m . /dev/null > Packages
+          sudo dpkg-scanpackages -m . /dev/null > Packages
           bzip2 -c Packages > Packages.bz2
           xz -c Packages > Packages.xz
           echo "Index entries: $(grep -c '^Package:' Packages || true)"
