@@ -4102,6 +4102,42 @@ Description: 大师兄去广告弹窗
 Author: M哥
 Name: dsx
 
+Package: com.mg.zhihu
+Version: 0.4.1
+Architecture: iphoneos-arm64
+Maintainer: M哥
+Installed-Size: 88
+Depends: firmware (>= 15.0), mobilesubstrate
+Filename: ./debs/com.mg.zhihu_0.4.1_iphoneos-arm64.deb
+Size: 4234
+MD5sum: fe0869c9da5909fa5166f0c12c40da6e
+SHA1: 4a224da01f45948c8927fb5dcb8578da97b92793
+SHA256: ffd747683c18e5d7a6836675d9edcc80c382eb2f61f74b2648215f8dec21b1ef
+Section: Tweaks
+Priority: optional
+Homepage: https://github.com/wwg135
+Description: 知乎开屏秒进 v0.4.0（轮询隐藏 LaunchAD 开屏窗口）。
+Author: M哥
+Name: 知乎
+
+Package: com.mg.zhihu
+Version: 0.4.1
+Architecture: iphoneos-arm64e
+Maintainer: M哥
+Installed-Size: 88
+Depends: firmware (>= 15.0), mobilesubstrate
+Filename: ./debs/com.mg.zhihu_0.4.1_iphoneos-arm64e.deb
+Size: 4182
+MD5sum: 7f9b7f2195cd58bcfd53af08e131d82c
+SHA1: 753eb0d1a442ec7fc93aa74bc2365482f69ea7c3
+SHA256: 458c8871f32564a5b4d2f4a26e8f15d2b7f1a4ac40678d25538e9b7b9b457889
+Section: Tweaks
+Priority: optional
+Homepage: https://github.com/wwg135
+Description: 知乎开屏秒进 v0.4.0（轮询隐藏 LaunchAD 开屏窗口）。
+Author: M哥
+Name: 知乎
+
 Package: com.mrgcgamer.libgcuniversal
 Version: 1.6.4
 Architecture: iphoneos-arm64
