@@ -4035,6 +4035,42 @@ Description: 买单吧去启动广告
 Author: M哥
 Name: 买单吧NoAd-rootless
 
+Package: com.mg.dsx
+Version: 0.5.8
+Architecture: iphoneos-arm64
+Maintainer: M哥
+Installed-Size: 88
+Depends: firmware (>= 5.0), mobilesubstrate
+Filename: ./debs/com.mg.dsx_0.5.8_iphoneos-arm64.deb
+Size: 6060
+MD5sum: 5962fa141640a35f5542fe7f22853858
+SHA1: 11ef3cb4f08af0184f55669e0b4c4373af0658e8
+SHA256: 88b9205c5c3503c38ebed8d9a0d47af7ff176755d1633588c8e7f947fa80d1a8
+Section: Tweaks
+Priority: optional
+Homepage: https://github.com/wwg135
+Description: 大师兄去广告弹窗
+Author: M哥
+Name: dsx
+
+Package: com.mg.dsx
+Version: 0.5.8
+Architecture: iphoneos-arm64e
+Maintainer: M哥
+Installed-Size: 88
+Depends: firmware (>= 5.0), mobilesubstrate
+Filename: ./debs/com.mg.dsx_0.5.8_iphoneos-arm64e.deb
+Size: 5998
+MD5sum: f653e74cce0d9adb12e8927b9784cd12
+SHA1: 0925e90ef5696e550c28c56c64ce0c8297a29a10
+SHA256: bc2724996086897d6c17cd9c204d689f0b225da8fefd0c172ce271f892a29e09
+Section: Tweaks
+Priority: optional
+Homepage: https://github.com/wwg135
+Description: 大师兄去广告弹窗
+Author: M哥
+Name: dsx
+
 Package: com.mrgcgamer.libgcuniversal
 Version: 1.6.4
 Architecture: iphoneos-arm64
