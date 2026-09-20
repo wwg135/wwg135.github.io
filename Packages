@@ -4137,6 +4137,24 @@ Description: 大师兄去广告弹窗
 Author: M哥
 Name: dsx
 
+Package: com.mg.immortal
+Version: 0.1.0
+Architecture: iphoneos-arm64
+Maintainer: M哥
+Installed-Size: 336
+Depends: firmware (>= 5.0), mobilesubstrate
+Filename: ./debs/com.mg.immortal_0.1.0_iphoneos-arm64.deb
+Size: 45700
+MD5sum: 43f59637fd5040f2eb4c8c90a49f1a4b
+SHA1: dc17bad792d351d48b9c83327fcf16dfc87a7f78
+SHA256: 4ee247bc59279e5921cbecd629ac466cd3c8802dc44ee1ccd3cd07720f738d2e
+Section: Tweaks
+Priority: optional
+Homepage: https://github.com/wwg135
+Description: 防杀后台（注入免越狱）。悬浮按钮切换，防止 App 被系统杀后台。
+Author: M哥
+Name: 防杀后台
+
 Package: com.mg.iqiyi
 Version: 0.2.4
 Architecture: iphoneos-arm64

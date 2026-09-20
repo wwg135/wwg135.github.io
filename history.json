@@ -1,4 +1,5 @@
 {"events":[
+{"type":"added","date":"2026-09-20 16:48","package":"com.mg.immortal_0.1.0_iphoneos-arm64","version":""},
 {"type":"added","date":"2026-09-20 16:47","package":"wiki.qaq.irisin_4.2.10_iphoneos-arm64","version":""},
 {"type":"added","date":"2026-09-20 16:47","package":"wiki.qaq.irisin_4.2.10_iphoneos-arm64e","version":""},
 {"type":"added","date":"2026-09-20 13:39","package":"wiki.qaq.irisin_4.2.7_iphoneos-arm64","version":""},
@@ -47,6 +48,5 @@
 {"type":"added","date":"2025-05-05 00:01","package":"com.huami.wcnicknameavatarstyle_2.2_iphoneos-arm64","version":""},
 {"type":"added","date":"2025-04-27 08:21","package":"com.huami.WCPluginsOrder_1.0-2_iphoneos-arm64","version":""},
 {"type":"added","date":"2025-04-27 08:21","package":"com.huami.dyyy_2.2-4_iphoneos-arm64","version":""},
-{"type":"added","date":"2025-04-26 08:41","package":"com.wwg135.leisu_1.0.2_iphoneos-arm64","version":""},
-{"type":"added","date":"2025-04-26 08:21","package":"com.wwg135.leisu_1.0.2_iphoneos-arm64","version":""}
+{"type":"added","date":"2025-04-26 08:41","package":"com.wwg135.leisu_1.0.2_iphoneos-arm64","version":""}
 ]}
