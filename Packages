@@ -2428,22 +2428,6 @@ Description: 锤子助手插件
 Author: DumpApp
 Name: 锤子助手-Rootless
 
-Package: com.dumpapp.wechat-rootless
-Version: 2.0.4
-Architecture: iphoneos-arm64
-Maintainer: DumpApp
-Installed-Size: 23952
-Depends: mobilesubstrate, firmware (>= 12.0)
-Filename: ./debs/com.dumpapp.wechat-rootless_2.0.4_961211.deb
-Size: 9223312
-MD5sum: 718ae31890f021d60e27024fcf107aa3
-SHA1: 000aebb3968f66e2fb2b5a4f89af480250249244
-SHA256: 5babf285f5f04204e9fc79e975500b4264a580d620f8849766a76f8e83c65861
-Section: 微信插件
-Author: DumpApp
-Icon: file:///Applications/Cydia.app/Sections/Messaging.png
-Name: 锤子助手-Rootless
-
 Package: com.eliassfeir.smartnetwork
 Version: 1.1
 Architecture: iphoneos-arm64
