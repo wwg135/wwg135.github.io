@@ -1,4 +1,6 @@
 {"events":[
+{"type":"added","date":"2026-09-21 00:33","package":"wiki.qaq.irisin_4.3.0_iphoneos-arm64","version":""},
+{"type":"added","date":"2026-09-21 00:33","package":"wiki.qaq.irisin_4.3.0_iphoneos-arm64e","version":""},
 {"type":"added","date":"2026-09-20 23:24","package":"wiki.qaq.irisin_4.2.10_iphoneos-arm64","version":""},
 {"type":"added","date":"2026-09-20 23:24","package":"wiki.qaq.irisin_4.2.10_iphoneos-arm64e","version":""},
 {"type":"added","date":"2026-09-20 19:49","package":"com.mg.llvodprobe_0.3.0_iphoneos-arm64","version":""},
@@ -46,7 +48,5 @@
 {"type":"added","date":"2025-05-14 10:44","package":"com.sergy.immortalizer_2.0.1.1_iphoneos-arm64","version":""},
 {"type":"added","date":"2025-05-05 22:28","package":"com.dopamine.swapforcer_0.0.2-7+debug_iphoneos-arm64","version":""},
 {"type":"added","date":"2025-05-05 22:28","package":"com.wangdonghua.backgroundretainer_0.0.1-6+debug_iphoneos-arm64","version":""},
-{"type":"added","date":"2025-05-05 18:45","package":"com.huami.dyyy_2.2-5_iphoneos-arm64","version":""},
-{"type":"added","date":"2025-05-05 00:01","package":"com.huami.dyyy_2.2-4_iphoneos-arm64","version":""},
-{"type":"added","date":"2025-05-05 00:01","package":"com.huami.dyyy_2.2-5_iphoneos-arm64","version":""}
+{"type":"added","date":"2025-05-05 18:45","package":"com.huami.dyyy_2.2-5_iphoneos-arm64","version":""}
 ]}
