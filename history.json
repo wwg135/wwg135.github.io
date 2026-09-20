@@ -1,4 +1,6 @@
 {"events":[
+{"type":"added","date":"2026-09-20 13:39","package":"wiki.qaq.irisin_4.2.7_iphoneos-arm64","version":""},
+{"type":"added","date":"2026-09-20 13:39","package":"wiki.qaq.irisin_4.2.7_iphoneos-arm64e","version":""},
 {"type":"added","date":"2026-09-20 12:59","package":"com.mg.iqiyi_0.2.4_iphoneos-arm64","version":""},
 {"type":"added","date":"2026-09-20 12:59","package":"com.mg.iqiyi_0.2.4_iphoneos-arm64e","version":""},
 {"type":"removed","date":"2026-09-20 10:18","package":"com.dumpapp.wechat-rootless_2.0.4_961211","version":""},
@@ -46,7 +48,5 @@
 {"type":"added","date":"2025-04-26 08:41","package":"com.wwg135.leisu_1.0.2_iphoneos-arm64","version":""},
 {"type":"added","date":"2025-04-26 08:21","package":"com.wwg135.leisu_1.0.2_iphoneos-arm64","version":""},
 {"type":"added","date":"2025-04-26 08:11","package":"com.huami.WCFullSwipe_1.1_iphoneos-arm64","version":""},
-{"type":"added","date":"2025-04-26 08:11","package":"com.huami.dyenablepanelmodernstyle_1.0.0_iphoneos-arm64","version":""},
-{"type":"added","date":"2025-04-26 08:11","package":"com.huami.dyyy_2.2-2_iphoneos-arm64","version":""},
-{"type":"added","date":"2025-04-26 08:11","package":"com.huami.dyyy_2.2-3_iphoneos-arm64","version":""}
+{"type":"added","date":"2025-04-26 08:11","package":"com.huami.dyenablepanelmodernstyle_1.0.0_iphoneos-arm64","version":""}
 ]}
