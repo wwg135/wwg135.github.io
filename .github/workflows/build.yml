@@ -49,7 +49,8 @@ jobs:
       - name: Generate history
         run: |
           set -euo pipefail
-          git log --diff-filter=A --name-only --pretty=format:"COMMIT|%ad" --date=format:"%Y-%m-%d %H:%M" | \
+          # A=新增, M=修改(覆盖上传), D=删除
+          git log --diff-filter=AM --name-only --pretty=format:"COMMIT|%ad" --date=format:"%Y-%m-%d %H:%M" | \
             awk '/^COMMIT\|/ { date=$0; sub(/^COMMIT\|/, "", date); next } /\.deb$/ { print "added|" date "|" $0 }' > /tmp/events.txt
 
           git log --diff-filter=D --name-only --pretty=format:"COMMIT|%ad" --date=format:"%Y-%m-%d %H:%M" | \
