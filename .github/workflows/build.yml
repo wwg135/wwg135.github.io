@@ -56,7 +56,8 @@ jobs:
             awk '/^COMMIT\|/ { date=$0; sub(/^COMMIT\|/, "", date); next } /\.deb$/ { print "removed|" date "|" $0 }' >> /tmp/events.txt
 
           echo '{"events":[' > history.json
-          sort -r /tmp/events.txt | while IFS='|' read -r type date filepath; do
+          # 只保留最近 50 条
+          sort -r /tmp/events.txt | head -50 | while IFS='|' read -r type date filepath; do
             pkg=$(basename "$filepath" .deb)
             version=$(grep -A2 "^Package: ${pkg}$" Packages 2>/dev/null | grep "^Version:" | head -1 | sed 's/Version: //' || true)
             echo "{\"type\":\"$type\",\"date\":\"$date\",\"package\":\"$pkg\",\"version\":\"$version\"}," >> history.json
@@ -65,7 +66,7 @@ jobs:
           echo ']}' >> history.json
 
           echo "History entries: $(grep -c '"type"' history.json || true)"
-          cat history.json | head -20
+          head -20 history.json
 
       - name: Commit changes
         run: |
@@ -91,3 +92,4 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v5.0.1
+#（注：内容由AI生成）
