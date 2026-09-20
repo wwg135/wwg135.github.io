@@ -1,11 +1,21 @@
 <!DOCTYPE html>
-<html lang="zh-CN" data-theme="dark">
+<html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>wwg135's Repo</title>
+    <title>wwg135's Repo - iOS 越狱软件源</title>
+    <meta name="description" content="wwg135 的 iOS 越狱 APT 软件源，支持 Sileo / Saily 一键添加。">
+    <meta property="og:title" content="wwg135's Repo">
+    <meta property="og:description" content="iOS 越狱 APT 软件源，一键添加到 Sileo / Saily。">
+    <meta property="og:type" content="website">
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230f3460'/%3E%3Ctext x='32' y='44' font-size='32' text-anchor='middle' fill='%234fc3f7' font-weight='bold'%3EW%3C/text%3E%3C/svg%3E">
     <script>
+        // 提前设置主题，避免闪烁
+        (function() {
+            const saved = localStorage.getItem('repo-theme');
+            if (saved) document.documentElement.setAttribute('data-theme', saved);
+            else document.documentElement.setAttribute('data-theme', 'dark');
+        })();
         addEventListener("load", function () {
             setTimeout(hideURLbar, 0);
         }, false);
@@ -29,6 +39,7 @@
             --input-bg: rgba(0,0,0,0.3);
             --modal-bg: #1e2a45;
             --divider: rgba(255,255,255,0.08);
+            --skeleton: rgba(255,255,255,0.08);
         }
         :root[data-theme="light"] {
             --bg-gradient: linear-gradient(135deg, #f5f7fa 0%, #e8ecf1 50%, #d7e3f4 100%);
@@ -43,6 +54,7 @@
             --input-bg: rgba(0,0,0,0.05);
             --modal-bg: #ffffff;
             --divider: rgba(0,0,0,0.08);
+            --skeleton: rgba(0,0,0,0.06);
         }
         * {
             margin: 0;
@@ -223,11 +235,29 @@
             border-bottom: 1px solid var(--divider);
             display: flex;
             justify-content: space-between;
-            align-items: flex-start;
+            align-items: center;
             gap: 12px;
         }
         .pkg-item:last-child {
             border-bottom: none;
+        }
+        .pkg-icon {
+            width: 44px;
+            height: 44px;
+            border-radius: 10px;
+            flex-shrink: 0;
+            background: var(--accent-bg);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            color: var(--accent);
+            overflow: hidden;
+        }
+        .pkg-icon img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
         .pkg-info {
             flex: 1;
@@ -252,6 +282,9 @@
             color: var(--text-secondary);
             margin-top: 4px;
             line-height: 1.4;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
         }
         .pkg-download-btn {
             flex-shrink: 0;
@@ -269,6 +302,37 @@
             transition: all 0.2s;
             min-height: 36px;
             white-space: nowrap;
+        }
+        /* 骨架屏 */
+        .skeleton-item {
+            padding: 12px 0;
+            border-bottom: 1px solid var(--divider);
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        .skeleton-icon {
+            width: 44px;
+            height: 44px;
+            border-radius: 10px;
+            background: var(--skeleton);
+            flex-shrink: 0;
+        }
+        .skeleton-lines {
+            flex: 1;
+        }
+        .skeleton-line {
+            height: 12px;
+            border-radius: 6px;
+            background: var(--skeleton);
+            margin-bottom: 8px;
+        }
+        .skeleton-line.short {
+            width: 40%;
+        }
+        .skeleton-line.title {
+            width: 60%;
+            height: 14px;
         }
         .loading {
             text-align: center;
@@ -347,6 +411,25 @@
         .detail-value.mono {
             font-family: "SF Mono", Monaco, monospace;
             font-size: 13px;
+            word-break: break-all;
+        }
+        .detail-icon {
+            width: 60px;
+            height: 60px;
+            border-radius: 14px;
+            background: var(--accent-bg);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 28px;
+            color: var(--accent);
+            margin-bottom: 16px;
+            overflow: hidden;
+        }
+        .detail-icon img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
         .version-item {
             padding: 12px 14px;
@@ -374,6 +457,22 @@
         .version-download-icon {
             color: var(--accent);
             font-size: 18px;
+        }
+        .copy-link-btn {
+            width: 100%;
+            margin-top: 8px;
+            background: var(--accent-bg);
+            border: 1px solid var(--accent-border);
+            color: var(--accent);
+            padding: 12px;
+            border-radius: 10px;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
         }
         .modal-close {
             width: 100%;
@@ -453,7 +552,28 @@
             </div>
             <input type="text" class="search-box" id="searchInput" placeholder="搜索软件包..." oninput="applyFilters()">
             <div class="pkg-list" id="pkgList">
-                <div class="loading">加载中...</div>
+                <!-- 骨架屏 -->
+                <div class="skeleton-item">
+                    <div class="skeleton-icon"></div>
+                    <div class="skeleton-lines">
+                        <div class="skeleton-line title"></div>
+                        <div class="skeleton-line short"></div>
+                    </div>
+                </div>
+                <div class="skeleton-item">
+                    <div class="skeleton-icon"></div>
+                    <div class="skeleton-lines">
+                        <div class="skeleton-line title"></div>
+                        <div class="skeleton-line short"></div>
+                    </div>
+                </div>
+                <div class="skeleton-item">
+                    <div class="skeleton-icon"></div>
+                    <div class="skeleton-lines">
+                        <div class="skeleton-line title"></div>
+                        <div class="skeleton-line short"></div>
+                    </div>
+                </div>
             </div>
         </div>
 
@@ -475,7 +595,6 @@
         </div>
     </div>
 
-    <!-- 版本选择弹窗 -->
     <div class="modal-mask" id="versionModal">
         <div class="modal">
             <div class="modal-title" id="versionModalTitle">选择版本下载</div>
@@ -484,11 +603,14 @@
         </div>
     </div>
 
-    <!-- 包详情弹窗 -->
     <div class="modal-mask" id="detailModal">
         <div class="modal">
+            <div id="detailIconWrap"></div>
             <div class="modal-title" id="detailModalTitle">包详情</div>
             <div id="detailContent"></div>
+            <button class="copy-link-btn" id="copyLinkBtn" onclick="copyDownloadLink()">
+                <i class="fa fa-copy"></i> 复制下载链接
+            </button>
             <button class="modal-close" onclick="closeModal('detailModal')">关闭</button>
         </div>
     </div>
@@ -498,6 +620,13 @@
     <script>
         const REPO_BASE = 'https://wwg135.github.io/';
         let allPackages = [];
+        let currentDetailPkg = null;
+
+        // 初始化主题图标
+        (function() {
+            const theme = document.documentElement.getAttribute('data-theme');
+            document.getElementById('themeIcon').className = theme === 'dark' ? 'fa fa-moon-o' : 'fa fa-sun-o';
+        })();
 
         function toggleTheme() {
             const root = document.documentElement;
@@ -505,6 +634,7 @@
             const next = current === 'dark' ? 'light' : 'dark';
             root.setAttribute('data-theme', next);
             document.getElementById('themeIcon').className = next === 'dark' ? 'fa fa-moon-o' : 'fa fa-sun-o';
+            localStorage.setItem('repo-theme', next);
         }
 
         function copyUrl() {
@@ -522,6 +652,22 @@
             });
         }
 
+        function copyDownloadLink() {
+            if (!currentDetailPkg || !currentDetailPkg.versions[0]) return;
+            const url = REPO_BASE + currentDetailPkg.versions[0].filename;
+            navigator.clipboard.writeText(url).then(() => {
+                showToast('下载链接已复制');
+            }).catch(() => {
+                const textarea = document.createElement('textarea');
+                textarea.value = url;
+                document.body.appendChild(textarea);
+                textarea.select();
+                document.execCommand('copy');
+                document.body.removeChild(textarea);
+                showToast('下载链接已复制');
+            });
+        }
+
         function showToast(msg) {
             const toast = document.getElementById('toast');
             toast.textContent = msg;
@@ -529,6 +675,29 @@
             setTimeout(() => {
                 toast.classList.remove('show');
             }, 2000);
+        }
+
+        function formatSize(installedSize) {
+            if (!installedSize) return '';
+            const kb = parseFloat(installedSize);
+            if (isNaN(kb)) return '';
+            if (kb >= 1024) {
+                return (kb / 1024).toFixed(1) + ' MB';
+            }
+            return Math.round(kb) + ' KB';
+        }
+
+        // 简单版本号比较，返回 -1/0/1
+        function compareVersions(a, b) {
+            const partsA = a.split(/[._-]/);
+            const partsB = b.split(/[._-]/);
+            const len = Math.max(partsA.length, partsB.length);
+            for (let i = 0; i < len; i++) {
+                const na = parseInt(partsA[i]) || 0;
+                const nb = parseInt(partsB[i]) || 0;
+                if (na !== nb) return nb - na;
+            }
+            return 0;
         }
 
         async function loadPackages() {
@@ -553,6 +722,8 @@
                         if (line.startsWith('Section:')) pkg.section = line.substring(8).trim();
                         if (line.startsWith('Depends:')) pkg.depends = line.substring(8).trim();
                         if (line.startsWith('Author:')) pkg.author = line.substring(7).trim();
+                        if (line.startsWith('Installed-Size:')) pkg.size = line.substring(15).trim();
+                        if (line.startsWith('Icon:')) pkg.icon = line.substring(5).trim();
                     });
                     if (pkg.name) rawPkgs.push(pkg);
                 });
@@ -565,6 +736,7 @@
                             desc: pkg.desc || '',
                             section: pkg.section || '未分类',
                             author: pkg.author || '',
+                            icon: pkg.icon || '',
                             versions: []
                         };
                     }
@@ -572,11 +744,17 @@
                         version: pkg.version,
                         arch: pkg.arch || 'iphoneos-arm',
                         filename: pkg.filename || '',
-                        depends: pkg.depends || ''
+                        depends: pkg.depends || '',
+                        size: pkg.size || ''
                     });
                 });
 
                 allPackages = Object.values(pkgMap);
+                // 每个包的版本按新版本在前排序
+                allPackages.forEach(p => {
+                    p.versions.sort((a, b) => compareVersions(a.version, b.version));
+                });
+
                 document.getElementById('pkgCount').textContent = `共 ${allPackages.length} 个包`;
                 populateFilters();
                 applyFilters();
@@ -613,12 +791,8 @@
             const arch = document.getElementById('archFilter').value;
 
             let filtered = allPackages;
-            if (section) {
-                filtered = filtered.filter(p => p.section === section);
-            }
-            if (arch) {
-                filtered = filtered.filter(p => p.versions.some(v => v.arch === arch));
-            }
+            if (section) filtered = filtered.filter(p => p.section === section);
+            if (arch) filtered = filtered.filter(p => p.versions.some(v => v.arch === arch));
             if (keyword) {
                 filtered = filtered.filter(p =>
                     p.name.toLowerCase().includes(keyword) ||
@@ -626,6 +800,13 @@
                 );
             }
             renderPackageList(filtered);
+        }
+
+        function renderIcon(pkg, size) {
+            if (pkg.icon) {
+                return `<div class="pkg-icon" style="${size === 'large' ? 'width:60px;height:60px;font-size:28px' : ''}"><img src="${pkg.icon}" onerror="this.style.display='none';this.parentNode.innerHTML='<i class=\\'fa fa-cube\\'></i>'"></div>`;
+            }
+            return `<div class="pkg-icon" style="${size === 'large' ? 'width:60px;height:60px;font-size:28px' : ''}"><i class="fa fa-cube"></i></div>`;
         }
 
         function renderPackageList(packages) {
@@ -639,16 +820,20 @@
                 const latest = pkg.versions[0];
                 const vCount = pkg.versions.length;
                 const btnText = vCount > 1 ? `下载 (${vCount})` : '下载';
+                const sizeText = latest && latest.size ? formatSize(latest.size) : '';
+                const metaParts = [
+                    `v${latest ? latest.version : '?'}`,
+                    pkg.section,
+                    latest ? latest.arch : '',
+                    sizeText
+                ].filter(Boolean);
 
                 return `
                     <div class="pkg-item">
+                        ${renderIcon(pkg)}
                         <div class="pkg-info" onclick="showDetailModal('${pkg.name.replace(/'/g, "\\'")}')">
-                            <div class="pkg-name">${pkg.name} <i class="fa fa-angle-right" style="font-size:12px;opacity:0.6"></i></div>
-                            <div class="pkg-meta">
-                                <span>v${latest ? latest.version : '?'}</span>
-                                <span>${pkg.section}</span>
-                                <span>${latest ? latest.arch : ''}</span>
-                            </div>
+                            <div class="pkg-name">${pkg.name}</div>
+                            <div class="pkg-meta">${metaParts.map(m => `<span>${m}</span>`).join('')}</div>
                             ${pkg.desc ? `<div class="pkg-desc">${pkg.desc}</div>` : ''}
                         </div>
                         <button class="pkg-download-btn" onclick="event.stopPropagation();showVersionModal('${pkg.name.replace(/'/g, "\\'")}')">
@@ -663,8 +848,11 @@
         function showDetailModal(pkgName) {
             const pkg = allPackages.find(p => p.name === pkgName);
             if (!pkg) return;
+            currentDetailPkg = pkg;
 
             const latest = pkg.versions[0];
+            document.getElementById('detailIconWrap').innerHTML = renderIcon(pkg, 'large');
+
             let html = `
                 <div class="detail-section">
                     <div class="detail-label">包名</div>
@@ -683,6 +871,10 @@
                     <div class="detail-value">${pkg.author || '未知'}</div>
                 </div>
                 <div class="detail-section">
+                    <div class="detail-label">大小</div>
+                    <div class="detail-value">${latest && latest.size ? formatSize(latest.size) : '未知'}</div>
+                </div>
+                <div class="detail-section">
                     <div class="detail-label">依赖</div>
                     <div class="detail-value mono">${latest && latest.depends ? latest.depends : '无'}</div>
                 </div>
@@ -691,10 +883,11 @@
                     <div style="margin-top:8px">
             `;
             pkg.versions.forEach(v => {
+                const sz = v.size ? formatSize(v.size) : '';
                 html += `
                     <div class="version-item" onclick="downloadFile('${v.filename.replace(/'/g, "\\'")}')">
                         <div class="version-info">
-                            <div class="version-num">v${v.version}</div>
+                            <div class="version-num">v${v.version}${sz ? ` · ${sz}` : ''}</div>
                             <div class="version-arch">${v.arch}</div>
                         </div>
                         <i class="fa fa-download version-download-icon"></i>
@@ -715,15 +908,17 @@
             document.getElementById('versionModalTitle').textContent = `${pkg.name} - 选择版本`;
             const listEl = document.getElementById('versionList');
 
-            listEl.innerHTML = pkg.versions.map(v => `
+            listEl.innerHTML = pkg.versions.map(v => {
+                const sz = v.size ? formatSize(v.size) : '';
+                return `
                 <div class="version-item" onclick="downloadFile('${v.filename.replace(/'/g, "\\'")}')">
                     <div class="version-info">
-                        <div class="version-num">v${v.version}</div>
+                        <div class="version-num">v${v.version}${sz ? ` · ${sz}` : ''}</div>
                         <div class="version-arch">架构: ${v.arch}</div>
                     </div>
                     <i class="fa fa-download version-download-icon"></i>
                 </div>
-            `).join('');
+            `}).join('');
 
             document.getElementById('versionModal').classList.add('show');
         }
