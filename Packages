@@ -11806,6 +11806,36 @@ Description: 适合xina和多巴胺越狱的插件及其配置的一键备份恢
 Author: 预言小猫
 Name: 一键备份和恢复工具-Rootless
 
+Package: tweaktool
+Version: 2.0.0-beta
+Architecture: iphoneos-arm64
+Maintainer: 预言小猫
+Depends: sudo, bash (>= 5.0.3-2), coreutils (>= 8.31-1), grep (>= 3.1-1), sed (>= 4.5-1), gawk (>= 4.2.1-1), tar (>= 1.33-1)
+Filename: ./debs/一键备份和恢复工具-Rootless_2.0.0-beta_iphoneos-arm64.deb
+Size: 10580
+MD5sum: b6a95d49b6880a820f07e7f59d5bd5b6
+SHA1: 00f00ff5a660eee04e85db57ce98660a3178a0d9
+SHA256: 52a20a4e38901bbe5260dad3668aece3aea35cd915c0ffc086f3751f698b12a0
+Section: Tweaks
+Description: 适合xina和多巴胺越狱的插件及其配置的一键备份恢复工具。Filza进入/var/mobile/tweak_tool/目录，运行“一键备份和恢复工具.sh”文件即可。
+Author: 预言小猫
+Name: 一键备份和恢复工具-Rootless
+
+Package: tweaktool
+Version: 2.0.0-beta
+Architecture: iphoneos-arm64e
+Maintainer: 预言小猫
+Depends: sudo, bash (>= 5.0.3-2), coreutils (>= 8.31-1), grep (>= 3.1-1), sed (>= 4.5-1), gawk (>= 4.2.1-1), tar (>= 1.33-1)
+Filename: ./debs/一键备份和恢复工具-Relaxin_2.0.0-beta_iphoneos-arm64e.deb
+Size: 11412
+MD5sum: 1afa9051f0968eae6bdfee667d749714
+SHA1: c0f5138fd913c9c3b019b509cc6428938eb86ca0
+SHA256: 42eb88ced480b1bd4b99489d0e7909dba4cd665fccb7a3b172d0705b548f49ff
+Section: Tweaks
+Description: 适合Relaxin越狱的插件及其配置的一键备份恢复工具（隐根版）。Filza进入/var/mobile/tweak_tool/目录，运行“一键备份和恢复工具.sh”文件即可。
+Author: 预言小猫
+Name: 一键备份和恢复工具-Relaxin
+
 Package: twitter.nowesr1.photosplus
 Version: 0.0.1
 Architecture: iphoneos-arm64
