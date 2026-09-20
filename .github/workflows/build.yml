@@ -3,7 +3,10 @@ name: Build Repo Index and Deploy Pages
 on:
   push:
     branches: ["main"]
-
+    paths-ignore:
+      - 'Packages'
+      - 'Packages.bz2'
+      - 'Packages.xz'
   workflow_dispatch:
 
 permissions:
@@ -13,7 +16,7 @@ permissions:
 
 concurrency:
   group: "pages"
-  cancel-in-progress: false
+  cancel-in-progress: true
 
 jobs:
   build-and-deploy:
@@ -35,6 +38,7 @@ jobs:
           dpkg-scanpackages --version | head -1
 
       - name: Rebuild packages
+        run: |
           set -euo pipefail
           sudo dpkg-scanpackages -m . /dev/null > Packages
           bzip2 -c Packages > Packages.bz2
