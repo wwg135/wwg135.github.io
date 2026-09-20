@@ -20,6 +20,7 @@ jobs:
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
+
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -33,8 +34,7 @@ jobs:
           fi
           dpkg-scanpackages --version | head -1
 
-      - name: Rebuild packages index
-        run: |
+      - name: Rebuild packages
           set -euo pipefail
           sudo dpkg-scanpackages -m . /dev/null > Packages
           bzip2 -c Packages > Packages.bz2
@@ -42,16 +42,16 @@ jobs:
           echo "Index entries: $(grep -c '^Package:' Packages || true)"
           grep -E '^(Package|Version|Architecture):' Packages || true
 
-      - name: Commit index changes
+      - name: Commit changes
         run: |
           set -euo pipefail
           git config user.name  "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add Packages Packages.bz2 Packages.xz
           if git diff --cached --quiet; then
-            echo "Index unchanged, skipping commit"
+            echo "unchanged, skipping commit"
           else
-            git commit -m "Auto-update package index [skip ci]"
+            git commit -m "Auto-update package"
             git push || (git pull --rebase --autostash && git push)
           fi
 
