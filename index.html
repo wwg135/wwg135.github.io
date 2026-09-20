@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-    <title>wwg135's Repo - iOS 越狱软件源</title>
-    <meta name="description" content="wwg135 的 iOS 越狱 APT 软件源，支持 Sileo / Saily 一键添加。">
+    <title>wwg135's Repo - iOS 越狱插件源</title>
+    <meta name="description" content="wwg135 的 iOS 越狱 APT 插件源，支持 Sileo / Irisin 一键添加。">
     <meta name="theme-color" content="#0f3460">
     <meta property="og:title" content="wwg135's Repo">
-    <meta property="og:description" content="iOS 越狱 APT 软件源，一键添加到 Sileo / Saily。">
+    <meta property="og:description" content="iOS 越狱 APT 插件源，一键添加到 Sileo / Irisin。">
     <meta property="og:type" content="website">
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230f3460'/%3E%3Ctext x='32' y='44' font-size='32' text-anchor='middle' fill='%234fc3f7' font-weight='bold'%3EW%3C/text%3E%3C/svg%3E">
     <link rel="apple-touch-icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230f3460'/%3E%3Ctext x='32' y='44' font-size='32' text-anchor='middle' fill='%234fc3f7' font-weight='bold'%3EW%3C/text%3E%3C/svg%3E">
@@ -272,24 +272,24 @@
                 <h1>wwg135's Repo</h1>
                 <button class="theme-toggle" onclick="toggleTheme()"><i class="fa fa-moon-o" id="themeIcon"></i></button>
             </div>
-            <p>iOS 越狱软件源</p>
+            <p>iOS 越狱插件源</p>
         </div>
 
         <div class="card">
-            <div class="card-title"><div class="card-title-left"><i class="fa fa-link"></i>软件源地址</div></div>
+            <div class="card-title"><div class="card-title-left"><i class="fa fa-link"></i>插件源地址</div></div>
             <div class="source-url">
                 <span id="repoUrl">https://wwg135.github.io/</span>
                 <button class="copy-btn" onclick="copyUrl()"><i class="fa fa-copy"></i> 复制</button>
             </div>
             <div class="action-buttons">
                 <a href="sileo://source/https://wwg135.github.io/" class="action-btn btn-sileo"><i class="fa fa-download"></i>添加到 Sileo</a>
-                <a href="apt-repo://source/https://wwg135.github.io/" class="action-btn btn-saily"><i class="fa fa-download"></i>添加到 Saily</a>
+                <a href="irisin://repository/add?url=https://wwg135.github.io/" class="action-btn btn-saily"><i class="fa fa-download"></i>添加到 Irisin</a>
             </div>
         </div>
 
         <div class="card">
             <div class="card-title">
-                <div class="card-title-left"><i class="fa fa-cube"></i>软件包列表</div>
+                <div class="card-title-left"><i class="fa fa-cube"></i>插件包列表</div>
                 <span class="pkg-count" id="pkgCount">共 0 个包</span>
             </div>
             <div class="filter-row">
@@ -300,7 +300,7 @@
                 <div class="sort-btn active" data-sort="name" onclick="setSort('name')">按名称</div>
                 <div class="sort-btn" data-sort="new" onclick="setSort('new')">按最新</div>
             </div>
-            <input type="text" class="search-box" id="searchInput" placeholder="搜索软件包..." oninput="applyFilters()">
+            <input type="text" class="search-box" id="searchInput" placeholder="搜索插件包..." oninput="applyFilters()">
             <div class="pkg-list" id="pkgList">
                 <div class="skeleton-item"><div class="skeleton-icon"></div><div class="skeleton-lines"><div class="skeleton-line title"></div><div class="skeleton-line short"></div></div></div>
                 <div class="skeleton-item"><div class="skeleton-icon"></div><div class="skeleton-lines"><div class="skeleton-line title"></div><div class="skeleton-line short"></div></div></div>
@@ -420,10 +420,9 @@
             return 0;
         }
 
-        // NEW 标记：localStorage 记录已看过的包版本
         function isNew(pkgName, version) {
             const seen = localStorage.getItem('repo-seen-' + pkgName);
-            return seen !== version; // 没看过或版本不同 = NEW
+            return seen !== version;
         }
         function markSeen(pkgName, version) {
             localStorage.setItem('repo-seen-' + pkgName, version);
@@ -453,7 +452,6 @@
                     let currentKey = '';
                     lines.forEach(line => {
                         if (line.startsWith(' ') && currentKey) {
-                            // 续行字段（Screenshots 多行）
                             pkg[currentKey] += '\n' + line.trim();
                             return;
                         }
@@ -485,7 +483,6 @@
                     }
                 });
 
-                // 合并同名包多版本
                 const pkgMap = {};
                 rawPkgs.forEach(pkg => {
                     if (!pkgMap[pkg.name]) pkgMap[pkg.name] = pkg;
@@ -500,7 +497,6 @@
                 applyFilters();
                 loadDownloadCounts();
 
-                // 深链接：?pkg=xxx
                 const params = new URLSearchParams(location.search);
                 const deepPkg = params.get('pkg');
                 if (deepPkg && allPackages.find(p => p.name === deepPkg)) {
@@ -578,7 +574,6 @@
 
         async function loadDownloadCounts() {
             try {
-                // 批量获取所有包的下载次数
                 const names = allPackages.map(p => p.name);
                 for (const name of names) {
                     try {
@@ -589,7 +584,7 @@
                         }
                     } catch (e) {}
                 }
-                applyFilters(); // 刷新列表显示次数
+                applyFilters();
             } catch (e) {}
         }
 
@@ -602,7 +597,6 @@
 
             document.getElementById('detailIconWrap').innerHTML = renderIcon(pkg, true);
 
-            // 依赖跳转：解析依赖，如果在源里就变成链接
             let dependsHtml = '无';
             if (latest && latest.depends) {
                 const deps = parseDepends(latest.depends);
@@ -614,7 +608,6 @@
                 }).join(', ');
             }
 
-            // 截图
             let screenshotsHtml = '';
             if (pkg.screenshots && pkg.screenshots.length > 0) {
                 screenshotsHtml = `
@@ -654,9 +647,8 @@
             document.getElementById('detailContent').innerHTML = html;
             document.getElementById('detailModal').classList.add('show');
 
-            // 深链接更新 URL
             history.replaceState(null, '', '?pkg=' + encodeURIComponent(pkgName));
-            applyFilters(); // 刷新 NEW 标记
+            applyFilters();
         }
 
         function showVersionModal(pkgName) {
@@ -689,7 +681,6 @@
             window.open(REPO_BASE + filename, '_blank');
             closeModal('versionModal'); closeModal('detailModal');
             showToast('开始下载...');
-            // 计数+1
             if (pkgName) {
                 fetch(`https://api.counterapi.dev/v1/wwg135repo/${encodeURIComponent(pkgName)}/up`, { mode: 'cors' }).catch(() => {});
             }
