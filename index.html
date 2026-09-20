@@ -111,11 +111,12 @@
             white-space: nowrap; margin-left: 10px; transition: all 0.2s; min-width: 88px; min-height: 44px;
         }
         .history-refresh-btn {
-            display: inline-flex; align-items: center; justify-content: center; gap: 5px;
-            min-width: auto !important; min-height: 36px !important; padding: 8px 14px !important;
-            font-size: 12px !important; margin-left: 0 !important;
+            display: inline-flex !important; align-items: center !important; justify-content: center !important; gap: 5px;
+            width: auto !important; min-width: auto !important; min-height: 36px !important;
+            padding: 8px 14px !important; font-size: 12px !important; margin-left: 0 !important;
+            box-sizing: border-box !important; line-height: 1 !important;
         }
-        .history-refresh-btn.spinning i { animation: spin 0.8s linear infinite; }
+        .history-refresh-btn.spinning i { animation: spin 0.8s linear infinite; display: inline-block; }
         @keyframes spin { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
         .action-buttons { display: flex; flex-direction: column; gap: 10px; }
         .action-btn {
@@ -137,7 +138,7 @@
             font-size: 16px; margin-bottom: 14px; outline: none;
         }
         .search-box::placeholder { color: var(--text-muted); }
-        .pkg-list { max-height: 400px; overflow-y: auto; }
+        .pkg-list { max-height: 400px; overflow-y: auto; overflow-x: hidden; -webkit-overflow-scrolling: touch; touch-action: pan-y; }
         .pkg-item {
             padding: 12px 0; border-bottom: 1px solid var(--divider);
             display: flex; justify-content: space-between; align-items: center; gap: 12px;
