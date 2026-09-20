@@ -354,6 +354,7 @@
         let allPackages = [];
         let currentDetailPkg = null;
         let currentSort = 'name';
+        let downloadCounts = {};
 
         (function() {
             const theme = document.documentElement.getAttribute('data-theme');
@@ -497,6 +498,7 @@
                 document.getElementById('pkgCount').textContent = `共 ${allPackages.length} 个包`;
                 populateFilters();
                 applyFilters();
+                loadDownloadCounts();
 
                 // 深链接：?pkg=xxx
                 const params = new URLSearchParams(location.search);
@@ -555,7 +557,9 @@
                 const vCount = pkg.versions.length;
                 const btnText = vCount > 1 ? `下载 (${vCount})` : '下载';
                 const sz = latest && latest.downloadSize ? formatSize(latest.downloadSize) : '';
-                const metaParts = [`v${latest ? latest.version : '?'}`, pkg.section, latest ? latest.arch : '', sz].filter(Boolean);
+                const dlCount = downloadCounts[pkg.name] || 0;
+                const dlText = dlCount > 0 ? `↓${dlCount}` : '';
+                const metaParts = [`v${latest ? latest.version : '?'}`, pkg.section, latest ? latest.arch : '', sz, dlText].filter(Boolean);
                 const newBadge = (latest && isNew(pkg.name, latest.version)) ? '<span class="new-badge">NEW</span>' : '';
                 return `
                     <div class="pkg-item">
@@ -570,6 +574,23 @@
                         </button>
                     </div>`;
             }).join('');
+        }
+
+        async function loadDownloadCounts() {
+            try {
+                // 批量获取所有包的下载次数
+                const names = allPackages.map(p => p.name);
+                for (const name of names) {
+                    try {
+                        const res = await fetch(`https://api.counterapi.dev/v1/wwg135repo/${encodeURIComponent(name)}/`, { mode: 'cors' });
+                        if (res.ok) {
+                            const data = await res.json();
+                            downloadCounts[name] = data.count || 0;
+                        }
+                    } catch (e) {}
+                }
+                applyFilters(); // 刷新列表显示次数
+            } catch (e) {}
         }
 
         function showDetailModal(pkgName) {
@@ -619,7 +640,7 @@
             pkg.versions.forEach(v => {
                 const sz = v.downloadSize ? formatSize(v.downloadSize) : '';
                 html += `
-                    <div class="version-item" onclick="downloadFile('${v.filename.replace(/'/g, "\\'")}')">
+                    <div class="version-item" onclick="downloadFile('${v.filename.replace(/'/g, "\\'")}', '${pkg.name.replace(/'/g, "\\'")}')">
                         <div class="version-info">
                             <div class="version-num">v${v.version}${sz ? ` · ${sz}` : ''}</div>
                             <div class="version-arch">${v.arch}</div>
@@ -645,7 +666,7 @@
             document.getElementById('versionList').innerHTML = pkg.versions.map(v => {
                 const sz = v.downloadSize ? formatSize(v.downloadSize) : '';
                 return `
-                <div class="version-item" onclick="downloadFile('${v.filename.replace(/'/g, "\\'")}')">
+                <div class="version-item" onclick="downloadFile('${v.filename.replace(/'/g, "\\'")}', '${pkg.name.replace(/'/g, "\\'")}')">
                     <div class="version-info">
                         <div class="version-num">v${v.version}${sz ? ` · ${sz}` : ''}</div>
                         <div class="version-arch">架构: ${v.arch}</div>
@@ -663,11 +684,15 @@
             }
         }
 
-        function downloadFile(filename) {
+        function downloadFile(filename, pkgName) {
             if (!filename) { showToast('下载地址未找到'); return; }
             window.open(REPO_BASE + filename, '_blank');
             closeModal('versionModal'); closeModal('detailModal');
             showToast('开始下载...');
+            // 计数+1
+            if (pkgName) {
+                fetch(`https://api.counterapi.dev/v1/wwg135repo/${encodeURIComponent(pkgName)}/up`, { mode: 'cors' }).catch(() => {});
+            }
         }
 
         document.querySelectorAll('.modal-mask').forEach(m => {
