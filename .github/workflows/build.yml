@@ -1,4 +1,5 @@
 name: Build Repo Index and Deploy Pages
+
 on:
   push:
     branches: ["main"]
@@ -22,12 +23,11 @@ jobs:
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
+
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v7.0.1
-        with:
-          fetch-depth: 0
 
       - name: Ensure dpkg-scanpackages is available
         run: |
@@ -40,7 +40,7 @@ jobs:
       - name: Rebuild packages
         run: |
           set -euo pipefail
-          dpkg-scanpackages -m . /dev/null > Packages
+          sudo dpkg-scanpackages -m . /dev/null > Packages
           bzip2 -c Packages > Packages.bz2
           xz -c Packages > Packages.xz
           echo "Index entries: $(grep -c '^Package:' Packages || true)"
@@ -55,8 +55,8 @@ jobs:
           if git diff --cached --quiet; then
             echo "unchanged, skipping commit"
           else
-            git commit -m "Auto-update package index [skip ci]"
-            git push
+            git commit -m "Auto-update package"
+            git push || (git pull --rebase --autostash && git push)
           fi
 
       - name: Setup Pages
