@@ -2,26 +2,24 @@
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <title>wwg135's Repo - iOS 越狱软件源</title>
     <meta name="description" content="wwg135 的 iOS 越狱 APT 软件源，支持 Sileo / Saily 一键添加。">
+    <meta name="theme-color" content="#0f3460">
     <meta property="og:title" content="wwg135's Repo">
     <meta property="og:description" content="iOS 越狱 APT 软件源，一键添加到 Sileo / Saily。">
     <meta property="og:type" content="website">
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230f3460'/%3E%3Ctext x='32' y='44' font-size='32' text-anchor='middle' fill='%234fc3f7' font-weight='bold'%3EW%3C/text%3E%3C/svg%3E">
+    <link rel="apple-touch-icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230f3460'/%3E%3Ctext x='32' y='44' font-size='32' text-anchor='middle' fill='%234fc3f7' font-weight='bold'%3EW%3C/text%3E%3C/svg%3E">
     <script>
-        // 提前设置主题，避免闪烁
         (function() {
             const saved = localStorage.getItem('repo-theme');
-            if (saved) document.documentElement.setAttribute('data-theme', saved);
-            else document.documentElement.setAttribute('data-theme', 'dark');
+            document.documentElement.setAttribute('data-theme', saved || 'dark');
         })();
         addEventListener("load", function () {
             setTimeout(hideURLbar, 0);
         }, false);
-        function hideURLbar() {
-            window.scrollTo(0, 1);
-        }
+        function hideURLbar() { window.scrollTo(0, 1); }
     </script>
     <link rel="stylesheet" href="./css/style.css" type="text/css" media="all" />
     <link href="css/font-awesome.min.css" rel="stylesheet">
@@ -40,6 +38,7 @@
             --modal-bg: #1e2a45;
             --divider: rgba(255,255,255,0.08);
             --skeleton: rgba(255,255,255,0.08);
+            --new-badge: #ff3b30;
         }
         :root[data-theme="light"] {
             --bg-gradient: linear-gradient(135deg, #f5f7fa 0%, #e8ecf1 50%, #d7e3f4 100%);
@@ -55,12 +54,9 @@
             --modal-bg: #ffffff;
             --divider: rgba(0,0,0,0.08);
             --skeleton: rgba(0,0,0,0.06);
+            --new-badge: #ff3b30;
         }
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
             background: var(--bg-gradient);
@@ -69,430 +65,171 @@
             padding: 20px;
             transition: background 0.3s;
         }
-        .container {
-            max-width: 480px;
-            margin: 0 auto;
-        }
-        .header {
-            text-align: center;
-            padding: 30px 0 20px;
-        }
+        .container { max-width: 480px; margin: 0 auto; }
+        .header { text-align: center; padding: 30px 0 20px; }
         .header-top {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 16px;
+            display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px;
         }
         .theme-toggle {
-            background: var(--card-bg);
-            border: 1px solid var(--card-border);
-            color: var(--text-primary);
-            width: 44px;
-            height: 44px;
-            border-radius: 12px;
-            cursor: pointer;
-            font-size: 18px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            background: var(--card-bg); border: 1px solid var(--card-border); color: var(--text-primary);
+            width: 44px; height: 44px; border-radius: 12px; cursor: pointer; font-size: 18px;
+            display: flex; align-items: center; justify-content: center;
         }
         .header h1 {
-            font-size: 28px;
-            font-weight: 700;
-            margin-bottom: 8px;
+            font-size: 28px; font-weight: 700; margin-bottom: 8px;
+            color: var(--text-primary) !important;
         }
-        .header p {
-            color: var(--text-secondary);
-            font-size: 14px;
-        }
+        .header p { color: var(--text-secondary); font-size: 14px; }
         .card {
-            background: var(--card-bg);
-            backdrop-filter: blur(20px);
-            border-radius: 16px;
-            padding: 20px;
-            margin-bottom: 16px;
-            border: 1px solid var(--card-border);
+            background: var(--card-bg); backdrop-filter: blur(20px); border-radius: 16px;
+            padding: 20px; margin-bottom: 16px; border: 1px solid var(--card-border);
         }
         .card-title {
-            font-size: 16px;
-            font-weight: 600;
-            margin-bottom: 16px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
+            font-size: 16px; font-weight: 600; margin-bottom: 16px;
+            display: flex; align-items: center; justify-content: space-between;
         }
-        .card-title-left {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-        .card-title i {
-            color: var(--accent);
-        }
-        .pkg-count {
-            font-size: 12px;
-            color: var(--text-muted);
-            font-weight: normal;
-        }
+        .card-title-left { display: flex; align-items: center; gap: 8px; }
+        .card-title i { color: var(--accent); }
+        .pkg-count { font-size: 12px; color: var(--text-muted); font-weight: normal; }
         .source-url {
-            background: var(--input-bg);
-            border-radius: 10px;
-            padding: 12px 14px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 16px;
+            background: var(--input-bg); border-radius: 10px; padding: 12px 14px;
+            display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px;
         }
         .source-url span {
-            font-family: "SF Mono", Monaco, monospace;
-            font-size: 14px;
-            color: var(--accent);
-            word-break: break-all;
+            font-family: "SF Mono", Monaco, monospace; font-size: 14px; color: var(--accent); word-break: break-all;
         }
         .copy-btn {
-            background: var(--accent);
-            color: #fff;
-            border: none;
-            border-radius: 8px;
-            padding: 12px 16px;
-            font-size: 14px;
-            font-weight: 600;
-            cursor: pointer;
-            white-space: nowrap;
-            margin-left: 10px;
-            transition: all 0.2s;
-            min-width: 88px;
-            min-height: 44px;
+            background: var(--accent); color: #fff; border: none; border-radius: 8px;
+            padding: 12px 16px; font-size: 14px; font-weight: 600; cursor: pointer;
+            white-space: nowrap; margin-left: 10px; transition: all 0.2s; min-width: 88px; min-height: 44px;
         }
-        .action-buttons {
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-        }
+        .action-buttons { display: flex; flex-direction: column; gap: 10px; }
         .action-btn {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 10px;
-            padding: 14px;
-            border-radius: 12px;
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 15px;
-            transition: all 0.2s;
+            display: flex; align-items: center; justify-content: center; gap: 10px;
+            padding: 14px; border-radius: 12px; text-decoration: none; font-weight: 600; font-size: 15px;
         }
-        .btn-sileo {
-            background: linear-gradient(135deg, #007aff, #5856d6);
-            color: #fff;
-        }
-        .btn-saily {
-            background: linear-gradient(135deg, #34c759, #30d158);
-            color: #fff;
-        }
-        .btn-telegram {
-            background: linear-gradient(135deg, #0088cc, #00a8e8);
-            color: #fff;
-        }
-        .filter-row {
-            display: flex;
-            gap: 8px;
-            margin-bottom: 12px;
-        }
+        .btn-sileo { background: linear-gradient(135deg, #007aff, #5856d6); color: #fff; }
+        .btn-saily { background: linear-gradient(135deg, #34c759, #30d158); color: #fff; }
+        .btn-telegram { background: linear-gradient(135deg, #0088cc, #00a8e8); color: #fff; }
+        .filter-row { display: flex; gap: 8px; margin-bottom: 12px; }
         .filter-select {
-            flex: 1;
-            background: var(--input-bg);
-            border: 1px solid var(--card-border);
-            border-radius: 8px;
-            padding: 10px 12px;
-            color: var(--text-primary);
-            font-size: 14px;
-            outline: none;
+            flex: 1; background: var(--input-bg); border: 1px solid var(--card-border);
+            border-radius: 8px; padding: 10px 12px; color: var(--text-primary); font-size: 14px; outline: none;
         }
-        .filter-select option {
-            color: #1a1a2e;
-        }
+        .filter-select option { color: #1a1a2e; }
         .search-box {
-            width: 100%;
-            background: var(--input-bg);
-            border: 1px solid var(--card-border);
-            border-radius: 10px;
-            padding: 12px 14px;
-            color: var(--text-primary);
-            font-size: 16px;
-            margin-bottom: 14px;
-            outline: none;
-            transition: border-color 0.2s;
+            width: 100%; background: var(--input-bg); border: 1px solid var(--card-border);
+            border-radius: 10px; padding: 12px 14px; color: var(--text-primary);
+            font-size: 16px; margin-bottom: 14px; outline: none;
         }
-        .search-box::placeholder {
-            color: var(--text-muted);
-        }
-        .pkg-list {
-            max-height: 400px;
-            overflow-y: auto;
-        }
+        .search-box::placeholder { color: var(--text-muted); }
+        .pkg-list { max-height: 400px; overflow-y: auto; }
         .pkg-item {
-            padding: 12px 0;
-            border-bottom: 1px solid var(--divider);
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            gap: 12px;
+            padding: 12px 0; border-bottom: 1px solid var(--divider);
+            display: flex; justify-content: space-between; align-items: center; gap: 12px;
         }
-        .pkg-item:last-child {
-            border-bottom: none;
-        }
+        .pkg-item:last-child { border-bottom: none; }
         .pkg-icon {
-            width: 44px;
-            height: 44px;
-            border-radius: 10px;
-            flex-shrink: 0;
-            background: var(--accent-bg);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 20px;
-            color: var(--accent);
-            overflow: hidden;
+            width: 44px; height: 44px; border-radius: 10px; flex-shrink: 0;
+            background: var(--accent-bg); display: flex; align-items: center; justify-content: center;
+            font-size: 20px; color: var(--accent); overflow: hidden;
         }
-        .pkg-icon img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-        .pkg-info {
-            flex: 1;
-            min-width: 0;
-            cursor: pointer;
-        }
+        .pkg-icon img { width: 100%; height: 100%; object-fit: cover; }
+        .pkg-info { flex: 1; min-width: 0; cursor: pointer; }
         .pkg-name {
-            font-weight: 600;
-            font-size: 14px;
-            margin-bottom: 4px;
-            color: var(--accent);
+            font-weight: 600; font-size: 14px; margin-bottom: 4px; color: var(--accent);
+            display: flex; align-items: center; gap: 6px;
         }
-        .pkg-meta {
-            font-size: 12px;
-            color: var(--text-muted);
-            display: flex;
-            gap: 10px;
-            flex-wrap: wrap;
+        .new-badge {
+            background: var(--new-badge); color: #fff; font-size: 10px; font-weight: 700;
+            padding: 2px 6px; border-radius: 6px; line-height: 1;
         }
+        .pkg-meta { font-size: 12px; color: var(--text-muted); display: flex; gap: 10px; flex-wrap: wrap; }
         .pkg-desc {
-            font-size: 13px;
-            color: var(--text-secondary);
-            margin-top: 4px;
-            line-height: 1.4;
-            white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
+            font-size: 13px; color: var(--text-secondary); margin-top: 4px; line-height: 1.4;
+            white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
         }
         .pkg-download-btn {
-            flex-shrink: 0;
-            background: var(--accent-bg);
-            color: var(--accent);
-            border: 1px solid var(--accent-border);
-            border-radius: 8px;
-            padding: 8px 12px;
-            font-size: 12px;
-            font-weight: 600;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            gap: 4px;
-            transition: all 0.2s;
-            min-height: 36px;
-            white-space: nowrap;
+            flex-shrink: 0; background: var(--accent-bg); color: var(--accent);
+            border: 1px solid var(--accent-border); border-radius: 8px; padding: 8px 12px;
+            font-size: 12px; font-weight: 600; cursor: pointer; display: flex; align-items: center;
+            gap: 4px; min-height: 36px; white-space: nowrap;
         }
-        /* 骨架屏 */
         .skeleton-item {
-            padding: 12px 0;
-            border-bottom: 1px solid var(--divider);
-            display: flex;
-            align-items: center;
-            gap: 12px;
+            padding: 12px 0; border-bottom: 1px solid var(--divider);
+            display: flex; align-items: center; gap: 12px;
         }
-        .skeleton-icon {
-            width: 44px;
-            height: 44px;
-            border-radius: 10px;
-            background: var(--skeleton);
-            flex-shrink: 0;
-        }
-        .skeleton-lines {
-            flex: 1;
-        }
-        .skeleton-line {
-            height: 12px;
-            border-radius: 6px;
-            background: var(--skeleton);
-            margin-bottom: 8px;
-        }
-        .skeleton-line.short {
-            width: 40%;
-        }
-        .skeleton-line.title {
-            width: 60%;
-            height: 14px;
-        }
-        .loading {
-            text-align: center;
-            color: var(--text-muted);
-            font-size: 14px;
-            padding: 20px;
-        }
-        .footer {
-            text-align: center;
-            padding: 20px 0;
-            color: var(--text-muted);
-            font-size: 13px;
-        }
+        .skeleton-icon { width: 44px; height: 44px; border-radius: 10px; background: var(--skeleton); flex-shrink: 0; }
+        .skeleton-lines { flex: 1; }
+        .skeleton-line { height: 12px; border-radius: 6px; background: var(--skeleton); margin-bottom: 8px; }
+        .skeleton-line.short { width: 40%; }
+        .skeleton-line.title { width: 60%; height: 14px; }
+        .loading { text-align: center; color: var(--text-muted); font-size: 14px; padding: 20px; }
+        .footer { text-align: center; padding: 20px 0; color: var(--text-muted); font-size: 13px; }
         .toast {
-            position: fixed;
-            bottom: 30px;
-            left: 50%;
+            position: fixed; bottom: 30px; left: 50%;
             transform: translateX(-50%) translateY(100px);
-            background: rgba(0,0,0,0.8);
-            color: #fff;
-            padding: 12px 24px;
-            border-radius: 10px;
-            font-size: 14px;
-            opacity: 0;
-            transition: all 0.3s;
-            pointer-events: none;
-            z-index: 1000;
+            background: rgba(0,0,0,0.8); color: #fff; padding: 12px 24px;
+            border-radius: 10px; font-size: 14px; opacity: 0;
+            transition: all 0.3s; pointer-events: none; z-index: 1000;
         }
-        .toast.show {
-            opacity: 1;
-            transform: translateX(-50%) translateY(0);
-        }
-
+        .toast.show { opacity: 1; transform: translateX(-50%) translateY(0); }
         .modal-mask {
-            position: fixed;
-            inset: 0;
-            background: rgba(0,0,0,0.6);
-            backdrop-filter: blur(4px);
-            z-index: 999;
-            display: none;
-            align-items: center;
-            justify-content: center;
-            padding: 20px;
+            position: fixed; inset: 0; background: rgba(0,0,0,0.6); backdrop-filter: blur(4px);
+            z-index: 999; display: none; align-items: center; justify-content: center; padding: 20px;
         }
-        .modal-mask.show {
-            display: flex;
-        }
+        .modal-mask.show { display: flex; }
         .modal {
-            background: var(--modal-bg);
-            border-radius: 16px;
-            padding: 24px;
-            width: 100%;
-            max-width: 420px;
-            max-height: 85vh;
-            overflow-y: auto;
+            background: var(--modal-bg); border-radius: 16px; padding: 24px;
+            width: 100%; max-width: 420px; max-height: 85vh; overflow-y: auto;
         }
-        .modal-title {
-            font-size: 16px;
-            font-weight: 600;
-            margin-bottom: 16px;
-            color: var(--text-primary);
-        }
-        .detail-section {
-            margin-bottom: 14px;
-        }
-        .detail-label {
-            font-size: 12px;
-            color: var(--text-muted);
-            margin-bottom: 4px;
-        }
-        .detail-value {
-            font-size: 14px;
-            color: var(--text-primary);
-            line-height: 1.5;
-        }
+        .modal-title { font-size: 16px; font-weight: 600; margin-bottom: 16px; color: var(--text-primary); }
+        .detail-section { margin-bottom: 14px; }
+        .detail-label { font-size: 12px; color: var(--text-muted); margin-bottom: 4px; }
+        .detail-value { font-size: 14px; color: var(--text-primary); line-height: 1.5; }
         .detail-value.mono {
-            font-family: "SF Mono", Monaco, monospace;
-            font-size: 13px;
-            word-break: break-all;
+            font-family: "SF Mono", Monaco, monospace; font-size: 13px; word-break: break-all;
         }
+        .dep-link { color: var(--accent); cursor: pointer; text-decoration: underline; }
         .detail-icon {
-            width: 60px;
-            height: 60px;
-            border-radius: 14px;
-            background: var(--accent-bg);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 28px;
-            color: var(--accent);
-            margin-bottom: 16px;
-            overflow: hidden;
+            width: 60px; height: 60px; border-radius: 14px; background: var(--accent-bg);
+            display: flex; align-items: center; justify-content: center;
+            font-size: 28px; color: var(--accent); margin-bottom: 16px; overflow: hidden;
         }
-        .detail-icon img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
+        .detail-icon img { width: 100%; height: 100%; object-fit: cover; }
+        .screenshots { display: flex; gap: 8px; overflow-x: auto; padding-bottom: 8px; }
+        .screenshots img {
+            width: 120px; height: 200px; object-fit: cover; border-radius: 10px; flex-shrink: 0;
         }
         .version-item {
-            padding: 12px 14px;
-            background: var(--accent-bg);
-            border-radius: 10px;
-            margin-bottom: 8px;
-            cursor: pointer;
-            transition: all 0.2s;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
+            padding: 12px 14px; background: var(--accent-bg); border-radius: 10px;
+            margin-bottom: 8px; cursor: pointer; display: flex; justify-content: space-between; align-items: center;
         }
-        .version-info {
-            flex: 1;
-        }
-        .version-num {
-            font-weight: 600;
-            font-size: 14px;
-            margin-bottom: 2px;
-        }
-        .version-arch {
-            font-size: 12px;
-            color: var(--text-muted);
-        }
-        .version-download-icon {
-            color: var(--accent);
-            font-size: 18px;
-        }
+        .version-info { flex: 1; }
+        .version-num { font-weight: 600; font-size: 14px; margin-bottom: 2px; }
+        .version-arch { font-size: 12px; color: var(--text-muted); }
+        .version-download-icon { color: var(--accent); font-size: 18px; }
         .copy-link-btn {
-            width: 100%;
-            margin-top: 8px;
-            background: var(--accent-bg);
-            border: 1px solid var(--accent-border);
-            color: var(--accent);
-            padding: 12px;
-            border-radius: 10px;
-            font-size: 14px;
-            font-weight: 600;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 8px;
+            width: 100%; margin-top: 8px; background: var(--accent-bg);
+            border: 1px solid var(--accent-border); color: var(--accent);
+            padding: 12px; border-radius: 10px; font-size: 14px; font-weight: 600;
+            cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 8px;
         }
         .modal-close {
-            width: 100%;
-            margin-top: 8px;
-            background: var(--input-bg);
-            border: none;
-            color: var(--text-primary);
-            padding: 12px;
-            border-radius: 10px;
-            font-size: 14px;
-            font-weight: 600;
-            cursor: pointer;
+            width: 100%; margin-top: 8px; background: var(--input-bg);
+            border: none; color: var(--text-primary); padding: 12px; border-radius: 10px;
+            font-size: 14px; font-weight: 600; cursor: pointer;
         }
+        .sort-row { display: flex; gap: 8px; margin-bottom: 12px; }
+        .sort-btn {
+            flex: 1; background: var(--input-bg); border: 1px solid var(--card-border);
+            border-radius: 8px; padding: 12px 8px; color: var(--text-secondary); font-size: 13px;
+            cursor: pointer; text-align: center; min-height: 44px;
+        }
+        .sort-btn.active { background: var(--accent-bg); color: var(--accent); border-color: var(--accent-border); }
         @media (max-width: 380px) {
-            .header h1 {
-                font-size: 24px;
-            }
-            .card {
-                padding: 16px;
-            }
+            .header h1 { font-size: 24px; }
+            .card { padding: 16px; }
         }
     </style>
 </head>
@@ -501,98 +238,51 @@
         <div class="header">
             <div class="header-top">
                 <div style="width:44px"></div>
-                <h1 style="margin:0">wwg135's Repo</h1>
-                <button class="theme-toggle" onclick="toggleTheme()" id="themeBtn">
-                    <i class="fa fa-moon-o" id="themeIcon"></i>
-                </button>
+                <h1>wwg135's Repo</h1>
+                <button class="theme-toggle" onclick="toggleTheme()"><i class="fa fa-moon-o" id="themeIcon"></i></button>
             </div>
             <p>iOS 越狱软件源</p>
         </div>
 
         <div class="card">
-            <div class="card-title">
-                <div class="card-title-left">
-                    <i class="fa fa-link"></i>
-                    软件源地址
-                </div>
-            </div>
+            <div class="card-title"><div class="card-title-left"><i class="fa fa-link"></i>软件源地址</div></div>
             <div class="source-url">
                 <span id="repoUrl">https://wwg135.github.io/</span>
-                <button class="copy-btn" onclick="copyUrl()">
-                    <i class="fa fa-copy"></i> 复制
-                </button>
+                <button class="copy-btn" onclick="copyUrl()"><i class="fa fa-copy"></i> 复制</button>
             </div>
             <div class="action-buttons">
-                <a href="sileo://source/https://wwg135.github.io/" class="action-btn btn-sileo">
-                    <i class="fa fa-download"></i>
-                    添加到 Sileo
-                </a>
-                <a href="apt-repo://source/https://wwg135.github.io/" class="action-btn btn-saily">
-                    <i class="fa fa-download"></i>
-                    添加到 Saily
-                </a>
+                <a href="sileo://source/https://wwg135.github.io/" class="action-btn btn-sileo"><i class="fa fa-download"></i>添加到 Sileo</a>
+                <a href="apt-repo://source/https://wwg135.github.io/" class="action-btn btn-saily"><i class="fa fa-download"></i>添加到 Saily</a>
             </div>
         </div>
 
         <div class="card">
             <div class="card-title">
-                <div class="card-title-left">
-                    <i class="fa fa-cube"></i>
-                    软件包列表
-                </div>
+                <div class="card-title-left"><i class="fa fa-cube"></i>软件包列表</div>
                 <span class="pkg-count" id="pkgCount">共 0 个包</span>
             </div>
             <div class="filter-row">
-                <select class="filter-select" id="sectionFilter" onchange="applyFilters()">
-                    <option value="">全部分类</option>
-                </select>
-                <select class="filter-select" id="archFilter" onchange="applyFilters()">
-                    <option value="">全部架构</option>
-                </select>
+                <select class="filter-select" id="sectionFilter" onchange="applyFilters()"><option value="">全部分类</option></select>
+                <select class="filter-select" id="archFilter" onchange="applyFilters()"><option value="">全部架构</option></select>
+            </div>
+            <div class="sort-row">
+                <div class="sort-btn active" data-sort="name" onclick="setSort('name')">按名称</div>
+                <div class="sort-btn" data-sort="new" onclick="setSort('new')">按最新</div>
             </div>
             <input type="text" class="search-box" id="searchInput" placeholder="搜索软件包..." oninput="applyFilters()">
             <div class="pkg-list" id="pkgList">
-                <!-- 骨架屏 -->
-                <div class="skeleton-item">
-                    <div class="skeleton-icon"></div>
-                    <div class="skeleton-lines">
-                        <div class="skeleton-line title"></div>
-                        <div class="skeleton-line short"></div>
-                    </div>
-                </div>
-                <div class="skeleton-item">
-                    <div class="skeleton-icon"></div>
-                    <div class="skeleton-lines">
-                        <div class="skeleton-line title"></div>
-                        <div class="skeleton-line short"></div>
-                    </div>
-                </div>
-                <div class="skeleton-item">
-                    <div class="skeleton-icon"></div>
-                    <div class="skeleton-lines">
-                        <div class="skeleton-line title"></div>
-                        <div class="skeleton-line short"></div>
-                    </div>
-                </div>
+                <div class="skeleton-item"><div class="skeleton-icon"></div><div class="skeleton-lines"><div class="skeleton-line title"></div><div class="skeleton-line short"></div></div></div>
+                <div class="skeleton-item"><div class="skeleton-icon"></div><div class="skeleton-lines"><div class="skeleton-line title"></div><div class="skeleton-line short"></div></div></div>
+                <div class="skeleton-item"><div class="skeleton-icon"></div><div class="skeleton-lines"><div class="skeleton-line title"></div><div class="skeleton-line short"></div></div></div>
             </div>
         </div>
 
         <div class="card">
-            <div class="card-title">
-                <div class="card-title-left">
-                    <i class="fa fa-telegram"></i>
-                    关注我们
-                </div>
-            </div>
-            <a href="https://t.me/TrollStorePro" target="_blank" class="action-btn btn-telegram">
-                <i class="fa fa-paper-plane"></i>
-                关注 TG 巨魔商店Pro--M哥
-            </a>
+            <div class="card-title"><div class="card-title-left"><i class="fa fa-telegram"></i>关注我们</div></div>
+            <a href="https://t.me/TrollStorePro" target="_blank" class="action-btn btn-telegram"><i class="fa fa-paper-plane"></i>关注 TG 巨魔商店Pro--M哥</a>
         </div>
 
-        <div class="footer">
-            Powered by wwg135 · GitHub Pages
-        </div>
+        <div class="footer">Powered by wwg135 · GitHub Pages</div>
     </div>
 
     <div class="modal-mask" id="versionModal">
@@ -608,9 +298,7 @@
             <div id="detailIconWrap"></div>
             <div class="modal-title" id="detailModalTitle">包详情</div>
             <div id="detailContent"></div>
-            <button class="copy-link-btn" id="copyLinkBtn" onclick="copyDownloadLink()">
-                <i class="fa fa-copy"></i> 复制下载链接
-            </button>
+            <button class="copy-link-btn" onclick="copyDownloadLink()"><i class="fa fa-copy"></i> 复制下载链接</button>
             <button class="modal-close" onclick="closeModal('detailModal')">关闭</button>
         </div>
     </div>
@@ -621,8 +309,8 @@
         const REPO_BASE = 'https://wwg135.github.io/';
         let allPackages = [];
         let currentDetailPkg = null;
+        let currentSort = 'name';
 
-        // 初始化主题图标
         (function() {
             const theme = document.documentElement.getAttribute('data-theme');
             document.getElementById('themeIcon').className = theme === 'dark' ? 'fa fa-moon-o' : 'fa fa-sun-o';
@@ -630,87 +318,84 @@
 
         function toggleTheme() {
             const root = document.documentElement;
-            const current = root.getAttribute('data-theme');
-            const next = current === 'dark' ? 'light' : 'dark';
+            const next = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
             root.setAttribute('data-theme', next);
             document.getElementById('themeIcon').className = next === 'dark' ? 'fa fa-moon-o' : 'fa fa-sun-o';
             localStorage.setItem('repo-theme', next);
         }
 
+        function setSort(s) {
+            currentSort = s;
+            document.querySelectorAll('.sort-btn').forEach(b => b.classList.toggle('active', b.dataset.sort === s));
+            applyFilters();
+        }
+
         function copyUrl() {
             const url = document.getElementById('repoUrl').textContent;
-            navigator.clipboard.writeText(url).then(() => {
-                showToast('已复制到剪贴板');
-            }).catch(() => {
-                const textarea = document.createElement('textarea');
-                textarea.value = url;
-                document.body.appendChild(textarea);
-                textarea.select();
-                document.execCommand('copy');
-                document.body.removeChild(textarea);
-                showToast('已复制到剪贴板');
+            navigator.clipboard.writeText(url).then(() => showToast('已复制到剪贴板')).catch(() => {
+                const t = document.createElement('textarea'); t.value = url; document.body.appendChild(t); t.select();
+                document.execCommand('copy'); document.body.removeChild(t); showToast('已复制到剪贴板');
             });
         }
 
         function copyDownloadLink() {
             if (!currentDetailPkg || !currentDetailPkg.versions[0]) return;
             const url = REPO_BASE + currentDetailPkg.versions[0].filename;
-            navigator.clipboard.writeText(url).then(() => {
-                showToast('下载链接已复制');
-            }).catch(() => {
-                const textarea = document.createElement('textarea');
-                textarea.value = url;
-                document.body.appendChild(textarea);
-                textarea.select();
-                document.execCommand('copy');
-                document.body.removeChild(textarea);
-                showToast('下载链接已复制');
+            navigator.clipboard.writeText(url).then(() => showToast('下载链接已复制')).catch(() => {
+                const t = document.createElement('textarea'); t.value = url; document.body.appendChild(t); t.select();
+                document.execCommand('copy'); document.body.removeChild(t); showToast('下载链接已复制');
             });
         }
 
         function showToast(msg) {
             const toast = document.getElementById('toast');
-            toast.textContent = msg;
-            toast.classList.add('show');
-            setTimeout(() => {
-                toast.classList.remove('show');
-            }, 2000);
+            toast.textContent = msg; toast.classList.add('show');
+            setTimeout(() => toast.classList.remove('show'), 2000);
         }
 
         function formatSize(bytes) {
-            if (!bytes && bytes !== 0) return '';
-            const b = parseFloat(bytes);
-            if (isNaN(b)) return '';
-            if (b >= 1024 * 1024 * 1024) return (b / 1024 / 1024 / 1024).toFixed(2) + ' GB';
-            if (b >= 1024 * 1024) return (b / 1024 / 1024).toFixed(1) + ' MB';
+            if (bytes === null || bytes === undefined || bytes === '') return '';
+            const b = parseFloat(bytes); if (isNaN(b)) return '';
+            if (b >= 1073741824) return (b / 1073741824).toFixed(2) + ' GB';
+            if (b >= 1048576) return (b / 1048576).toFixed(1) + ' MB';
             if (b >= 1024) return (b / 1024).toFixed(1) + ' KB';
             return Math.round(b) + ' B';
         }
-
         function formatInstalledSize(kb) {
-            if (!kb && kb !== 0) return '';
-            const k = parseFloat(kb);
-            if (isNaN(k)) return '';
-            return formatSize(k * 1024);
+            if (!kb) return ''; return formatSize(parseFloat(kb) * 1024);
         }
 
-        // 简单版本号比较，返回 -1/0/1
         function compareVersions(a, b) {
-            const partsA = a.split(/[._-]/);
-            const partsB = b.split(/[._-]/);
-            const len = Math.max(partsA.length, partsB.length);
+            const pa = a.split(/[._-]/), pb = b.split(/[._-]/);
+            const len = Math.max(pa.length, pb.length);
             for (let i = 0; i < len; i++) {
-                const na = parseInt(partsA[i]) || 0;
-                const nb = parseInt(partsB[i]) || 0;
+                const na = parseInt(pa[i]) || 0, nb = parseInt(pb[i]) || 0;
                 if (na !== nb) return nb - na;
             }
             return 0;
         }
 
+        // NEW 标记：localStorage 记录已看过的包版本
+        function isNew(pkgName, version) {
+            const seen = localStorage.getItem('repo-seen-' + pkgName);
+            return seen !== version; // 没看过或版本不同 = NEW
+        }
+        function markSeen(pkgName, version) {
+            localStorage.setItem('repo-seen-' + pkgName, version);
+        }
+
+        function parseDepends(dependsStr) {
+            if (!dependsStr) return [];
+            return dependsStr.split(',').map(d => {
+                const m = d.trim().match(/^([a-zA-Z0-9_+\.\-]+)/);
+                return m ? m[1] : null;
+            }).filter(Boolean);
+        }
+
         async function loadPackages() {
             try {
-                const response = await fetch('Packages');
-                if (!response.ok) throw new Error('Failed to load');
+                const response = await fetch('Packages', { cache: 'no-cache' });
+                if (!response.ok) throw new Error('Failed');
                 const text = await response.text();
 
                 const rawPkgs = [];
@@ -720,137 +405,126 @@
                     if (!block.trim()) return;
                     const lines = block.split('\n');
                     const pkg = {};
+                    let currentKey = '';
                     lines.forEach(line => {
-                        if (line.startsWith('Package:')) pkg.name = line.substring(9).trim();
-                        if (line.startsWith('Version:')) pkg.version = line.substring(8).trim();
-                        if (line.startsWith('Description:')) pkg.desc = line.substring(12).trim();
-                        if (line.startsWith('Architecture:')) pkg.arch = line.substring(13).trim();
-                        if (line.startsWith('Filename:')) pkg.filename = line.substring(9).trim();
-                        if (line.startsWith('Section:')) pkg.section = line.substring(8).trim();
-                        if (line.startsWith('Depends:')) pkg.depends = line.substring(8).trim();
-                        if (line.startsWith('Author:')) pkg.author = line.substring(7).trim();
-                        if (line.startsWith('Installed-Size:')) pkg.installedSize = line.substring(15).trim();
-                        if (line.startsWith('Size:')) pkg.downloadSize = line.substring(5).trim();
-                        if (line.startsWith('Icon:')) pkg.icon = line.substring(5).trim();
+                        if (line.startsWith(' ') && currentKey) {
+                            // 续行字段（Screenshots 多行）
+                            pkg[currentKey] += '\n' + line.trim();
+                            return;
+                        }
+                        const idx = line.indexOf(':');
+                        if (idx === -1) return;
+                        const key = line.substring(0, idx).trim();
+                        const val = line.substring(idx + 1).trim();
+                        currentKey = key;
+                        pkg[key] = val;
                     });
-                    if (pkg.name) rawPkgs.push(pkg);
+                    if (pkg.Package) {
+                        rawPkgs.push({
+                            name: pkg.Package,
+                            desc: pkg.Description || '',
+                            section: pkg.Section || '未分类',
+                            author: pkg.Author || '',
+                            icon: pkg.Icon || '',
+                            screenshots: pkg.Screenshots ? pkg.Screenshots.split('\n').map(s => s.trim()).filter(Boolean) : [],
+                            versions: []
+                        });
+                        const v = {};
+                        if (pkg.Version) v.version = pkg.Version;
+                        if (pkg.Architecture) v.arch = pkg.Architecture;
+                        if (pkg.Filename) v.filename = pkg.Filename;
+                        if (pkg.Depends) v.depends = pkg.Depends;
+                        if (pkg.Size) v.downloadSize = pkg.Size;
+                        if (pkg['Installed-Size']) v.installedSize = pkg['Installed-Size'];
+                        rawPkgs[rawPkgs.length - 1].versions.push(v);
+                    }
                 });
 
+                // 合并同名包多版本
                 const pkgMap = {};
                 rawPkgs.forEach(pkg => {
-                    if (!pkgMap[pkg.name]) {
-                        pkgMap[pkg.name] = {
-                            name: pkg.name,
-                            desc: pkg.desc || '',
-                            section: pkg.section || '未分类',
-                            author: pkg.author || '',
-                            icon: pkg.icon || '',
-                            versions: []
-                        };
-                    }
-                    pkgMap[pkg.name].versions.push({
-                        version: pkg.version,
-                        arch: pkg.arch || 'iphoneos-arm',
-                        filename: pkg.filename || '',
-                        depends: pkg.depends || '',
-                        downloadSize: pkg.downloadSize || '',
-                        installedSize: pkg.installedSize || ''
-                    });
+                    if (!pkgMap[pkg.name]) pkgMap[pkg.name] = pkg;
+                    else pkgMap[pkg.name].versions.push(...pkg.versions);
                 });
 
                 allPackages = Object.values(pkgMap);
-                // 每个包的版本按新版本在前排序
-                allPackages.forEach(p => {
-                    p.versions.sort((a, b) => compareVersions(a.version, b.version));
-                });
+                allPackages.forEach(p => p.versions.sort((a, b) => compareVersions(a.version, b.version)));
 
                 document.getElementById('pkgCount').textContent = `共 ${allPackages.length} 个包`;
                 populateFilters();
                 applyFilters();
+
+                // 深链接：?pkg=xxx
+                const params = new URLSearchParams(location.search);
+                const deepPkg = params.get('pkg');
+                if (deepPkg && allPackages.find(p => p.name === deepPkg)) {
+                    setTimeout(() => showDetailModal(deepPkg), 300);
+                }
             } catch (e) {
-                document.getElementById('pkgList').innerHTML =
-                    '<div class="loading">无法加载软件包列表</div>';
+                document.getElementById('pkgList').innerHTML = '<div class="loading">无法加载软件包列表</div>';
             }
         }
 
         function populateFilters() {
             const sections = [...new Set(allPackages.map(p => p.section))].sort();
             const archs = [...new Set(allPackages.flatMap(p => p.versions.map(v => v.arch)))].sort();
-
-            const sectionSel = document.getElementById('sectionFilter');
-            sections.forEach(s => {
-                const opt = document.createElement('option');
-                opt.value = s;
-                opt.textContent = s;
-                sectionSel.appendChild(opt);
-            });
-
-            const archSel = document.getElementById('archFilter');
-            archs.forEach(a => {
-                const opt = document.createElement('option');
-                opt.value = a;
-                opt.textContent = a;
-                archSel.appendChild(opt);
-            });
+            const sSel = document.getElementById('sectionFilter');
+            sections.forEach(s => { const o = document.createElement('option'); o.value = s; o.textContent = s; sSel.appendChild(o); });
+            const aSel = document.getElementById('archFilter');
+            archs.forEach(a => { const o = document.createElement('option'); o.value = a; o.textContent = a; aSel.appendChild(o); });
         }
 
         function applyFilters() {
             const keyword = document.getElementById('searchInput').value.trim().toLowerCase();
             const section = document.getElementById('sectionFilter').value;
             const arch = document.getElementById('archFilter').value;
-
-            let filtered = allPackages;
+            let filtered = [...allPackages];
             if (section) filtered = filtered.filter(p => p.section === section);
             if (arch) filtered = filtered.filter(p => p.versions.some(v => v.arch === arch));
-            if (keyword) {
-                filtered = filtered.filter(p =>
-                    p.name.toLowerCase().includes(keyword) ||
-                    (p.desc && p.desc.toLowerCase().includes(keyword))
-                );
+            if (keyword) filtered = filtered.filter(p =>
+                p.name.toLowerCase().includes(keyword) || (p.desc && p.desc.toLowerCase().includes(keyword)));
+            if (currentSort === 'new') {
+                filtered.sort((a, b) => {
+                    const an = isNew(a.name, a.versions[0]?.version) ? 1 : 0;
+                    const bn = isNew(b.name, b.versions[0]?.version) ? 1 : 0;
+                    return bn - an;
+                });
+            } else {
+                filtered.sort((a, b) => a.name.localeCompare(b.name));
             }
             renderPackageList(filtered);
         }
 
-        function renderIcon(pkg, size) {
+        function renderIcon(pkg, large) {
+            const style = large ? 'width:60px;height:60px;font-size:28px' : '';
             if (pkg.icon) {
-                return `<div class="pkg-icon" style="${size === 'large' ? 'width:60px;height:60px;font-size:28px' : ''}"><img src="${pkg.icon}" onerror="this.style.display='none';this.parentNode.innerHTML='<i class=\\'fa fa-cube\\'></i>'"></div>`;
+                return `<div class="pkg-icon" style="${style}"><img src="${pkg.icon}" onerror="this.style.display='none';this.parentNode.innerHTML='<i class=\\'fa fa-cube\\'></i>'"></div>`;
             }
-            return `<div class="pkg-icon" style="${size === 'large' ? 'width:60px;height:60px;font-size:28px' : ''}"><i class="fa fa-cube"></i></div>`;
+            return `<div class="pkg-icon" style="${style}"><i class="fa fa-cube"></i></div>`;
         }
 
         function renderPackageList(packages) {
             const listEl = document.getElementById('pkgList');
-            if (packages.length === 0) {
-                listEl.innerHTML = '<div class="loading">没有匹配的软件包</div>';
-                return;
-            }
-
+            if (packages.length === 0) { listEl.innerHTML = '<div class="loading">没有匹配的软件包</div>'; return; }
             listEl.innerHTML = packages.map(pkg => {
                 const latest = pkg.versions[0];
                 const vCount = pkg.versions.length;
                 const btnText = vCount > 1 ? `下载 (${vCount})` : '下载';
-                const sizeText = latest && latest.downloadSize ? formatSize(latest.downloadSize) : '';
-                const metaParts = [
-                    `v${latest ? latest.version : '?'}`,
-                    pkg.section,
-                    latest ? latest.arch : '',
-                    sizeText
-                ].filter(Boolean);
-
+                const sz = latest && latest.downloadSize ? formatSize(latest.downloadSize) : '';
+                const metaParts = [`v${latest ? latest.version : '?'}`, pkg.section, latest ? latest.arch : '', sz].filter(Boolean);
+                const newBadge = (latest && isNew(pkg.name, latest.version)) ? '<span class="new-badge">NEW</span>' : '';
                 return `
                     <div class="pkg-item">
                         ${renderIcon(pkg)}
                         <div class="pkg-info" onclick="showDetailModal('${pkg.name.replace(/'/g, "\\'")}')">
-                            <div class="pkg-name">${pkg.name}</div>
+                            <div class="pkg-name">${pkg.name} ${newBadge}</div>
                             <div class="pkg-meta">${metaParts.map(m => `<span>${m}</span>`).join('')}</div>
                             ${pkg.desc ? `<div class="pkg-desc">${pkg.desc}</div>` : ''}
                         </div>
                         <button class="pkg-download-btn" onclick="event.stopPropagation();showVersionModal('${pkg.name.replace(/'/g, "\\'")}')">
-                            <i class="fa fa-download"></i>
-                            ${btnText}
+                            <i class="fa fa-download"></i>${btnText}
                         </button>
-                    </div>
-                `;
+                    </div>`;
             }).join('');
         }
 
@@ -858,39 +532,42 @@
             const pkg = allPackages.find(p => p.name === pkgName);
             if (!pkg) return;
             currentDetailPkg = pkg;
-
             const latest = pkg.versions[0];
-            document.getElementById('detailIconWrap').innerHTML = renderIcon(pkg, 'large');
+            if (latest) markSeen(pkgName, latest.version);
+
+            document.getElementById('detailIconWrap').innerHTML = renderIcon(pkg, true);
+
+            // 依赖跳转：解析依赖，如果在源里就变成链接
+            let dependsHtml = '无';
+            if (latest && latest.depends) {
+                const deps = parseDepends(latest.depends);
+                dependsHtml = deps.map(d => {
+                    if (allPackages.find(p => p.name === d)) {
+                        return `<span class="dep-link" onclick="closeModal('detailModal');showDetailModal('${d}')">${d}</span>`;
+                    }
+                    return `<span>${d}</span>`;
+                }).join(', ');
+            }
+
+            // 截图
+            let screenshotsHtml = '';
+            if (pkg.screenshots && pkg.screenshots.length > 0) {
+                screenshotsHtml = `
+                    <div class="detail-section">
+                        <div class="detail-label">截图</div>
+                        <div class="screenshots">${pkg.screenshots.map(s => `<img src="${s}" onerror="this.style.display='none'">`).join('')}</div>
+                    </div>`;
+            }
 
             let html = `
-                <div class="detail-section">
-                    <div class="detail-label">包名</div>
-                    <div class="detail-value mono">${pkg.name}</div>
-                </div>
-                <div class="detail-section">
-                    <div class="detail-label">描述</div>
-                    <div class="detail-value">${pkg.desc || '无描述'}</div>
-                </div>
-                <div class="detail-section">
-                    <div class="detail-label">分类</div>
-                    <div class="detail-value">${pkg.section}</div>
-                </div>
-                <div class="detail-section">
-                    <div class="detail-label">作者</div>
-                    <div class="detail-value">${pkg.author || '未知'}</div>
-                </div>
-                <div class="detail-section">
-                    <div class="detail-label">下载大小</div>
-                    <div class="detail-value">${latest && latest.downloadSize ? formatSize(latest.downloadSize) : '未知'}</div>
-                </div>
-                <div class="detail-section">
-                    <div class="detail-label">安装后大小</div>
-                    <div class="detail-value">${latest && latest.installedSize ? formatInstalledSize(latest.installedSize) : '未知'}</div>
-                </div>
-                <div class="detail-section">
-                    <div class="detail-label">依赖</div>
-                    <div class="detail-value mono">${latest && latest.depends ? latest.depends : '无'}</div>
-                </div>
+                <div class="detail-section"><div class="detail-label">包名</div><div class="detail-value mono">${pkg.name}</div></div>
+                <div class="detail-section"><div class="detail-label">描述</div><div class="detail-value">${pkg.desc || '无描述'}</div></div>
+                <div class="detail-section"><div class="detail-label">分类</div><div class="detail-value">${pkg.section}</div></div>
+                <div class="detail-section"><div class="detail-label">作者</div><div class="detail-value">${pkg.author || '未知'}</div></div>
+                <div class="detail-section"><div class="detail-label">下载大小</div><div class="detail-value">${latest && latest.downloadSize ? formatSize(latest.downloadSize) : '未知'}</div></div>
+                <div class="detail-section"><div class="detail-label">安装后大小</div><div class="detail-value">${latest && latest.installedSize ? formatInstalledSize(latest.installedSize) : '未知'}</div></div>
+                <div class="detail-section"><div class="detail-label">依赖</div><div class="detail-value">${dependsHtml}</div></div>
+                ${screenshotsHtml}
                 <div class="detail-section">
                     <div class="detail-label">版本列表 (${pkg.versions.length})</div>
                     <div style="margin-top:8px">
@@ -904,24 +581,24 @@
                             <div class="version-arch">${v.arch}</div>
                         </div>
                         <i class="fa fa-download version-download-icon"></i>
-                    </div>
-                `;
+                    </div>`;
             });
-            html += `</div></div>`;
+            html += '</div></div>';
 
             document.getElementById('detailModalTitle').textContent = pkg.name;
             document.getElementById('detailContent').innerHTML = html;
             document.getElementById('detailModal').classList.add('show');
+
+            // 深链接更新 URL
+            history.replaceState(null, '', '?pkg=' + encodeURIComponent(pkgName));
+            applyFilters(); // 刷新 NEW 标记
         }
 
         function showVersionModal(pkgName) {
             const pkg = allPackages.find(p => p.name === pkgName);
             if (!pkg || pkg.versions.length === 0) return;
-
             document.getElementById('versionModalTitle').textContent = `${pkg.name} - 选择版本`;
-            const listEl = document.getElementById('versionList');
-
-            listEl.innerHTML = pkg.versions.map(v => {
+            document.getElementById('versionList').innerHTML = pkg.versions.map(v => {
                 const sz = v.downloadSize ? formatSize(v.downloadSize) : '';
                 return `
                 <div class="version-item" onclick="downloadFile('${v.filename.replace(/'/g, "\\'")}')">
@@ -930,36 +607,30 @@
                         <div class="version-arch">架构: ${v.arch}</div>
                     </div>
                     <i class="fa fa-download version-download-icon"></i>
-                </div>
-            `}).join('');
-
+                </div>`;
+            }).join('');
             document.getElementById('versionModal').classList.add('show');
         }
 
         function closeModal(id) {
             document.getElementById(id).classList.remove('show');
+            if (id === 'detailModal') {
+                history.replaceState(null, '', location.pathname);
+            }
         }
 
         function downloadFile(filename) {
-            if (!filename) {
-                showToast('下载地址未找到');
-                return;
-            }
-            const url = REPO_BASE + filename;
-            window.open(url, '_blank');
-            closeModal('versionModal');
-            closeModal('detailModal');
+            if (!filename) { showToast('下载地址未找到'); return; }
+            window.open(REPO_BASE + filename, '_blank');
+            closeModal('versionModal'); closeModal('detailModal');
             showToast('开始下载...');
         }
 
-        document.querySelectorAll('.modal-mask').forEach(modal => {
-            modal.addEventListener('click', function(e) {
-                if (e.target === this) this.classList.remove('show');
-            });
+        document.querySelectorAll('.modal-mask').forEach(m => {
+            m.addEventListener('click', function(e) { if (e.target === this) this.classList.remove('show'); });
         });
 
         loadPackages();
     </script>
 </body>
 </html>
-<!-- （注：内容由AI生成） -->
