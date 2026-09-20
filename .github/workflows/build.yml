@@ -49,23 +49,40 @@ jobs:
       - name: Generate history
         run: |
           set -euo pipefail
-          git log --diff-filter=AM --name-only --pretty=format:"COMMIT|%ad" --date=format:"%Y-%m-%d %H:%M" | \
-            awk '/^COMMIT\|/ { date=$0; sub(/^COMMIT\|/, "", date); next } /\.deb$/ { print "added|" date "|" $0 }' > /tmp/events.txt
-
-          git log --diff-filter=D --name-only --pretty=format:"COMMIT|%ad" --date=format:"%Y-%m-%d %H:%M" | \
-            awk '/^COMMIT\|/ { date=$0; sub(/^COMMIT\|/, "", date); next } /\.deb$/ { print "removed|" date "|" $0 }' >> /tmp/events.txt
+          # 用 --name-status 直接获取状态+文件名，更可靠
+          git log --name-status --pretty=format:"COMMIT|%ad" --date=format:"%Y-%m-%d %H:%M" > /tmp/raw.log
 
           echo '{"events":[' > history.json
-          sort -r /tmp/events.txt > /tmp/sorted.txt
-          head -50 /tmp/sorted.txt | while IFS='|' read -r type date filepath; do
-            pkg=$(basename "$filepath" .deb)
-            version=$(grep -A2 "^Package: ${pkg}$" Packages 2>/dev/null | grep "^Version:" | head -1 | sed 's/Version: //' || true)
-            echo "{\"type\":\"$type\",\"date\":\"$date\",\"package\":\"$pkg\",\"version\":\"$version\"}," >> history.json
-          done
-          sed -i '$ s/,$//' history.json
+          count=0
+          while IFS= read -r line; do
+            [ "$count" -ge 50 ] && break
+            case "$line" in
+              COMMIT\|*)
+                date="${line#COMMIT|}"
+                ;;
+              A*|M*|D*)
+                status=$(echo "$line" | cut -f1)
+                filepath=$(echo "$line" | cut -f2)
+                case "$filepath" in
+                  *.deb)
+                    pkg=$(basename "$filepath" .deb)
+                    [ "$status" = "D" ] && type="removed" || type="added"
+                    version=$(grep -A2 "^Package: ${pkg}$" Packages 2>/dev/null | grep "^Version:" | head -1 | sed 's/Version: //' || true)
+                    echo "{\"type\":\"$type\",\"date\":\"$date\",\"package\":\"$pkg\",\"version\":\"$version\"}," >> history.json
+                    count=$((count+1))
+                    ;;
+                esac
+                ;;
+            esac
+          done < /tmp/raw.log
+
+          # 去掉末尾逗号
+          if [ "$count" -gt 0 ]; then
+            sed -i '$ s/,$//' history.json
+          fi
           echo ']}' >> history.json
 
-          echo "History entries: $(grep -c '"type"' history.json || true)"
+          echo "History entries: $count"
           head -20 history.json
 
       - name: Commit changes
@@ -92,3 +109,4 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v5.0.1
+#（注：内容由AI生成）
