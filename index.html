@@ -1,38 +1,326 @@
-<html>
-	<head>
-		<meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8"/>
-		<title>添加软件源</title>
-		<script>
-			addEventListener("load", function () {
-				setTimeout(hideURLbar, 0);
-			}, false);
-			function hideURLbar() {
-				window.scrollTo(0, 1);
-			}
-		</script>
-		<link rel="stylesheet" href="./css/style.css" type="text/css" media="all" />
-		<link href="css/font-awesome.min.css" rel="stylesheet">
-	</head>
-	<body>
-		<div class="main-bg"/>
-		<h1>wwg135's Repo</h1>
-		<div class="sub-main-w3"/>
-		<div class="bg-content-w3pvt"/>
-		<div class="top-content-style"/>
-		</div>
-		<form action="#" method="post">
-    <p class="legend">添加软件源到 Sileo<span class="fa fa-hand-o-down"></span></p>
-    <a href="sileo://source/https://wwg135.github.io/" class="follow-button">添加</a>
-    <p class="legend"></span></p>
-    <p class="legend">添加软件源到 Saily<span class="fa fa-hand-o-down"></span></p>
-    <a href="apt-repo://source/https://wwg135.github.io/" class="follow-button">添加</a>
-    <p class="legend"></span></p>
-    <p class="legend">关注tg巨魔商店Pro--M哥<span class="fa fa-hand-o-down"></span></p>
-    <a href="https://t.me/TrollStorePro" class="follow-button">关注</a>
-</form>
-		</br>
-		</br>
-		</br>
-		</div>
-	</body>
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>wwg135's Repo</title>
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230f3460'/%3E%3Ctext x='32' y='44' font-size='32' text-anchor='middle' fill='%234fc3f7' font-weight='bold'%3EW%3C/text%3E%3C/svg%3E">
+    <script>
+        addEventListener("load", function () {
+            setTimeout(hideURLbar, 0);
+        }, false);
+        function hideURLbar() {
+            window.scrollTo(0, 1);
+        }
+    </script>
+    <link rel="stylesheet" href="./css/style.css" type="text/css" media="all" />
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+            min-height: 100vh;
+            color: #fff;
+            padding: 20px;
+        }
+        .container {
+            max-width: 480px;
+            margin: 0 auto;
+        }
+        .header {
+            text-align: center;
+            padding: 30px 0;
+        }
+        .header h1 {
+            font-size: 28px;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+        .header p {
+            color: rgba(255,255,255,0.6);
+            font-size: 14px;
+        }
+        .card {
+            background: rgba(255,255,255,0.08);
+            backdrop-filter: blur(20px);
+            border-radius: 16px;
+            padding: 20px;
+            margin-bottom: 16px;
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+        .card-title {
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 16px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .card-title i {
+            color: #4fc3f7;
+        }
+        .source-url {
+            background: rgba(0,0,0,0.3);
+            border-radius: 10px;
+            padding: 12px 14px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 16px;
+        }
+        .source-url span {
+            font-family: "SF Mono", Monaco, monospace;
+            font-size: 14px;
+            color: #4fc3f7;
+            word-break: break-all;
+        }
+        .copy-btn {
+            background: #4fc3f7;
+            color: #1a1a2e;
+            border: none;
+            border-radius: 8px;
+            padding: 12px 16px;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            white-space: nowrap;
+            margin-left: 10px;
+            transition: all 0.2s;
+            min-width: 88px;
+            min-height: 44px;
+        }
+        .copy-btn:hover {
+            background: #29b6f6;
+            transform: scale(1.02);
+        }
+        .action-buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        .action-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            padding: 14px;
+            border-radius: 12px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 15px;
+            transition: all 0.2s;
+        }
+        .action-btn:hover {
+            transform: translateY(-1px);
+        }
+        .btn-sileo {
+            background: linear-gradient(135deg, #007aff, #5856d6);
+            color: #fff;
+        }
+        .btn-saily {
+            background: linear-gradient(135deg, #34c759, #30d158);
+            color: #fff;
+        }
+        .btn-telegram {
+            background: linear-gradient(135deg, #0088cc, #00a8e8);
+            color: #fff;
+        }
+        .pkg-list {
+            max-height: 300px;
+            overflow-y: auto;
+        }
+        .pkg-item {
+            padding: 12px 0;
+            border-bottom: 1px solid rgba(255,255,255,0.08);
+        }
+        .pkg-item:last-child {
+            border-bottom: none;
+        }
+        .pkg-name {
+            font-weight: 600;
+            font-size: 14px;
+            margin-bottom: 4px;
+        }
+        .pkg-version {
+            font-size: 12px;
+            color: rgba(255,255,255,0.5);
+        }
+        .pkg-desc {
+            font-size: 13px;
+            color: rgba(255,255,255,0.7);
+            margin-top: 4px;
+            line-height: 1.4;
+        }
+        .loading {
+            text-align: center;
+            color: rgba(255,255,255,0.5);
+            font-size: 14px;
+            padding: 20px;
+        }
+        .footer {
+            text-align: center;
+            padding: 20px 0;
+            color: rgba(255,255,255,0.4);
+            font-size: 13px;
+        }
+        .toast {
+            position: fixed;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%) translateY(100px);
+            background: rgba(0,0,0,0.8);
+            color: #fff;
+            padding: 12px 24px;
+            border-radius: 10px;
+            font-size: 14px;
+            opacity: 0;
+            transition: all 0.3s;
+            pointer-events: none;
+            z-index: 1000;
+        }
+        .toast.show {
+            opacity: 1;
+            transform: translateX(-50%) translateY(0);
+        }
+        @media (max-width: 380px) {
+            .header h1 {
+                font-size: 24px;
+            }
+            .card {
+                padding: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>wwg135's Repo</h1>
+            <p>iOS 越狱软件源</p>
+        </div>
+
+        <div class="card">
+            <div class="card-title">
+                <i class="fa fa-link"></i>
+                软件源地址
+            </div>
+            <div class="source-url">
+                <span id="repoUrl">https://wwg135.github.io/</span>
+                <button class="copy-btn" onclick="copyUrl()">
+                    <i class="fa fa-copy"></i> 复制
+                </button>
+            </div>
+            <div class="action-buttons">
+                <a href="sileo://source/https://wwg135.github.io/" class="action-btn btn-sileo">
+                    <i class="fa fa-download"></i>
+                    添加到 Sileo
+                </a>
+                <a href="apt-repo://source/https://wwg135.github.io/" class="action-btn btn-saily">
+                    <i class="fa fa-download"></i>
+                    添加到 Saily
+                </a>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-title">
+                <i class="fa fa-cube"></i>
+                软件包列表
+            </div>
+            <div class="pkg-list" id="pkgList">
+                <div class="loading">加载中...</div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-title">
+                <i class="fa fa-telegram"></i>
+                关注我们
+            </div>
+            <a href="https://t.me/TrollStorePro" target="_blank" class="action-btn btn-telegram">
+                <i class="fa fa-paper-plane"></i>
+                关注 TG 巨魔商店Pro--M哥
+            </a>
+        </div>
+
+        <div class="footer">
+            Powered by wwg135 · GitHub Pages
+        </div>
+    </div>
+
+    <div class="toast" id="toast">已复制到剪贴板</div>
+
+    <script>
+        function copyUrl() {
+            const url = document.getElementById('repoUrl').textContent;
+            navigator.clipboard.writeText(url).then(() => {
+                showToast('已复制到剪贴板');
+            }).catch(() => {
+                const textarea = document.createElement('textarea');
+                textarea.value = url;
+                document.body.appendChild(textarea);
+                textarea.select();
+                document.execCommand('copy');
+                document.body.removeChild(textarea);
+                showToast('已复制到剪贴板');
+            });
+        }
+
+        function showToast(msg) {
+            const toast = document.getElementById('toast');
+            toast.textContent = msg;
+            toast.classList.add('show');
+            setTimeout(() => {
+                toast.classList.remove('show');
+            }, 2000);
+        }
+
+        async function loadPackages() {
+            try {
+                const response = await fetch('Packages');
+                if (!response.ok) throw new Error('Failed to load');
+                const text = await response.text();
+                
+                const packages = [];
+                const blocks = text.split('\n\n');
+                
+                blocks.forEach(block => {
+                    if (!block.trim()) return;
+                    const lines = block.split('\n');
+                    const pkg = {};
+                    lines.forEach(line => {
+                        if (line.startsWith('Package:')) pkg.name = line.substring(9).trim();
+                        if (line.startsWith('Version:')) pkg.version = line.substring(8).trim();
+                        if (line.startsWith('Description:')) pkg.desc = line.substring(12).trim();
+                    });
+                    if (pkg.name) packages.push(pkg);
+                });
+
+                const listEl = document.getElementById('pkgList');
+                if (packages.length === 0) {
+                    listEl.innerHTML = '<div class="loading">暂无软件包</div>';
+                    return;
+                }
+
+                listEl.innerHTML = packages.map(pkg => `
+                    <div class="pkg-item">
+                        <div class="pkg-name">${pkg.name || '未知'}</div>
+                        <div class="pkg-version">v${pkg.version || '未知版本'}</div>
+                        ${pkg.desc ? `<div class="pkg-desc">${pkg.desc}</div>` : ''}
+                    </div>
+                `).join('');
+            } catch (e) {
+                document.getElementById('pkgList').innerHTML = 
+                    '<div class="loading">无法加载软件包列表</div>';
+            }
+        }
+
+        loadPackages();
+    </script>
+</body>
 </html>
