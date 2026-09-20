@@ -4191,6 +4191,38 @@ Description: 爱奇艺开屏秒进 v0.2.3（正式版）。
 Author: M哥
 Name: 爱奇艺开屏秒进
 
+Package: com.mg.llvodprobe
+Version: 0.3.0
+Architecture: iphoneos-arm64
+Maintainer: M哥
+Depends: firmware (>= 12.0), mobilesubstrate
+Filename: ./debs/com.mg.llvodprobe_0.3.0_iphoneos-arm64.deb
+Size: 13856
+MD5sum: bb4f380048e17a6e92a05ac1896d104a
+SHA1: f5a8fd3fc37ba410eb638bc0c0b483eefd4ddfa1
+SHA256: 68c0a2a96b270f55bb1fa70643775250625e8e530fbcad4e09d51465e6a34d7a
+Section: Tweaks
+Priority: optional
+Description: 壹影视去广告弹窗
+Author: M哥
+Name: LLVodProbe
+
+Package: com.mg.llvodprobe
+Version: 0.3.0
+Architecture: iphoneos-arm64e
+Maintainer: M哥
+Depends: firmware (>= 12.0), mobilesubstrate
+Filename: ./debs/com.mg.llvodprobe_0.3.0_iphoneos-arm64e.deb
+Size: 13844
+MD5sum: d12a152669d9ee96afb46e28b9298aba
+SHA1: f6b5387e677cc48234caad9c3e37822142abacd3
+SHA256: db0ec1adc19ce3331c21b1ddc1cf5004f846c2c23b34605c2576a6d5d139ba33
+Section: Tweaks
+Priority: optional
+Description: 壹影视去广告弹窗
+Author: M哥
+Name: LLVodProbe
+
 Package: com.mg.zhihu
 Version: 0.4.1
 Architecture: iphoneos-arm64
