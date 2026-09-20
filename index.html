@@ -116,7 +116,7 @@
             padding: 8px 14px !important; font-size: 12px !important; margin-left: 0 !important;
             box-sizing: border-box !important; line-height: 1 !important;
         }
-        .history-refresh-btn.spinning i { animation: spin 0.8s linear infinite; display: inline-block; }
+        .history-refresh-btn.spinning .refresh-icon { animation: spin 0.8s linear infinite; }
         @keyframes spin { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
         .action-buttons { display: flex; flex-direction: column; gap: 10px; }
         .action-btn {
@@ -316,7 +316,10 @@
         <div class="card">
             <div class="card-title">
                 <div class="card-title-left"><i class="fa fa-history"></i>更新历史</div>
-                <button class="copy-btn history-refresh-btn" onclick="loadHistory()"><i class="fa fa-refresh"></i> 刷新</button>
+                <button class="copy-btn history-refresh-btn" onclick="loadHistory()">
+                    <svg class="refresh-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 4 23 10 17 10"></polyline><path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"></path></svg>
+                    刷新
+                </button>
             </div>
             <div class="pkg-list" id="historyList">
                 <div class="loading">加载中...</div>
