@@ -57,7 +57,8 @@ jobs:
 
           echo '{"events":[' > history.json
           # 只保留最近 50 条
-          sort -r /tmp/events.txt | head -50 | while IFS='|' read -r type date filepath; do
+          sort -r /tmp/events.txt > /tmp/sorted.txt
+          head -50 /tmp/sorted.txt | while IFS='|' read -r type date filepath; do
             pkg=$(basename "$filepath" .deb)
             version=$(grep -A2 "^Package: ${pkg}$" Packages 2>/dev/null | grep "^Version:" | head -1 | sed 's/Version: //' || true)
             echo "{\"type\":\"$type\",\"date\":\"$date\",\"package\":\"$pkg\",\"version\":\"$version\"}," >> history.json
