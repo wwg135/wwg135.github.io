@@ -233,6 +233,22 @@
             border-radius: 8px; padding: 12px 8px; color: var(--text-secondary); font-size: 13px;
             cursor: pointer; text-align: center; min-height: 44px;
         }
+        /* 时间线 */
+        .timeline { position: relative; padding-left: 24px; }
+        .timeline::before {
+            content: ''; position: absolute; left: 8px; top: 8px; bottom: 8px;
+            width: 2px; background: var(--divider);
+        }
+        .timeline-item { position: relative; padding-bottom: 16px; }
+        .timeline-item:last-child { padding-bottom: 0; }
+        .timeline-dot {
+            position: absolute; left: -20px; top: 4px; width: 12px; height: 12px;
+            border-radius: 50%; border: 2px solid var(--accent); background: var(--modal-bg);
+        }
+        .timeline-dot.removed { border-color: #ff3b30; }
+        .timeline-date { font-size: 12px; color: var(--text-muted); margin-bottom: 4px; }
+        .timeline-title { font-size: 14px; font-weight: 600; color: var(--text-primary); }
+        .timeline-desc { font-size: 12px; color: var(--text-secondary); margin-top: 2px; }
         .sort-btn.active { background: var(--accent-bg); color: var(--accent); border-color: var(--accent-border); }
         @media (max-width: 380px) {
             .header h1 { font-size: 24px; }
@@ -287,6 +303,13 @@
         <div class="card">
             <div class="card-title"><div class="card-title-left"><i class="fa fa-telegram"></i>关注我们</div></div>
             <a href="https://t.me/TrollStorePro" target="_blank" class="action-btn btn-telegram"><i class="fa fa-paper-plane"></i>关注 TG 巨魔商店Pro--M哥</a>
+        </div>
+
+        <div class="card">
+            <div class="card-title"><div class="card-title-left"><i class="fa fa-history"></i>更新历史</div></div>
+            <div class="pkg-list" id="historyList">
+                <div class="loading">加载中...</div>
+            </div>
         </div>
 
         <div class="footer">Powered by wwg135 · GitHub Pages</div>
@@ -637,7 +660,31 @@
             m.addEventListener('click', function(e) { if (e.target === this) this.classList.remove('show'); });
         });
 
+        async function loadHistory() {
+            const el = document.getElementById('historyList');
+            try {
+                const res = await fetch('history.json', { cache: 'no-cache' });
+                if (!res.ok) throw new Error('no history');
+                const data = await res.json();
+                if (!data.events || data.events.length === 0) {
+                    el.innerHTML = '<div class="loading">暂无更新记录</div>';
+                    return;
+                }
+                el.innerHTML = '<div class="timeline">' + data.events.map(e => `
+                    <div class="timeline-item">
+                        <div class="timeline-dot ${e.type === 'removed' ? 'removed' : ''}"></div>
+                        <div class="timeline-date">${e.date}</div>
+                        <div class="timeline-title">${e.type === 'added' ? '上架' : '下架'} ${e.package}</div>
+                        ${e.version ? `<div class="timeline-desc">版本 v${e.version}</div>` : ''}
+                    </div>
+                `).join('') + '</div>';
+            } catch (e) {
+                el.innerHTML = '<div class="loading">暂无更新记录</div>';
+            }
+        }
+
         loadPackages();
+        loadHistory();
     </script>
 </body>
 </html>
