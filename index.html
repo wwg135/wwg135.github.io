@@ -131,15 +131,23 @@
             color: #fff;
         }
         .pkg-list {
-            max-height: 300px;
+            max-height: 400px;
             overflow-y: auto;
         }
         .pkg-item {
             padding: 12px 0;
             border-bottom: 1px solid rgba(255,255,255,0.08);
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 12px;
         }
         .pkg-item:last-child {
             border-bottom: none;
+        }
+        .pkg-info {
+            flex: 1;
+            min-width: 0;
         }
         .pkg-name {
             font-weight: 600;
@@ -155,6 +163,26 @@
             color: rgba(255,255,255,0.7);
             margin-top: 4px;
             line-height: 1.4;
+        }
+        .pkg-download-btn {
+            flex-shrink: 0;
+            background: rgba(79, 195, 247, 0.2);
+            color: #4fc3f7;
+            border: 1px solid rgba(79, 195, 247, 0.4);
+            border-radius: 8px;
+            padding: 8px 12px;
+            font-size: 12px;
+            font-weight: 600;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 4px;
+            transition: all 0.2s;
+            min-height: 36px;
+            white-space: nowrap;
+        }
+        .pkg-download-btn:hover {
+            background: rgba(79, 195, 247, 0.35);
         }
         .loading {
             text-align: center;
@@ -186,6 +214,78 @@
         .toast.show {
             opacity: 1;
             transform: translateX(-50%) translateY(0);
+        }
+
+        /* 版本选择弹窗 */
+        .modal-mask {
+            position: fixed;
+            inset: 0;
+            background: rgba(0,0,0,0.6);
+            backdrop-filter: blur(4px);
+            z-index: 999;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+        .modal-mask.show {
+            display: flex;
+        }
+        .modal {
+            background: #1e2a45;
+            border-radius: 16px;
+            padding: 24px;
+            width: 100%;
+            max-width: 400px;
+            max-height: 80vh;
+            overflow-y: auto;
+        }
+        .modal-title {
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 16px;
+        }
+        .version-item {
+            padding: 12px 14px;
+            background: rgba(255,255,255,0.06);
+            border-radius: 10px;
+            margin-bottom: 8px;
+            cursor: pointer;
+            transition: all 0.2s;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .version-item:hover {
+            background: rgba(79, 195, 247, 0.15);
+        }
+        .version-info {
+            flex: 1;
+        }
+        .version-num {
+            font-weight: 600;
+            font-size: 14px;
+            margin-bottom: 2px;
+        }
+        .version-arch {
+            font-size: 12px;
+            color: rgba(255,255,255,0.5);
+        }
+        .version-download-icon {
+            color: #4fc3f7;
+            font-size: 18px;
+        }
+        .modal-close {
+            width: 100%;
+            margin-top: 8px;
+            background: rgba(255,255,255,0.1);
+            border: none;
+            color: #fff;
+            padding: 12px;
+            border-radius: 10px;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
         }
         @media (max-width: 380px) {
             .header h1 {
@@ -253,9 +353,21 @@
         </div>
     </div>
 
+    <!-- 版本选择弹窗 -->
+    <div class="modal-mask" id="versionModal">
+        <div class="modal">
+            <div class="modal-title" id="modalTitle">选择版本下载</div>
+            <div id="versionList"></div>
+            <button class="modal-close" onclick="closeVersionModal()">取消</button>
+        </div>
+    </div>
+
     <div class="toast" id="toast">已复制到剪贴板</div>
 
     <script>
+        const REPO_BASE = 'https://wwg135.github.io/';
+        let allPackages = [];
+
         function copyUrl() {
             const url = document.getElementById('repoUrl').textContent;
             navigator.clipboard.writeText(url).then(() => {
@@ -285,10 +397,10 @@
                 const response = await fetch('Packages');
                 if (!response.ok) throw new Error('Failed to load');
                 const text = await response.text();
-                
-                const packages = [];
+
+                const rawPkgs = [];
                 const blocks = text.split('\n\n');
-                
+
                 blocks.forEach(block => {
                     if (!block.trim()) return;
                     const lines = block.split('\n');
@@ -297,28 +409,106 @@
                         if (line.startsWith('Package:')) pkg.name = line.substring(9).trim();
                         if (line.startsWith('Version:')) pkg.version = line.substring(8).trim();
                         if (line.startsWith('Description:')) pkg.desc = line.substring(12).trim();
+                        if (line.startsWith('Architecture:')) pkg.arch = line.substring(13).trim();
+                        if (line.startsWith('Filename:')) pkg.filename = line.substring(9).trim();
                     });
-                    if (pkg.name) packages.push(pkg);
+                    if (pkg.name) rawPkgs.push(pkg);
                 });
 
-                const listEl = document.getElementById('pkgList');
-                if (packages.length === 0) {
-                    listEl.innerHTML = '<div class="loading">暂无软件包</div>';
-                    return;
-                }
+                // 按包名分组，保留所有版本
+                const pkgMap = {};
+                rawPkgs.forEach(pkg => {
+                    if (!pkgMap[pkg.name]) {
+                        pkgMap[pkg.name] = {
+                            name: pkg.name,
+                            desc: pkg.desc || '',
+                            versions: []
+                        };
+                    }
+                    pkgMap[pkg.name].versions.push({
+                        version: pkg.version,
+                        arch: pkg.arch || 'iphoneos-arm',
+                        filename: pkg.filename || ''
+                    });
+                });
 
-                listEl.innerHTML = packages.map(pkg => `
-                    <div class="pkg-item">
-                        <div class="pkg-name">${pkg.name || '未知'}</div>
-                        <div class="pkg-version">v${pkg.version || '未知版本'}</div>
-                        ${pkg.desc ? `<div class="pkg-desc">${pkg.desc}</div>` : ''}
-                    </div>
-                `).join('');
+                allPackages = Object.values(pkgMap);
+                renderPackageList(allPackages);
             } catch (e) {
-                document.getElementById('pkgList').innerHTML = 
+                document.getElementById('pkgList').innerHTML =
                     '<div class="loading">无法加载软件包列表</div>';
             }
         }
+
+        function renderPackageList(packages) {
+            const listEl = document.getElementById('pkgList');
+            if (packages.length === 0) {
+                listEl.innerHTML = '<div class="loading">暂无软件包</div>';
+                return;
+            }
+
+            listEl.innerHTML = packages.map(pkg => {
+                const latestVersion = pkg.versions[0] ? pkg.versions[0].version : '未知版本';
+                const versionCount = pkg.versions.length;
+                const btnText = versionCount > 1
+                    ? `下载 (${versionCount})`
+                    : '下载';
+
+                return `
+                    <div class="pkg-item">
+                        <div class="pkg-info">
+                            <div class="pkg-name">${pkg.name}</div>
+                            <div class="pkg-version">v${latestVersion}${versionCount > 1 ? ' · 共' + versionCount + '个版本' : ''}</div>
+                            ${pkg.desc ? `<div class="pkg-desc">${pkg.desc}</div>` : ''}
+                        </div>
+                        <button class="pkg-download-btn" onclick="showVersionModal('${pkg.name}')">
+                            <i class="fa fa-download"></i>
+                            ${btnText}
+                        </button>
+                    </div>
+                `;
+            }).join('');
+        }
+
+        function showVersionModal(pkgName) {
+            const pkg = allPackages.find(p => p.name === pkgName);
+            if (!pkg || pkg.versions.length === 0) return;
+
+            document.getElementById('modalTitle').textContent = `${pkg.name} - 选择版本`;
+            const listEl = document.getElementById('versionList');
+
+            listEl.innerHTML = pkg.versions.map((v, idx) => `
+                <div class="version-item" onclick="downloadFile('${v.filename.replace(/'/g, "\\'")}')">
+                    <div class="version-info">
+                        <div class="version-num">v${v.version}</div>
+                        <div class="version-arch">架构: ${v.arch}</div>
+                    </div>
+                    <i class="fa fa-download version-download-icon"></i>
+                </div>
+            `).join('');
+
+            document.getElementById('versionModal').classList.add('show');
+        }
+
+        function closeVersionModal() {
+            document.getElementById('versionModal').classList.remove('show');
+        }
+
+        function downloadFile(filename) {
+            if (!filename) {
+                showToast('下载地址未找到');
+                return;
+            }
+            const url = REPO_BASE + filename;
+            window.open(url, '_blank');
+            closeVersionModal();
+            showToast('开始下载...');
+        }
+
+        // 点击遮罩关闭弹窗
+        document.getElementById('versionModal').addEventListener('click', function(e) {
+            if (e.target === this) closeVersionModal();
+        });
 
         loadPackages();
     </script>
