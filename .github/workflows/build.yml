@@ -43,19 +43,8 @@ jobs:
         run: |
           set -euo pipefail
           chmod -R a+rX .
-          mkdir -p ./.tmp-dpkg
-          export TMPDIR=$PWD/.tmp-dpkg
-
-          # 先检查所有 deb 文件是否可读、是否真的是 deb 格式
-          echo "=== Checking deb files ==="
-          find . -name "*.deb" -exec sh -c '
-            f="$1"
-            echo "Checking: $f ($(du -h "$f" | cut -f1))"
-            if ! file "$f" | grep -q "Debian binary package"; then
-              echo "WARNING: $f is not a valid deb file, skipping"
-              mv "$f" "$f.broken"
-            fi
-          ' _ {} \;
+          mkdir -p /tmp/dpkg-tmp
+          export TMPDIR=/tmp/dpkg-tmp
 
           dpkg-scanpackages -m . /dev/null > Packages
           bzip2 -c Packages > Packages.bz2
@@ -65,23 +54,18 @@ jobs:
       - name: Generate history.json
         run: |
           set -euo pipefail
-          # 用 git log 扫描 .deb 文件的增删记录
-          # 输出格式: type|date|package_name|version
           git log --diff-filter=A --name-only --pretty=format:"COMMIT|%ad" --date=format:"%Y-%m-%d %H:%M" -- '*.deb' | \
             awk '/^COMMIT\|/ { date=$0; sub(/^COMMIT\|/, "", date); next } /\.deb$/ { print "added|" date "|" $0 }' > /tmp/events.txt
 
           git log --diff-filter=D --name-only --pretty=format:"COMMIT|%ad" --date=format:"%Y-%m-%d %H:%M" -- '*.deb' | \
             awk '/^COMMIT\|/ { date=$0; sub(/^COMMIT\|/, "", date); next } /\.deb$/ { print "removed|" date "|" $0 }' >> /tmp/events.txt
 
-          # 转成 JSON，按时间倒序
           echo '{"events":[' > history.json
           sort -r /tmp/events.txt | while IFS='|' read -r type date filepath; do
             pkg=$(basename "$filepath" .deb)
-            # 尝试从 Packages 文件提取版本号
             version=$(grep -A2 "^Package: ${pkg}$" Packages 2>/dev/null | grep "^Version:" | head -1 | sed 's/Version: //' || true)
             echo "{\"type\":\"$type\",\"date\":\"$date\",\"package\":\"$pkg\",\"version\":\"$version\"}," >> history.json
           done
-          # 去掉末尾逗号，闭合 JSON
           sed -i '$ s/,$//' history.json
           echo ']}' >> history.json
 
@@ -112,4 +96,3 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v5.0.1
-#（注：内容由AI生成）
