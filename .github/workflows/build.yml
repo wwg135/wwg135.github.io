@@ -49,7 +49,6 @@ jobs:
       - name: Generate history
         run: |
           set -euo pipefail
-          # A=新增, M=修改(覆盖上传), D=删除
           git log --diff-filter=AM --name-only --pretty=format:"COMMIT|%ad" --date=format:"%Y-%m-%d %H:%M" | \
             awk '/^COMMIT\|/ { date=$0; sub(/^COMMIT\|/, "", date); next } /\.deb$/ { print "added|" date "|" $0 }' > /tmp/events.txt
 
@@ -57,7 +56,6 @@ jobs:
             awk '/^COMMIT\|/ { date=$0; sub(/^COMMIT\|/, "", date); next } /\.deb$/ { print "removed|" date "|" $0 }' >> /tmp/events.txt
 
           echo '{"events":[' > history.json
-          # 只保留最近 50 条
           sort -r /tmp/events.txt > /tmp/sorted.txt
           head -50 /tmp/sorted.txt | while IFS='|' read -r type date filepath; do
             pkg=$(basename "$filepath" .deb)
@@ -94,4 +92,3 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v5.0.1
-#（注：内容由AI生成）
