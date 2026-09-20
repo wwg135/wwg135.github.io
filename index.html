@@ -130,6 +130,24 @@
             background: linear-gradient(135deg, #0088cc, #00a8e8);
             color: #fff;
         }
+        .search-box {
+            width: 100%;
+            background: rgba(0,0,0,0.3);
+            border: 1px solid rgba(255,255,255,0.15);
+            border-radius: 10px;
+            padding: 12px 14px;
+            color: #fff;
+            font-size: 16px;
+            margin-bottom: 14px;
+            outline: none;
+            transition: border-color 0.2s;
+        }
+        .search-box::placeholder {
+            color: rgba(255,255,255,0.4);
+        }
+        .search-box:focus {
+            border-color: #4fc3f7;
+        }
         .pkg-list {
             max-height: 400px;
             overflow-y: auto;
@@ -332,6 +350,7 @@
                 <i class="fa fa-cube"></i>
                 软件包列表
             </div>
+            <input type="text" class="search-box" id="searchInput" placeholder="搜索软件包名称..." oninput="searchPackages()">
             <div class="pkg-list" id="pkgList">
                 <div class="loading">加载中...</div>
             </div>
@@ -468,6 +487,19 @@
                     </div>
                 `;
             }).join('');
+        }
+
+        function searchPackages() {
+            const keyword = document.getElementById('searchInput').value.trim().toLowerCase();
+            if (!keyword) {
+                renderPackageList(allPackages);
+                return;
+            }
+            const filtered = allPackages.filter(pkg =>
+                pkg.name.toLowerCase().includes(keyword) ||
+                (pkg.desc && pkg.desc.toLowerCase().includes(keyword))
+            );
+            renderPackageList(filtered);
         }
 
         function showVersionModal(pkgName) {
