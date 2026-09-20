@@ -677,14 +677,21 @@
             }, 2000);
         }
 
-        function formatSize(installedSize) {
-            if (!installedSize) return '';
-            const kb = parseFloat(installedSize);
-            if (isNaN(kb)) return '';
-            if (kb >= 1024) {
-                return (kb / 1024).toFixed(1) + ' MB';
-            }
-            return Math.round(kb) + ' KB';
+        function formatSize(bytes) {
+            if (!bytes && bytes !== 0) return '';
+            const b = parseFloat(bytes);
+            if (isNaN(b)) return '';
+            if (b >= 1024 * 1024 * 1024) return (b / 1024 / 1024 / 1024).toFixed(2) + ' GB';
+            if (b >= 1024 * 1024) return (b / 1024 / 1024).toFixed(1) + ' MB';
+            if (b >= 1024) return (b / 1024).toFixed(1) + ' KB';
+            return Math.round(b) + ' B';
+        }
+
+        function formatInstalledSize(kb) {
+            if (!kb && kb !== 0) return '';
+            const k = parseFloat(kb);
+            if (isNaN(k)) return '';
+            return formatSize(k * 1024);
         }
 
         // 简单版本号比较，返回 -1/0/1
@@ -722,7 +729,8 @@
                         if (line.startsWith('Section:')) pkg.section = line.substring(8).trim();
                         if (line.startsWith('Depends:')) pkg.depends = line.substring(8).trim();
                         if (line.startsWith('Author:')) pkg.author = line.substring(7).trim();
-                        if (line.startsWith('Installed-Size:')) pkg.size = line.substring(15).trim();
+                        if (line.startsWith('Installed-Size:')) pkg.installedSize = line.substring(15).trim();
+                        if (line.startsWith('Size:')) pkg.downloadSize = line.substring(5).trim();
                         if (line.startsWith('Icon:')) pkg.icon = line.substring(5).trim();
                     });
                     if (pkg.name) rawPkgs.push(pkg);
@@ -745,7 +753,8 @@
                         arch: pkg.arch || 'iphoneos-arm',
                         filename: pkg.filename || '',
                         depends: pkg.depends || '',
-                        size: pkg.size || ''
+                        downloadSize: pkg.downloadSize || '',
+                        installedSize: pkg.installedSize || ''
                     });
                 });
 
@@ -820,7 +829,7 @@
                 const latest = pkg.versions[0];
                 const vCount = pkg.versions.length;
                 const btnText = vCount > 1 ? `下载 (${vCount})` : '下载';
-                const sizeText = latest && latest.size ? formatSize(latest.size) : '';
+                const sizeText = latest && latest.downloadSize ? formatSize(latest.downloadSize) : '';
                 const metaParts = [
                     `v${latest ? latest.version : '?'}`,
                     pkg.section,
@@ -871,8 +880,12 @@
                     <div class="detail-value">${pkg.author || '未知'}</div>
                 </div>
                 <div class="detail-section">
-                    <div class="detail-label">大小</div>
-                    <div class="detail-value">${latest && latest.size ? formatSize(latest.size) : '未知'}</div>
+                    <div class="detail-label">下载大小</div>
+                    <div class="detail-value">${latest && latest.downloadSize ? formatSize(latest.downloadSize) : '未知'}</div>
+                </div>
+                <div class="detail-section">
+                    <div class="detail-label">安装后大小</div>
+                    <div class="detail-value">${latest && latest.installedSize ? formatInstalledSize(latest.installedSize) : '未知'}</div>
                 </div>
                 <div class="detail-section">
                     <div class="detail-label">依赖</div>
@@ -883,7 +896,7 @@
                     <div style="margin-top:8px">
             `;
             pkg.versions.forEach(v => {
-                const sz = v.size ? formatSize(v.size) : '';
+                const sz = v.downloadSize ? formatSize(v.downloadSize) : '';
                 html += `
                     <div class="version-item" onclick="downloadFile('${v.filename.replace(/'/g, "\\'")}')">
                         <div class="version-info">
@@ -909,7 +922,7 @@
             const listEl = document.getElementById('versionList');
 
             listEl.innerHTML = pkg.versions.map(v => {
-                const sz = v.size ? formatSize(v.size) : '';
+                const sz = v.downloadSize ? formatSize(v.downloadSize) : '';
                 return `
                 <div class="version-item" onclick="downloadFile('${v.filename.replace(/'/g, "\\'")}')">
                     <div class="version-info">
@@ -949,3 +962,4 @@
     </script>
 </body>
 </html>
+<!-- （注：内容由AI生成） -->
