@@ -110,6 +110,13 @@
             padding: 12px 16px; font-size: 14px; font-weight: 600; cursor: pointer;
             white-space: nowrap; margin-left: 10px; transition: all 0.2s; min-width: 88px; min-height: 44px;
         }
+        .history-refresh-btn {
+            display: inline-flex; align-items: center; justify-content: center; gap: 5px;
+            min-width: auto !important; min-height: 36px !important; padding: 8px 14px !important;
+            font-size: 12px !important; margin-left: 0 !important;
+        }
+        .history-refresh-btn.spinning i { animation: spin 0.8s linear infinite; }
+        @keyframes spin { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
         .action-buttons { display: flex; flex-direction: column; gap: 10px; }
         .action-btn {
             display: flex; align-items: center; justify-content: center; gap: 10px;
@@ -308,7 +315,7 @@
         <div class="card">
             <div class="card-title">
                 <div class="card-title-left"><i class="fa fa-history"></i>更新历史</div>
-                <button class="copy-btn" style="min-width:auto;padding:8px 12px;font-size:12px" onclick="loadHistory()"><i class="fa fa-refresh"></i> 刷新</button>
+                <button class="copy-btn history-refresh-btn" onclick="loadHistory()"><i class="fa fa-refresh"></i> 刷新</button>
             </div>
             <div class="pkg-list" id="historyList">
                 <div class="loading">加载中...</div>
@@ -665,6 +672,8 @@
 
         async function loadHistory() {
             const el = document.getElementById('historyList');
+            const btn = document.querySelector('.history-refresh-btn');
+            if (btn) btn.classList.add('spinning');
             try {
                 const res = await fetch('history.json', { cache: 'no-cache' });
                 if (!res.ok) throw new Error('no history');
@@ -683,6 +692,8 @@
                 `).join('') + '</div>';
             } catch (e) {
                 el.innerHTML = '<div class="loading">暂无更新记录</div>';
+            } finally {
+                if (btn) btn.classList.remove('spinning');
             }
         }
 
