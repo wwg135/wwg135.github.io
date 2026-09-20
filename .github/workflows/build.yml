@@ -49,7 +49,6 @@ jobs:
       - name: Generate history
         run: |
           set -euo pipefail
-          # 用 --name-status 直接获取状态+文件名，更可靠
           git log --name-status --pretty=format:"COMMIT|%ad" --date=format:"%Y-%m-%d %H:%M" > /tmp/raw.log
 
           echo '{"events":[' > history.json
@@ -76,7 +75,6 @@ jobs:
             esac
           done < /tmp/raw.log
 
-          # 去掉末尾逗号
           if [ "$count" -gt 0 ]; then
             sed -i '$ s/,$//' history.json
           fi
@@ -109,4 +107,3 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v5.0.1
-#（注：内容由AI生成）
