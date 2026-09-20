@@ -1,0 +1,99 @@
+name: Build Repo Index and Deploy Pages
+on:
+  push:
+    branches: ["main"]
+    paths-ignore:
+      - 'Packages'
+      - 'Packages.bz2'
+      - 'Packages.xz'
+      - 'history.json'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: true
+
+jobs:
+  build-and-deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v7.0.1
+        with:
+          fetch-depth: 0
+
+      - name: Ensure dpkg-scanpackages is available
+        run: |
+          if ! command -v dpkg-scanpackages >/dev/null 2>&1; then
+            sudo apt-get update -qq
+            sudo apt-get install -y -qq dpkg-dev
+          fi
+          dpkg-scanpackages --version | head -1
+
+      - name: Rebuild packages
+        run: |
+          set -euo pipefail
+          dpkg-scanpackages -m . /dev/null > Packages
+          bzip2 -c Packages > Packages.bz2
+          xz -c Packages > Packages.xz
+          echo "Index entries: $(grep -c '^Package:' Packages || true)"
+
+      - name: Generate history.json
+        run: |
+          set -euo pipefail
+          # 用 git log 扫描 .deb 文件的增删记录
+          # 输出格式: type|date|package_name|version
+          git log --diff-filter=A --name-only --pretty=format:"COMMIT|%ad" --date=format:"%Y-%m-%d %H:%M" -- '*.deb' | \
+            awk '/^COMMIT\|/ { date=$0; sub(/^COMMIT\|/, "", date); next } /\.deb$/ { print "added|" date "|" $0 }' > /tmp/events.txt
+
+          git log --diff-filter=D --name-only --pretty=format:"COMMIT|%ad" --date=format:"%Y-%m-%d %H:%M" -- '*.deb' | \
+            awk '/^COMMIT\|/ { date=$0; sub(/^COMMIT\|/, "", date); next } /\.deb$/ { print "removed|" date "|" $0 }' >> /tmp/events.txt
+
+          # 转成 JSON，按时间倒序
+          echo '{"events":[' > history.json
+          sort -r /tmp/events.txt | while IFS='|' read -r type date filepath; do
+            pkg=$(basename "$filepath" .deb)
+            # 尝试从 Packages 文件提取版本号
+            version=$(grep -A2 "^Package: ${pkg}$" Packages 2>/dev/null | grep "^Version:" | head -1 | sed 's/Version: //' || true)
+            echo "{\"type\":\"$type\",\"date\":\"$date\",\"package\":\"$pkg\",\"version\":\"$version\"}," >> history.json
+          done
+          # 去掉末尾逗号，闭合 JSON
+          sed -i '$ s/,$//' history.json
+          echo ']}' >> history.json
+
+          echo "History entries: $(grep -c '"type"' history.json || true)"
+          cat history.json | head -20
+
+      - name: Commit changes
+        run: |
+          set -euo pipefail
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add Packages Packages.bz2 Packages.xz history.json
+          if git diff --cached --quiet; then
+            echo "unchanged, skipping commit"
+          else
+            git commit -m "Auto-update package index [skip ci]"
+            git push
+          fi
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v6.0.0
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v5.0.0
+        with:
+          path: '.'
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v5.0.1
+#（注：内容由AI生成）
