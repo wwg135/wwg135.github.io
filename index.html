@@ -503,7 +503,7 @@
                     setTimeout(() => showDetailModal(deepPkg), 300);
                 }
             } catch (e) {
-                document.getElementById('pkgList').innerHTML = '<div class="loading">无法加载软件包列表</div>';
+                document.getElementById('pkgList').innerHTML = '<div class="loading">无法加载插件包列表</div>';
             }
         }
 
@@ -547,7 +547,7 @@
 
         function renderPackageList(packages) {
             const listEl = document.getElementById('pkgList');
-            if (packages.length === 0) { listEl.innerHTML = '<div class="loading">没有匹配的软件包</div>'; return; }
+            if (packages.length === 0) { listEl.innerHTML = '<div class="loading">没有匹配的插件包</div>'; return; }
             listEl.innerHTML = packages.map(pkg => {
                 const latest = pkg.versions[0];
                 const vCount = pkg.versions.length;
