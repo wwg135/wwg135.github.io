@@ -4223,6 +4223,38 @@ Description: 壹影视去广告弹窗
 Author: M哥
 Name: LLVodProbe
 
+Package: com.mg.qmfree
+Version: 1.4.3
+Architecture: iphoneos-arm64e
+Maintainer: M哥
+Depends: firmware (>= 14.0), mobilesubstrate
+Filename: ./debs/com.mg.qmfree_1.4.3_iphoneos-arm64e.deb
+Size: 20284
+MD5sum: f68665b619e50ed86227252c84193bf5
+SHA1: debc3cfb4d4b64bbaa13424f8b16f30fa2b8d924
+SHA256: 6d564be0e4c4f1dd840ebef31b6faa9d5e493b9bbddacd8a21a72de987f4ad33
+Section: Tweaks
+Priority: optional
+Description: 七猫小说去广告
+Author: M哥
+Name: QMFree
+
+Package: com.mg.qmfree
+Version: 1.4.3
+Architecture: iphoneos-arm64
+Maintainer: M哥
+Depends: firmware (>= 14.0), mobilesubstrate
+Filename: ./debs/com.mg.qmfree_1.4.3_iphoneos-arm64.deb
+Size: 20300
+MD5sum: 550ab6b2f4825c0c419e8e8de033368e
+SHA1: 47623c370ada79dc67467b9622260544c780371a
+SHA256: b2494248e1589e879293461aa6f3dbfa1210dfd7288b29ec22b381708eb50789
+Section: Tweaks
+Priority: optional
+Description: 七猫小说去广告
+Author: M哥
+Name: QMFree
+
 Package: com.mg.zhihu
 Version: 0.4.1
 Architecture: iphoneos-arm64
