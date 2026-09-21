@@ -1,4 +1,6 @@
 {"events":[
+{"type":"added","date":"2026-09-21 02:05","package":"wiki.qaq.irisin_4.3.5_iphoneos-arm64","version":""},
+{"type":"added","date":"2026-09-21 02:05","package":"wiki.qaq.irisin_4.3.5_iphoneos-arm64e","version":""},
 {"type":"added","date":"2026-09-21 02:02","package":"wiki.qaq.irisin_4.3.5_iphoneos-arm64","version":""},
 {"type":"added","date":"2026-09-21 02:02","package":"wiki.qaq.irisin_4.3.5_iphoneos-arm64e","version":""},
 {"type":"added","date":"2026-09-21 01:53","package":"wiki.qaq.irisin_4.3.5_iphoneos-arm64","version":""},
@@ -46,7 +48,5 @@
 {"type":"added","date":"2025-05-15 08:02","package":"com.huami.dyyy_2.2-7_iphoneos-arm64","version":""},
 {"type":"added","date":"2025-05-14 23:12","package":"WCPulse_1.0-5-arm64","version":""},
 {"type":"added","date":"2025-05-14 10:44","package":"WCPulse_1.0-2-arm64","version":""},
-{"type":"added","date":"2025-05-14 10:44","package":"WCPulse_1.0-4-arm64","version":""},
-{"type":"added","date":"2025-05-14 10:44","package":"com.flex.lib_1.0-3+debug_iphoneos-arm","version":""},
-{"type":"added","date":"2025-05-14 10:44","package":"com.huami.WCPulse_1.0-1_iphoneos-arm64","version":""}
+{"type":"added","date":"2025-05-14 10:44","package":"WCPulse_1.0-4-arm64","version":""}
 ]}
