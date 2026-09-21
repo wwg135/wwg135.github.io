@@ -1,4 +1,5 @@
 {"events":[
+{"type":"added","date":"2026-09-21 20:53","package":"com.mlgm.idata_1.2.1_iphoneos-arm64e","version":""},
 {"type":"added","date":"2026-09-21 10:47","package":"wiki.qaq.irisin_4.3.7_iphoneos-arm64","version":""},
 {"type":"added","date":"2026-09-21 10:47","package":"wiki.qaq.irisin_4.3.7_iphoneos-arm64e","version":""},
 {"type":"added","date":"2026-09-21 09:45","package":"wiki.qaq.irisin_4.3.6_iphoneos-arm64","version":""},
@@ -47,6 +48,5 @@
 {"type":"added","date":"2025-06-13 19:38","package":"com.shtm.flexibleexpression_1.2.0_173270","version":""},
 {"type":"added","date":"2025-05-25 17:00","package":"WCPulse_1.0-7-arm64","version":""},
 {"type":"added","date":"2025-05-25 17:00","package":"com.huami.dyyy_2.2-7_iphoneos-arm64","version":""},
-{"type":"added","date":"2025-05-25 17:00","package":"com.liuf.dyjc_0.0.1_iphoneos-arm64","version":""},
-{"type":"added","date":"2025-05-25 17:00","package":"com.photospluss_1.0_iphoneos-arm64","version":""}
+{"type":"added","date":"2025-05-25 17:00","package":"com.liuf.dyjc_0.0.1_iphoneos-arm64","version":""}
 ]}

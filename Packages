@@ -4259,6 +4259,23 @@ Description: 知乎开屏秒进 v0.4.0（轮询隐藏 LaunchAD 开屏窗口）�
 Author: M哥
 Name: 知乎
 
+Package: com.mlgm.idata
+Version: 1.2.1
+Architecture: iphoneos-arm64e
+Maintainer: mlgm
+Installed-Size: 8228
+Depends: firmware (>= 15.0), apt, dpkg
+Filename: ./debs/com.mlgm.idata_1.2.1_iphoneos-arm64e.deb
+Size: 2460060
+MD5sum: a5183863376601f088ac0f62deac4f5c
+SHA1: 1832e6266ea43e6aeee3a8f11719bbda9eb3e435
+SHA256: 1cb5282fa2e0e81981ad07ff39841ebebde3094795bd75b221c5d1209bb08f98
+Section: Applications
+Description: 应用、插件数据管理工具，一键备份/恢复
+Author: mlgm
+Icon: https://mlgm66.github.io/icon/idata.png
+Name: iData
+
 Package: com.mrgcgamer.libgcuniversal
 Version: 1.6.4
 Architecture: iphoneos-arm64
