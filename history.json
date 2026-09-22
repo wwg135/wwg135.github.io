@@ -1,4 +1,6 @@
 {"events":[
+{"type":"added","date":"2026-09-22 02:23","package":"wiki.qaq.irisin_4.3.7_iphoneos-arm64","version":""},
+{"type":"added","date":"2026-09-22 02:23","package":"wiki.qaq.irisin_4.3.7_iphoneos-arm64e","version":""},
 {"type":"added","date":"2026-09-22 02:10","package":"wiki.qaq.irisin_4.3.7_iphoneos-arm64","version":""},
 {"type":"added","date":"2026-09-22 02:10","package":"wiki.qaq.irisin_4.3.7_iphoneos-arm64e","version":""},
 {"type":"added","date":"2026-09-22 01:34","package":"wiki.qaq.irisin_4.3.7_iphoneos-arm64","version":""},
@@ -46,7 +48,5 @@
 {"type":"added","date":"2026-09-19 21:30","package":"com.mg.dsx_0.5.8_iphoneos-arm64e","version":""},
 {"type":"added","date":"2025-07-03 08:50","package":"com.huami.dyyy_2.2-8_iphoneos-arm64","version":""},
 {"type":"added","date":"2025-07-03 08:50","package":"com.netskao.awemefullscreen_1.3-6_790698","version":""},
-{"type":"added","date":"2025-07-03 08:50","package":"com.ps.githubweblegacycompat_2.2.0_393808","version":""},
-{"type":"added","date":"2025-07-03 08:50","package":"com.ps.polyfills_2.2.0_454356","version":""},
-{"type":"added","date":"2025-06-24 12:05","package":"com.huami.dyyy_2.2-8_iphoneos-arm64","version":""}
+{"type":"added","date":"2025-07-03 08:50","package":"com.ps.githubweblegacycompat_2.2.0_393808","version":""}
 ]}
