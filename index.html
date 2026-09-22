@@ -124,7 +124,7 @@
             padding: 14px; border-radius: 12px; text-decoration: none; font-weight: 600; font-size: 15px;
         }
         .btn-sileo { background: linear-gradient(135deg, #007aff, #5856d6); color: #fff; }
-        .btn-irisin { background: linear-gradient(135deg, #34c759, #30d158); color: #fff; }
+        .btn-saily { background: linear-gradient(135deg, #34c759, #30d158); color: #fff; }
         .btn-telegram { background: linear-gradient(135deg, #0088cc, #00a8e8); color: #fff; }
         .filter-row { display: flex; gap: 8px; margin-bottom: 12px; }
         .filter-select {
@@ -283,7 +283,7 @@
             </div>
             <div class="action-buttons">
                 <a href="sileo://source/https://wwg135.github.io/" class="action-btn btn-sileo"><i class="fa fa-download"></i>添加到 Sileo</a>
-                <a href="irisin://repository/add?url=https://wwg135.github.io/" class="action-btn btn-irisin"><i class="fa fa-download"></i>添加到 Irisin</a>
+                <a href="irisin://repository/add?url=https://wwg135.github.io/" class="action-btn btn-saily"><i class="fa fa-download"></i>添加到 Irisin</a>
             </div>
         </div>
 
@@ -503,7 +503,7 @@
                     setTimeout(() => showDetailModal(deepPkg), 300);
                 }
             } catch (e) {
-                document.getElementById('pkgList').innerHTML = '<div class="loading">无法加载插件包列表</div>';
+                document.getElementById('pkgList').innerHTML = '<div class="loading">无法加载软件包列表</div>';
             }
         }
 
@@ -547,7 +547,7 @@
 
         function renderPackageList(packages) {
             const listEl = document.getElementById('pkgList');
-            if (packages.length === 0) { listEl.innerHTML = '<div class="loading">没有匹配的插件包</div>'; return; }
+            if (packages.length === 0) { listEl.innerHTML = '<div class="loading">没有匹配的软件包</div>'; return; }
             listEl.innerHTML = packages.map(pkg => {
                 const latest = pkg.versions[0];
                 const vCount = pkg.versions.length;
@@ -702,14 +702,25 @@
                     el.innerHTML = '<div class="loading">暂无更新记录</div>';
                     return;
                 }
-                el.innerHTML = '<div class="timeline">' + data.events.map(e => `
+                el.innerHTML = '<div class="timeline">' + data.events.map(e => {
+                    // git log 输出的是 UTC 时间，转成北京时间 UTC+8
+                    let displayDate = e.date;
+                    try {
+                        const utc = new Date(e.date.replace(' ', 'T') + 'Z');
+                        displayDate = utc.toLocaleString('zh-CN', {
+                            timeZone: 'Asia/Shanghai',
+                            year: 'numeric', month: '2-digit', day: '2-digit',
+                            hour: '2-digit', minute: '2-digit', hour12: false
+                        }).replace(/\//g, '-');
+                    } catch (err) {}
+                    return `
                     <div class="timeline-item">
                         <div class="timeline-dot ${e.type === 'removed' ? 'removed' : ''}"></div>
-                        <div class="timeline-date">${e.date}</div>
+                        <div class="timeline-date">${displayDate}</div>
                         <div class="timeline-title">${e.type === 'added' ? '上架' : '下架'} ${e.package}</div>
                         ${e.version ? `<div class="timeline-desc">版本 v${e.version}</div>` : ''}
-                    </div>
-                `).join('') + '</div>';
+                    </div>`;
+                }).join('') + '</div>';
             } catch (e) {
                 el.innerHTML = '<div class="loading">暂无更新记录</div>';
             } finally {
