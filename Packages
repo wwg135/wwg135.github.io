@@ -1819,21 +1819,6 @@ Author: HuangBai <QQ:1343309363@qq.com>
 Name: 黄白助手(微信插件)-Rootless
 
 Package: com.HBWechatHelper.ailun
-Version: 1.7.1
-Architecture: iphoneos-arm64
-Maintainer: HuangBai <QQ:1343309363@qq.com>
-Depends: mobilesubstrate
-Filename: ./debs/黄白助手1.7.1_无根.deb
-Size: 9419648
-MD5sum: b00e07f64b28b921759c0ed97b4bf7ad
-SHA1: 594988c89270c59b3099b2367bc56952bb63b181
-SHA256: 73b4936a01c2bb178a4d41957473b72acea4b4bfe2a2a9a9b5812a89b9a1f0d2
-Section: Mao
-Description: 黄白助手-微信插件                                                                                                                                                                 一个微信插件文本转语音以及点歌朋友圈一键点赞等诸多功能（发送网络语录舔狗日记骂人等文案或者4K原图手绘壁纸等，抢私聊红包，自定义信息尾巴，自定义拍一拍 百变小尾巴 实时尾巴时间等功能
-Author: HuangBai <QQ:1343309363@qq.com>
-Name: 黄白助手(微信插件)-Rootless
-
-Package: com.HBWechatHelper.ailun
 Version: 1.7.2
 Architecture: iphoneos-arm64
 Maintainer: HuangBai <QQ:1343309363@qq.com>
@@ -1843,21 +1828,6 @@ Size: 9512088
 MD5sum: ae40fa00c95876f71f1225e07c0ccf9c
 SHA1: 4b489e342d282ea94cf2ef263f916b2bb6c7deaf
 SHA256: 2f96c00003133556c3e0b78e6f4c7e1bd6911e25e8bf55cdeeb7e7d4216e56bf
-Section: Mao
-Description: 黄白助手-微信插件                                                                                                                                                                 一个微信插件文本转语音以及点歌朋友圈一键点赞等诸多功能（发送网络语录舔狗日记骂人等文案或者4K原图手绘壁纸等，抢私聊红包，自定义信息尾巴，自定义拍一拍 百变小尾巴 实时尾巴时间等功能
-Author: HuangBai <QQ:1343309363@qq.com>
-Name: 黄白助手(微信插件)-Rootless
-
-Package: com.HBWechatHelper.ailun
-Version: 1.7.3
-Architecture: iphoneos-arm64
-Maintainer: HuangBai <QQ:1343309363@qq.com>
-Depends: mobilesubstrate
-Filename: ./debs/黄白助手1.7.3_无根.deb
-Size: 9038504
-MD5sum: 49b47c16acc1a31a59f59dee7d13930e
-SHA1: f857977fb5e9e7040d6d867a088256b77a1a296f
-SHA256: 81f28a2fdd720cf3d1f9a93372df4a070e99f5ae22f02875583ba5bf2a30f76c
 Section: Mao
 Description: 黄白助手-微信插件                                                                                                                                                                 一个微信插件文本转语音以及点歌朋友圈一键点赞等诸多功能（发送网络语录舔狗日记骂人等文案或者4K原图手绘壁纸等，抢私聊红包，自定义信息尾巴，自定义拍一拍 百变小尾巴 实时尾巴时间等功能
 Author: HuangBai <QQ:1343309363@qq.com>
