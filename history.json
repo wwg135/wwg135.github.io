@@ -1,4 +1,6 @@
 {"events":[
+{"type":"added","date":"2026-09-22 18:16","package":"WCPulse_1.7-4-arm64","version":""},
+{"type":"added","date":"2026-09-22 18:16","package":"WCPulse_1.7-4-arm64e","version":""},
 {"type":"added","date":"2026-09-22 09:08","package":"wiki.qaq.irisin_4.3.8_iphoneos-arm64","version":""},
 {"type":"added","date":"2026-09-22 09:08","package":"wiki.qaq.irisin_4.3.8_iphoneos-arm64e","version":""},
 {"type":"added","date":"2026-09-22 16:51","package":"com.mg.qmfree_1.7.4_iphoneos-arm64","version":""},
@@ -46,7 +48,5 @@
 {"type":"added","date":"2026-09-20 12:59","package":"com.mg.iqiyi_0.2.4_iphoneos-arm64","version":""},
 {"type":"added","date":"2026-09-20 12:59","package":"com.mg.iqiyi_0.2.4_iphoneos-arm64e","version":""},
 {"type":"removed","date":"2026-09-20 10:18","package":"com.dumpapp.wechat-rootless_2.0.4_961211","version":""},
-{"type":"removed","date":"2026-09-20 00:03","package":"tweaktool_1.6.4_iphoneos-arm64","version":""},
-{"type":"added","date":"2026-09-19 23:52","package":"Saily(RootHide)_3.0.1","version":""},
-{"type":"added","date":"2026-09-19 23:52","package":"cn.llld.appfix_1.0.0_iphoneos-arm64","version":""}
+{"type":"removed","date":"2026-09-20 00:03","package":"tweaktool_1.6.4_iphoneos-arm64","version":""}
 ]}
