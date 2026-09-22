@@ -12482,13 +12482,13 @@ Package: wiki.qaq.irisin
 Version: 4.3.7
 Architecture: iphoneos-arm64
 Maintainer: OwnGoal Studio <no-reply@owngoal.dev>
-Installed-Size: 37204
+Installed-Size: 37220
 Depends: firmware (>= 16.0)
 Filename: ./debs/wiki.qaq.irisin_4.3.7_iphoneos-arm64.deb
-Size: 10106700
-MD5sum: 999dd02af3b0947f7363a6ff0cff167e
-SHA1: d3a648510fb9856965fe0e5c4d0319a94563fd88
-SHA256: 9e30befbaa01969cfd870db3735db4c1dd94fca94e82d5f7f9c23ef72e980d58
+Size: 10107952
+MD5sum: 79edc43ad41db4d7e76f14e06676d5b8
+SHA1: 4c2346c9bf14749cbe51f43962cd45370f79f599
+SHA256: 13901525838fcbb5677ab613e053da44b6b399f2ac449147e01ac2127cb17f29
 Section: Applications
 Priority: optional
 Homepage: https://github.com/Lakr233/Irisin
@@ -12508,13 +12508,13 @@ Package: wiki.qaq.irisin
 Version: 4.3.7
 Architecture: iphoneos-arm64e
 Maintainer: OwnGoal Studio <no-reply@owngoal.dev>
-Installed-Size: 37204
+Installed-Size: 37220
 Depends: firmware (>= 16.0)
 Filename: ./debs/wiki.qaq.irisin_4.3.7_iphoneos-arm64e.deb
-Size: 10105972
-MD5sum: 2583bf77dcd4caab308dd566443f52a3
-SHA1: 5fb549a1177f749e170efbc1594b9664ac8cd9b3
-SHA256: e22c1a504e35a243edc7303bd73dff77fab3123a66dbfb574de8d6de690a5709
+Size: 10106776
+MD5sum: 6eef44d8e335905a1d4e42c6574d68a9
+SHA1: 58d446a61db99df5931915a9d51e4fb91cbcdf2f
+SHA256: 4784934c5641b6b531bc57153cf5df1c69cc4c4e2246e51746df7ddf8f6a51e4
 Section: Applications
 Priority: optional
 Homepage: https://github.com/Lakr233/Irisin
