@@ -465,6 +465,7 @@
                     if (pkg.Package) {
                         rawPkgs.push({
                             name: pkg.Package,
+                            displayName: pkg.Name || pkg.Package,
                             desc: pkg.Description || '',
                             section: pkg.Section || '未分类',
                             author: pkg.Author || '',
@@ -524,7 +525,7 @@
             if (section) filtered = filtered.filter(p => p.section === section);
             if (arch) filtered = filtered.filter(p => p.versions.some(v => v.arch === arch));
             if (keyword) filtered = filtered.filter(p =>
-                p.name.toLowerCase().includes(keyword) || (p.desc && p.desc.toLowerCase().includes(keyword)));
+                p.name.toLowerCase().includes(keyword) || p.displayName.toLowerCase().includes(keyword) || (p.desc && p.desc.toLowerCase().includes(keyword)));
             if (currentSort === 'new') {
                 filtered.sort((a, b) => {
                     const an = isNew(a.name, a.versions[0]?.version) ? 1 : 0;
@@ -561,7 +562,7 @@
                     <div class="pkg-item">
                         ${renderIcon(pkg)}
                         <div class="pkg-info" onclick="showDetailModal('${pkg.name.replace(/'/g, "\\'")}')">
-                            <div class="pkg-name">${pkg.name} ${newBadge}</div>
+                            <div class="pkg-name">${pkg.displayName} ${newBadge}</div>
                             <div class="pkg-meta">${metaParts.map(m => `<span>${m}</span>`).join('')}</div>
                             ${pkg.desc ? `<div class="pkg-desc">${pkg.desc}</div>` : ''}
                         </div>
@@ -643,7 +644,7 @@
             });
             html += '</div></div>';
 
-            document.getElementById('detailModalTitle').textContent = pkg.name;
+            document.getElementById('detailModalTitle').textContent = pkg.displayName;
             document.getElementById('detailContent').innerHTML = html;
             document.getElementById('detailModal').classList.add('show');
 
@@ -654,7 +655,7 @@
         function showVersionModal(pkgName) {
             const pkg = allPackages.find(p => p.name === pkgName);
             if (!pkg || pkg.versions.length === 0) return;
-            document.getElementById('versionModalTitle').textContent = `${pkg.name} - 选择版本`;
+            document.getElementById('versionModalTitle').textContent = `${pkg.displayName} - 选择版本`;
             document.getElementById('versionList').innerHTML = pkg.versions.map(v => {
                 const sz = v.downloadSize ? formatSize(v.downloadSize) : '';
                 return `
@@ -703,6 +704,7 @@
                     return;
                 }
                 el.innerHTML = '<div class="timeline">' + data.events.map(e => {
+                    // git log 输出的是 UTC 时间，转成北京时间 UTC+8
                     let displayDate = e.date;
                     try {
                         const utc = new Date(e.date.replace(' ', 'T') + 'Z');
