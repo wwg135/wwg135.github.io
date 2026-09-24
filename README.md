@@ -49,28 +49,11 @@
 
 | 项目 | 简介 |
 | :--- | :--- |
-| **Dopamine** | iOS15 无根越狱工具 |
-| **Relaxin** **Roothide** | iOS16+ 隐根越狱工具 |
+| **Dopamine** | iOS15 无根越狱插件，arm64 |
+| **Relaxin** **Roothide** | iOS16+ 隐根越狱插件,arm64e |
 
 </details>
 </div>
-
-<br>
-
-<div style="background: rgba(255,255,255,0.05); backdrop-filter: blur(10px); border:1px solid rgba(255,255,255,0.1); border-radius:16px; padding:20px; max-width:720px;">
-<details>
-<summary style="font-size:18px; font-weight:bold;">🤖 AI Agent 相关项目</summary>
-
-<br>
-
-- **hermes-agent**：The agent that grows with you
-- **openclaw**：Your own personal AI assistant. Any OS. Any Platform.
-
-</details>
-</div>
-</div>
-
-<br>
 
 <div align="center">
 <img src="https://komarev.com/ghpvc/?username=wwg135&color=89CFF0&style=flat-square" alt="profile views"/>
