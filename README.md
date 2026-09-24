@@ -1,18 +1,5 @@
-<!-- PROJECT SHIELDS -->
-
-[![Forks][forks-shield]][forks-url]
-[![Stargazers][stars-shield]][stars-url]
-
 <!-- PROJECT LOGO -->
 <br />
-
-<div align="center">
-
-<!-- 玻璃拟态标题卡片 -->
-<div style="background: rgba(255,255,255,0.05); backdrop-filter: blur(10px); border:1px solid rgba(255,255,255,0.1); border-radius:16px; padding:24px; max-width:720px;">
-<h2 style="margin:0;">wwg135</h2>
-<p style="color:#9ca3af; margin:8px 0 0;">Don't give up the joy of upgrading just for jailbreaking!!</p>
-</div>
 
 <br>
 
