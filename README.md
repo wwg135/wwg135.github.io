@@ -1,6 +1,8 @@
 <!-- PROJECT LOGO -->
 <br />
 
+<div align="center">
+
 <br>
 
 <!-- 动态打字SVG -->
