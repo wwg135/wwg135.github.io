@@ -6,21 +6,72 @@
 <!-- PROJECT LOGO -->
 <br />
 
-免责声明: 本仓库发布的项目中涉及的所有内容，仅用于测试和学习研究，禁止用于商业用途，不能保证其合法性，准确性，完整性和有效性，请根据情况自行判断.
+<div align="center">
 
-请勿将本项目的任何内容用于商业或非法目的，否则后果自负.
+<!-- 玻璃拟态标题卡片 -->
+<div style="background: rgba(255,255,255,0.05); backdrop-filter: blur(10px); border:1px solid rgba(255,255,255,0.1); border-radius:16px; padding:24px; max-width:720px;">
+<h2 style="margin:0;">wwg135</h2>
+<p style="color:#9ca3af; margin:8px 0 0;">Don't give up the joy of upgrading just for jailbreaking!!</p>
+</div>
 
-如果您认为该项目的内容可能涉嫌侵犯其权利，请与我联系，我会尽快删除文件.
+<br>
 
-如果您使用并复制了任何本仓库的内容，则视为您已接受此免责声明.
+<!-- 动态打字SVG -->
+<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=500&size=20&pause=1000&color=89CFF0&width=620&lines=iOS+Tweak+Developer;TrollStore+%7C+Dopamine+%7C+Rootless;AI+Agent+Enthusiast" />
 
-聊天交流，请关注tg巨魔商店Pro：https://t.me/TrollStorePro
+<br><br>
 
-![](http://profile-counter.glitch.me/evilbutcher/count.svg)
+<!-- 玻璃风格统计卡片 -->
+<img src="https://github-readme-stats.vercel.app/api?username=wwg135&show_icons=true&theme=transparent&hide_border=true" />
+<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=wwg135&layout=compact&theme=transparent&hide_border=true" />
 
-<!-- links -->
-[your-project-path]:wwg135/wwg135.github.io
-[forks-shield]: https://img.shields.io/github/forks/wwg135/wwg135.github.io.svg?style=flat-square
-[forks-url]: https://github.com/wwg135/wwg135.github.io/network/members
-[stars-shield]: https://img.shields.io/github/stars/wwg135/wwg135.github.io.svg?style=flat-square
-[stars-url]: https://github.com/wwg135/wwg135.github.io/stargazers
+<br><br>
+
+<!-- 技术徽章 -->
+<img src="https://img.shields.io/badge/C-00599C?style=flat-square&logo=c&logoColor=white">
+<img src="https://img.shields.io/badge/Objective--C-438EFF?style=flat-square&logo=apple&logoColor=white">
+<img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white">
+<img src="https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white">
+
+</div>
+
+<br>
+
+---
+
+<div align="center">
+<!-- 项目玻璃卡片 -->
+<div style="background: rgba(255,255,255,0.05); backdrop-filter: blur(10px); border:1px solid rgba(255,255,255,0.1); border-radius:16px; padding:20px; max-width:720px;">
+<details open>
+<summary style="font-size:18px; font-weight:bold;">📱 iOS 越狱 & 插件项目</summary>
+
+<br>
+
+| 项目 | 简介 |
+| :--- | :--- |
+| **Dopamine** | iOS15 无根越狱工具 |
+| **Relaxin** **Roothide** | iOS16+ 隐根越狱工具 |
+
+</details>
+</div>
+
+<br>
+
+<div style="background: rgba(255,255,255,0.05); backdrop-filter: blur(10px); border:1px solid rgba(255,255,255,0.1); border-radius:16px; padding:20px; max-width:720px;">
+<details>
+<summary style="font-size:18px; font-weight:bold;">🤖 AI Agent 相关项目</summary>
+
+<br>
+
+- **hermes-agent**：The agent that grows with you
+- **openclaw**：Your own personal AI assistant. Any OS. Any Platform.
+
+</details>
+</div>
+</div>
+
+<br>
+
+<div align="center">
+<img src="https://komarev.com/ghpvc/?username=wwg135&color=89CFF0&style=flat-square" alt="profile views"/>
+</div>
