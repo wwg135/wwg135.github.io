@@ -6,7 +6,7 @@
 <br>
 
 <!-- 动态打字SVG -->
-<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=500&size=20&pause=1000&color=89CFF0&width=620&lines=iOS+Tweak+Developer;TrollStore+%7C+Dopamine+Relaxin+%7C+Rootless" />
+<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=500&size=20&pause=1000&color=89CFF0&width=620&lines=iOS+Tweak+Developer;TrollStore+%7C+Dopamine+Relaxin+Roothide+%7C+Rootless+Roothide" />
 
 <br><br>
 
