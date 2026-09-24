@@ -172,7 +172,7 @@ https://wwg135.github.io
 
 <h2 align="center">📱 兼容性说明</h2>
 
-- 本源为 **Rootless（无根）源**，架构支持 **arm64 / arm64e**
+- 本源为 **Rootless（无根）源、Roothide（隐根）源**，架构支持 **arm64 / arm64e**
 - 适用于 **Dopamine、Relaxin（Roothide）** 等 iOS 15+ 无根 / 隐根越狱环境
 - 推荐使用 **Sileo** 或 **Irisin** 包管理器
 - 同时收录部分 **TrollStore 免越狱注入** 插件
