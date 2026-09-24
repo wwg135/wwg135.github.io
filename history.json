@@ -1,4 +1,5 @@
 {"events":[
+{"type":"removed","date":"2026-09-24 08:53","package":"wiki.qaq.irisin_4.5.0_iphoneos-arm64","version":""},
 {"type":"added","date":"2026-09-24 00:46","package":"wiki.qaq.irisin_4.5.0_iphoneos-arm64","version":""},
 {"type":"added","date":"2026-09-24 00:46","package":"wiki.qaq.irisin_4.5.0_iphoneos-arm64e","version":""},
 {"type":"added","date":"2026-09-24 08:07","package":"xyz.cypwn.prism_1.5.0-1k_iphoneos-arm64","version":""},
@@ -47,6 +48,5 @@
 {"type":"added","date":"2026-09-20 23:24","package":"wiki.qaq.irisin_4.2.10_iphoneos-arm64e","version":""},
 {"type":"added","date":"2026-09-20 19:49","package":"com.mg.llvodprobe_0.3.0_iphoneos-arm64","version":""},
 {"type":"added","date":"2026-09-20 19:49","package":"com.mg.llvodprobe_0.3.0_iphoneos-arm64e","version":""},
-{"type":"added","date":"2026-09-20 16:48","package":"com.mg.immortal_0.1.0_iphoneos-arm64","version":""},
-{"type":"added","date":"2026-09-20 16:47","package":"wiki.qaq.irisin_4.2.10_iphoneos-arm64","version":""}
+{"type":"added","date":"2026-09-20 16:48","package":"com.mg.immortal_0.1.0_iphoneos-arm64","version":""}
 ]}
