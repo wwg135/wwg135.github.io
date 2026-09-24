@@ -38,8 +38,8 @@
 
 | 项目 | 简介 |
 | :--- | :--- |
-| **Dopamine** | iOS15 无根越狱插件，arm64 |
-| **Relaxin** **Roothide** | iOS16+ 隐根越狱插件,arm64e |
+| **Dopamine** | iOS15+ 无根越狱插件，arm64 |
+| **Relaxin** **Roothide** | iOS15+ 隐根越狱插件，arm64e |
 
 </details>
 </div>
