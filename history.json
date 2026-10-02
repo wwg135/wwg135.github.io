@@ -1,4 +1,6 @@
 {"events":[
+{"type":"added","date":"2026-10-02 06:58","package":"wiki.qaq.irisin_4.5.18_iphoneos-arm64","version":""},
+{"type":"added","date":"2026-10-02 06:58","package":"wiki.qaq.irisin_4.5.18_iphoneos-arm64e","version":""},
 {"type":"added","date":"2026-10-02 06:31","package":"wiki.qaq.irisin_4.5.18_iphoneos-arm64","version":""},
 {"type":"added","date":"2026-10-02 06:31","package":"wiki.qaq.irisin_4.5.18_iphoneos-arm64e","version":""},
 {"type":"added","date":"2026-10-02 06:00","package":"wiki.qaq.irisin_4.5.18_iphoneos-arm64","version":""},
@@ -46,7 +48,5 @@
 {"type":"added","date":"2026-09-22 18:19","package":"com.iosdump.shellx_10.1.0_iphoneos-arm64","version":""},
 {"type":"added","date":"2026-09-22 18:19","package":"com.iosdump.shellx_10.1.0_iphoneos-arm64e","version":""},
 {"type":"added","date":"2026-09-22 18:16","package":"WCPulse_1.7-4-arm64","version":""},
-{"type":"added","date":"2026-09-22 18:16","package":"WCPulse_1.7-4-arm64e","version":""},
-{"type":"added","date":"2026-09-22 09:08","package":"wiki.qaq.irisin_4.3.8_iphoneos-arm64","version":""},
-{"type":"added","date":"2026-09-22 09:08","package":"wiki.qaq.irisin_4.3.8_iphoneos-arm64e","version":""}
+{"type":"added","date":"2026-09-22 18:16","package":"WCPulse_1.7-4-arm64e","version":""}
 ]}
