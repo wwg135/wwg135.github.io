@@ -2037,6 +2037,43 @@ Description: 插件开关已纳入微信插件管理页面。删除搜索页面�
 Author: Apple
 Name: 微信广告净化助手_Crack
 
+Package: com.aronsz26.lockscreenrestore
+Version: 1.9.4
+Architecture: iphoneos-arm64e
+Maintainer: aronsz26
+Installed-Size: 700
+Pre-Depends: rootless-compat (>= 0.9)
+Depends: mobilesubstrate (>= 0.9.5000), firmware (>= 16.0), preferenceloader
+Filename: ./debs/com.aronsz26.lockscreenrestore_1.9.4-relaxin.deb
+Size: 116148
+MD5sum: a90890c723aa65542e9bb669323de676
+SHA1: c3843a3a5373426fe5ff4f1f388b7caf8e180ffe
+SHA256: 2cf8126c3af4778112dd8722cd097b1b909f85b80b6e00787066c866adb0247d
+Section: Tweaks
+Description: iOS 16上的iOS 15风格锁屏：时钟、日期、锁头、焦点药丸、顶部通知、iOS 15音乐播放器、解锁动画、实时和动态壁纸以及iOS 15设置>壁纸页面，可下载壁纸。每个部分都可以在设置中关闭。
+Author: aronsz26
+Icon: https://aronsz26.github.io/depictions/lockscreenrestore/depiction/icon.png
+Name: LockScreenRestore
+Sileodepiction: https://aronsz26.github.io/depictions/lockscreenrestore/depiction/sileo.json
+
+Package: com.aronsz26.lockscreenrestore
+Version: 1.9.4
+Architecture: iphoneos-arm64
+Maintainer: aronsz26
+Installed-Size: 700
+Depends: mobilesubstrate (>= 0.9.5000), firmware (>= 16.0), preferenceloader
+Filename: ./debs/com.aronsz26.lockscreenrestore_1.9.4_iphoneos-arm64.deb
+Size: 112656
+MD5sum: 3607ae47c9a0fbd109ed2a99937bf06d
+SHA1: f3ce9aba3fc922931e197ee8c67e5582526bdfd1
+SHA256: af62ea53cfcd479dd920163732d6211b4ff0f86d135d86dbc5da942364babeb7
+Section: Tweaks
+Description: iOS 16上的iOS 15风格锁屏：时钟、日期、锁头、焦点药丸、顶部通知、iOS 15音乐播放器、解锁动画、实时和动态壁纸以及iOS 15设置>壁纸页面，可下载壁纸。每个部分都可以在设置中关闭。
+Author: aronsz26
+Icon: https://aronsz26.github.io/depictions/lockscreenrestore/depiction/icon.png
+Name: LockScreenRestore
+Sileodepiction: https://aronsz26.github.io/depictions/lockscreenrestore/depiction/sileo.json
+
 Package: com.autounlockface
 Version: 1.1
 Architecture: iphoneos-arm64
