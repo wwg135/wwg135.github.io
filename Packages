@@ -515,6 +515,24 @@ Tag: purpose::uikit, compatible::ios14
 Author: 来了老弟
 Name: 应用修改器
 
+Package: cn.llld.appfix
+Version: 1.2.21
+Architecture: iphoneos-arm64
+Maintainer: 来了老弟
+Installed-Size: 1940
+Depends: firmware (>= 14.0), ellekit | mobilesubstrate
+Filename: ./debs/cn.llld.appfix_1.2.21_iphoneos-arm64.deb
+Size: 575812
+MD5sum: 52d2cf78cbd4c786dc1cf618998042f7
+SHA1: d67759058f24db4d233a28a564b9b2f8e1a9ace1
+SHA256: c7062ebfab2f619cd7e78d995ce21b65bc58798dcd7a7273a725c2d83e5dd566
+Section: Development
+Description: appfix 应用修改器 ———  系统应用，用户应用，越狱应用的调整工具（Flex3 思路重写增强，1.0版本之后支持导入Flex3配置），支持自定义脚本代码，配置导出导入，一键开关，视图层级可视化 等等，不收费。
+Tag: purpose::uikit, compatible::ios14
+Author: 来了老弟
+Icon: file:///var/jb/Applications/appfix.app/AppIcon60@3x.png
+Name: 应用修改器
+
 Package: cn.llld.bbqzr
 Version: 0.1
 Architecture: iphoneos-arm64
@@ -627,6 +645,22 @@ Description: ***给QQ加些精简功能，芭比Q可注入可越狱使用，***�
 Author: 来了老弟
 Name: QQ绿化_芭比Q-rootless
 Sileodepiction: https://laileld.github.io/repo/sileodepiction/cn.llld.bbqzr/bbq.json
+
+Package: cn.llld.biaoji
+Version: 2.0-1+debug
+Architecture: iphoneos-arm64
+Maintainer: 来了老弟 X: h_h_x_t
+Installed-Size: 328
+Depends: mobilesubstrate
+Filename: ./debs/cn.llld.biaoji_2.0-1+debug_iphoneos-arm64.deb
+Size: 75620
+MD5sum: b32b41b91d99889e26bd076db2cf6920
+SHA1: a086ba9fbe24c864096b989919ea39dd9b985248
+SHA256: 37ec92e91610b4394c66728e3fda659f80cfc453958cf9aab1ccfa533d3ec1a3
+Section: rootless插件
+Description: 给Snapper 或stayShot插件增加标记功能，快速对图进行箭头，打码，复制，方块，涂鸦，保存，高亮，文字等，免去了装第三方软件或者跳转程序的繁琐，14-17可用，改屏幕图标在插件目录下Library/MobileSubstrate/DynamicLibraries/biaoji/pencil.tip.crop.circle.png，设置里图标名为Settings-biaoji.png
+Author: 来了老弟 X: h_h_x_t
+Name: 截图标记-rootless
 
 Package: cn.llld.copy1
 Version: 1.4.3
@@ -1502,6 +1536,22 @@ SHA1: e363486e15e9b68bec9ed9331e5d770097ed7395
 SHA256: 3dbabe90f6e82ae7103e4b827d550c6624ddef665601e5f0e77b4e298f4cc75b
 Section: rootless应用插件
 Description: 可注入可越狱使用。自定义步数，屏蔽越狱检测(代码半年没动了)，精简主页显示内容.***长按底栏1秒控件或森林、运动顶栏或任意右上角控件顶部，弹出设置***,支持任意版本。0303:增加移除理财。自行设置里关了视频，底部就居中了
+Author: 来了老弟 X：h_h_x_t
+Name: 支付宝步数XD-rootless
+
+Package: cn.llld.zfbb
+Version: 1.5
+Architecture: iphoneos-arm64
+Maintainer: 来了老弟 X：h_h_x_t
+Installed-Size: 204
+Depends: mobilesubstrate
+Filename: ./debs/cn.llld.zfbb_1.5_iphoneos-arm64.deb
+Size: 20574
+MD5sum: d05c3f0664f52193954fbf15048d59ff
+SHA1: a25df2a8bcb5e08921f7b751171a4708689f0c82
+SHA256: 4e02f0badf1df90b88702959a0ce26fd3fed364b0a333caf1992ecfe714f96da
+Section: rootless应用插件
+Description: 可注入可越狱使用。自定义步数，精简主页显示内容，视频内容下载.***长按底栏1秒控件或森林、运动顶栏或任意右上角控件顶部，弹出设置***,支持任意版本。250524:最好巨魔注入使用。260927:加个视频下载按钮
 Author: 来了老弟 X：h_h_x_t
 Name: 支付宝步数XD-rootless
 
