@@ -13043,6 +13043,58 @@ Name: Irisin
 Sileodepiction: https://lakr233.github.io/Irisin/depiction.json
 
 Package: wiki.qaq.irisin
+Version: 4.5.20
+Architecture: iphoneos-arm64e
+Maintainer: OwnGoal Studio <no-reply@owngoal.dev>
+Installed-Size: 18776
+Depends: firmware (>= 16.0)
+Filename: ./debs/wiki.qaq.irisin_4.5.20_iphoneos-arm64e.deb
+Size: 5672444
+MD5sum: bdda94e5873b45454311a90d462cb9b8
+SHA1: f6d8e44fc8d7dda3d2f0e17dfb7a2788122b70e1
+SHA256: 61eedd093197928c72a39f37d72fdde703f8a101e10e088aee172910d71facd0
+Section: Applications
+Priority: optional
+Homepage: https://github.com/Lakr233/Irisin
+Description: Modern package manager for roothide custom firmware
+ Browse your repositories, install and remove packages, keep tweaks updated
+ and read every depiction, on iPhone and iPad. The app runs without root;
+ installs go through a small on-demand root daemon whose helper installs
+ packages natively and registers apps with LaunchServices itself. No dpkg,
+ no uicache.
+Author: OwnGoal Studio <no-reply@owngoal.dev>
+Depiction: https://lakr233.github.io/Irisin/
+Icon: https://lakr233.github.io/Irisin/icon.png
+Name: Irisin
+Sileodepiction: https://lakr233.github.io/Irisin/depiction.json
+
+Package: wiki.qaq.irisin
+Version: 4.5.20
+Architecture: iphoneos-arm64
+Maintainer: OwnGoal Studio <no-reply@owngoal.dev>
+Installed-Size: 18776
+Depends: firmware (>= 16.0)
+Filename: ./debs/wiki.qaq.irisin_4.5.20_iphoneos-arm64.deb
+Size: 5672868
+MD5sum: 0b395c5d63a79fd4667e43747eca4261
+SHA1: 4788a2aabd8cb7abda229810b5937583a3d92fec
+SHA256: e2208ed37fe23e95f1b1ac860eb739e60c718f158bf2f0616a1ab1cb28c22113
+Section: Applications
+Priority: optional
+Homepage: https://github.com/Lakr233/Irisin
+Description: Modern package manager for rootless custom firmware
+ Browse your repositories, install and remove packages, keep tweaks updated
+ and read every depiction, on iPhone and iPad. The app runs without root;
+ installs go through a small on-demand root daemon whose helper installs
+ packages natively and registers apps with LaunchServices itself. No dpkg,
+ no uicache.
+Author: OwnGoal Studio <no-reply@owngoal.dev>
+Depiction: https://lakr233.github.io/Irisin/
+Icon: https://lakr233.github.io/Irisin/icon.png
+Name: Irisin
+Sileodepiction: https://lakr233.github.io/Irisin/depiction.json
+
+Package: wiki.qaq.irisin
 Version: 4.5.3
 Architecture: iphoneos-arm64e
 Maintainer: OwnGoal Studio <no-reply@owngoal.dev>
