@@ -1651,6 +1651,24 @@ Description: 可注入可越狱使用。去除启动页视频图片摇一摇广�
 Author: 来了老弟
 Name: 最右绿化-rootless
 
+Package: cn.mg.adsspee
+Version: 1.1.5
+Architecture: iphoneos-arm64
+Maintainer: M哥
+Installed-Size: 620
+Depends: mobilesubstrate, preferenceloader
+Conflicts: com.yourepo.lenglengyu.adsspeed
+Filename: ./debs/cn.mg.adsspee_1.1.5_iphoneos-arm64.deb
+Size: 110328
+MD5sum: 1e1b917317504946761b55037d6a52fb
+SHA1: ae4a314ac8652083b6621aed14dc3e79ff0b8985
+SHA256: 1e83a996485c2fa19ab2651fcaaa2400a66f8c7b432f35e633c9e4e23f029b62
+Section: 插件
+Description: 快速跳过激励视频广告！
+Author: lly
+Name: 跳过广告-Rootless
+Sponsor: M哥
+
 Package: cn.swing.trip
 Version: 1.0.0
 Architecture: iphoneos-arm64
@@ -2156,6 +2174,38 @@ Section: Tweaks
 Description: 中国联通去广告
 Author: M哥
 Name: 中国联通NoAd-rootless
+
+Package: com.crctdd.autocopyverify
+Version: 0.0.5
+Architecture: iphoneos-arm64e
+Maintainer: crctdd
+Installed-Size: 740
+Depends: mobilesubstrate, firmware (>= 15.0), firmware (<< 18.0)
+Filename: ./debs/com.crctdd.autocopyverify_0.0.5_iphoneos-arm64e.deb
+Size: 77884
+MD5sum: 57577047708f37ac35850896edc2b82b
+SHA1: 19c0462ea790dafc10ed15bb38d3db986c1428e0
+SHA256: 1a220ff5406933c519d28f8a0924ca1d6513ad6ce1507cdf5dae9825b620d53e
+Section: Tweaks
+Description: 自动复制短信、系统邮件、部分主流第三方邮件的验证码到剪切板，第三方邮件只能从临时通知框内获取，获取不到则无法复制；无设置项。（支持iOS 15-17）
+Author: crctdd
+Name: Auto Copy Verify
+
+Package: com.crctdd.autocopyverify
+Version: 0.0.5
+Architecture: iphoneos-arm64
+Maintainer: crctdd
+Installed-Size: 1524
+Depends: mobilesubstrate, firmware (>= 15.0), firmware (<< 18.0)
+Filename: ./debs/com.crctdd.autocopyverify_0.0.5_iphoneos-arm64.deb
+Size: 100532
+MD5sum: 25a432a2df8b0cbb8ea78ea39d2c695f
+SHA1: 6838f9e055fa73084a5843dc96fcd91539cb11a2
+SHA256: 0e028e419b7fe0eefc6d9b834adb9bde73e5071fcdc6e94df4c74b89532cab90
+Section: Tweaks
+Description: 自动复制短信、系统邮件、部分主流第三方邮件的验证码到剪切板，第三方邮件只能从临时通知框内获取，获取不到则无法复制；无设置项。（支持iOS 15-17）
+Author: crctdd
+Name: Auto Copy Verify
 
 Package: com.crctdd.stayalivelite
 Version: 0.3.2

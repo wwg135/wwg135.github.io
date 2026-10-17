@@ -1,4 +1,7 @@
 {"events":[
+{"type":"added","date":"2026-10-17 08:47","package":"cn.mg.adsspee_1.1.5_iphoneos-arm64","version":""},
+{"type":"added","date":"2026-10-17 08:47","package":"com.crctdd.autocopyverify_0.0.5_iphoneos-arm64","version":""},
+{"type":"added","date":"2026-10-17 08:47","package":"com.crctdd.autocopyverify_0.0.5_iphoneos-arm64e","version":""},
 {"type":"added","date":"2026-10-14 00:49","package":"wiki.qaq.irisin_4.6.3_iphoneos-arm64","version":""},
 {"type":"added","date":"2026-10-14 00:49","package":"wiki.qaq.irisin_4.6.3_iphoneos-arm64e","version":""},
 {"type":"added","date":"2026-10-11 17:19","package":"wiki.qaq.irisin_4.5.27_iphoneos-arm64","version":""},
@@ -45,8 +48,5 @@
 {"type":"added","date":"2026-09-28 03:12","package":"wiki.qaq.irisin_4.5.11_iphoneos-arm64","version":""},
 {"type":"added","date":"2026-09-28 03:12","package":"wiki.qaq.irisin_4.5.11_iphoneos-arm64e","version":""},
 {"type":"added","date":"2026-09-28 01:54","package":"wiki.qaq.irisin_4.5.11_iphoneos-arm64","version":""},
-{"type":"added","date":"2026-09-28 01:54","package":"wiki.qaq.irisin_4.5.11_iphoneos-arm64e","version":""},
-{"type":"added","date":"2026-09-28 01:15","package":"wiki.qaq.irisin_4.5.11_iphoneos-arm64","version":""},
-{"type":"added","date":"2026-09-28 01:15","package":"wiki.qaq.irisin_4.5.11_iphoneos-arm64e","version":""},
-{"type":"added","date":"2026-09-26 00:45","package":"wiki.qaq.irisin_4.5.11_iphoneos-arm64","version":""}
+{"type":"added","date":"2026-09-28 01:54","package":"wiki.qaq.irisin_4.5.11_iphoneos-arm64e","version":""}
 ]}
