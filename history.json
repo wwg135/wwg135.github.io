@@ -1,4 +1,6 @@
 {"events":[
+{"type":"added","date":"2026-10-22 10:38","package":"wiki.qaq.irisin_4.7.4_iphoneos-arm64","version":""},
+{"type":"added","date":"2026-10-22 10:38","package":"wiki.qaq.irisin_4.7.4_iphoneos-arm64e","version":""},
 {"type":"added","date":"2026-10-20 20:42","package":"com.aronsz26.lockscreenrestore_1.9.5_iphoneos-arm64","version":""},
 {"type":"added","date":"2026-10-20 20:42","package":"com.aronsz26.lockscreenrestore_1.9.5_iphoneos-arm64e","version":""},
 {"type":"added","date":"2026-10-19 00:06","package":"wiki.qaq.irisin_4.7.2_iphoneos-arm64","version":""},
@@ -46,7 +48,5 @@
 {"type":"added","date":"2026-09-30 06:30","package":"wiki.qaq.irisin_4.5.15_iphoneos-arm64","version":""},
 {"type":"added","date":"2026-09-30 06:30","package":"wiki.qaq.irisin_4.5.15_iphoneos-arm64e","version":""},
 {"type":"added","date":"2026-09-30 14:19","package":"com.crctdd.stayalivelite_0.3.2_iphoneos-arm64","version":""},
-{"type":"added","date":"2026-09-30 14:19","package":"com.crctdd.stayalivelite_0.3.2_iphoneos-arm64e","version":""},
-{"type":"added","date":"2026-09-30 02:31","package":"wiki.qaq.irisin_4.5.14_iphoneos-arm64","version":""},
-{"type":"added","date":"2026-09-30 02:31","package":"wiki.qaq.irisin_4.5.14_iphoneos-arm64e","version":""}
+{"type":"added","date":"2026-09-30 14:19","package":"com.crctdd.stayalivelite_0.3.2_iphoneos-arm64e","version":""}
 ]}
