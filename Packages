@@ -13998,6 +13998,58 @@ Icon: https://lakr233.github.io/Irisin/icon.png
 Name: Irisin
 Sileodepiction: https://lakr233.github.io/Irisin/depiction.json
 
+Package: wiki.qaq.irisin
+Version: 5.0.0
+Architecture: iphoneos-arm64e
+Maintainer: OwnGoal Studio <no-reply@owngoal.dev>
+Installed-Size: 20544
+Depends: firmware (>= 15.0)
+Filename: ./debs/wiki.qaq.irisin_5.0.0_iphoneos-arm64e.deb
+Size: 5263140
+MD5sum: 719ad186944d470ad2640a269ab54509
+SHA1: 546784892c95eba7bb6d155eb832cb85fece1c26
+SHA256: cdfe4c5cf2807b632957d63886b833f2d4bb482b1aef0349ea1bd60794c4fbec
+Section: Applications
+Priority: optional
+Homepage: https://github.com/Lakr233/Irisin
+Description: Modern package manager for roothide custom firmware
+ Browse your repositories, install and remove packages, keep tweaks updated
+ and read every depiction, on iPhone and iPad. The app runs without root;
+ installs go through a small on-demand root daemon whose helper installs
+ packages natively and registers apps with LaunchServices itself. No dpkg,
+ no uicache.
+Author: OwnGoal Studio <no-reply@owngoal.dev>
+Depiction: https://lakr233.github.io/Irisin/
+Icon: https://lakr233.github.io/Irisin/icon.png
+Name: Irisin
+Sileodepiction: https://lakr233.github.io/Irisin/depiction.json
+
+Package: wiki.qaq.irisin
+Version: 5.0.0
+Architecture: iphoneos-arm64
+Maintainer: OwnGoal Studio <no-reply@owngoal.dev>
+Installed-Size: 20544
+Depends: firmware (>= 15.0)
+Filename: ./debs/wiki.qaq.irisin_5.0.0_iphoneos-arm64.deb
+Size: 5264280
+MD5sum: f9f6d6b5f3735ea4ff687be31b3602ff
+SHA1: 393c9b33dfbd9b66c5de0ea9316b6a96f805c154
+SHA256: bde1b7c5c213256dd71aa1873599647916ab20959a45422eefc3eda6a523ff53
+Section: Applications
+Priority: optional
+Homepage: https://github.com/Lakr233/Irisin
+Description: Modern package manager for rootless custom firmware
+ Browse your repositories, install and remove packages, keep tweaks updated
+ and read every depiction, on iPhone and iPad. The app runs without root;
+ installs go through a small on-demand root daemon whose helper installs
+ packages natively and registers apps with LaunchServices itself. No dpkg,
+ no uicache.
+Author: OwnGoal Studio <no-reply@owngoal.dev>
+Depiction: https://lakr233.github.io/Irisin/
+Icon: https://lakr233.github.io/Irisin/icon.png
+Name: Irisin
+Sileodepiction: https://lakr233.github.io/Irisin/depiction.json
+
 Package: willow
 Version: 1.2.14
 Architecture: iphoneos-arm64
