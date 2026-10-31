@@ -1,4 +1,6 @@
 {"events":[
+{"type":"added","date":"2026-10-31 04:15","package":"wiki.qaq.irisin_5.1.4_iphoneos-arm64","version":""},
+{"type":"added","date":"2026-10-31 04:15","package":"wiki.qaq.irisin_5.1.4_iphoneos-arm64e","version":""},
 {"type":"added","date":"2026-10-30 16:00","package":"wiki.qaq.irisin_5.1.4_iphoneos-arm64","version":""},
 {"type":"added","date":"2026-10-30 16:00","package":"wiki.qaq.irisin_5.1.4_iphoneos-arm64e","version":""},
 {"type":"added","date":"2026-10-30 08:08","package":"wiki.qaq.irisin_5.1.3_iphoneos-arm64","version":""},
@@ -46,7 +48,5 @@
 {"type":"added","date":"2026-10-20 20:42","package":"com.aronsz26.lockscreenrestore_1.9.5_iphoneos-arm64","version":""},
 {"type":"added","date":"2026-10-20 20:42","package":"com.aronsz26.lockscreenrestore_1.9.5_iphoneos-arm64e","version":""},
 {"type":"added","date":"2026-10-19 00:06","package":"wiki.qaq.irisin_4.7.2_iphoneos-arm64","version":""},
-{"type":"added","date":"2026-10-19 00:06","package":"wiki.qaq.irisin_4.7.2_iphoneos-arm64e","version":""},
-{"type":"added","date":"2026-10-17 16:18","package":"wiki.qaq.irisin_4.7.0_iphoneos-arm64","version":""},
-{"type":"added","date":"2026-10-17 16:18","package":"wiki.qaq.irisin_4.7.0_iphoneos-arm64e","version":""}
+{"type":"added","date":"2026-10-19 00:06","package":"wiki.qaq.irisin_4.7.2_iphoneos-arm64e","version":""}
 ]}
