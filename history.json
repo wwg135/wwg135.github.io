@@ -1,4 +1,6 @@
 {"events":[
+{"type":"added","date":"2026-11-02 10:28","package":"org.coolstar.sileo_2.5.1-15_iphoneos-arm64e","version":""},
+{"type":"removed","date":"2026-11-02 10:28","package":"org.coolstar.sileo_2.5_iphoneos-arm64","version":""},
 {"type":"added","date":"2026-11-02 08:56","package":"wiki.qaq.irisin_5.1.5_iphoneos-arm64","version":""},
 {"type":"added","date":"2026-11-02 08:56","package":"wiki.qaq.irisin_5.1.5_iphoneos-arm64e","version":""},
 {"type":"added","date":"2026-11-02 08:33","package":"wiki.qaq.irisin_5.1.5_iphoneos-arm64","version":""},
@@ -46,7 +48,5 @@
 {"type":"added","date":"2026-10-30 07:20","package":"wiki.qaq.irisin_5.1.1_iphoneos-arm64e","version":""},
 {"type":"added","date":"2026-10-30 01:45","package":"wiki.qaq.irisin_5.1.1_iphoneos-arm64","version":""},
 {"type":"added","date":"2026-10-30 01:45","package":"wiki.qaq.irisin_5.1.1_iphoneos-arm64e","version":""},
-{"type":"added","date":"2026-10-30 00:54","package":"wiki.qaq.irisin_5.0.4_iphoneos-arm64","version":""},
-{"type":"added","date":"2026-10-30 00:54","package":"wiki.qaq.irisin_5.0.4_iphoneos-arm64e","version":""},
-{"type":"added","date":"2026-10-29 07:18","package":"wiki.qaq.irisin_5.0.4_iphoneos-arm64","version":""}
+{"type":"added","date":"2026-10-30 00:54","package":"wiki.qaq.irisin_5.0.4_iphoneos-arm64","version":""}
 ]}

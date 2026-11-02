@@ -11045,23 +11045,6 @@ Icon: https://img.chariz.cloud/icon/onesettings/icon@3x.png
 Name: OneSettings
 
 Package: org.coolstar.sileo
-Version: 2.5
-Architecture: iphoneos-arm64
-Maintainer: Amy While <me@anamy.gay>
-Depends: firmware (>= 11.0), firmware (>= 12.2) | org.swift.libswift (>= 5.0), coreutils (>= 8.30-1), dpkg (>= 1.19.4-1), apt (>= 1.8.2), libzstd1
-Filename: ./debs/org.coolstar.sileo_2.5_iphoneos-arm64.deb
-Size: 2805004
-MD5sum: 4ec21d885fc43f1c5c55fa468d16aa6a
-SHA1: d0d9a01d6ec290c7e5476166a4b8310d70882cd6
-SHA256: fdb1a05b27fcf2f7b9cd9cdc902a5be8394aaea4f90596303c4731e9ec4c5a31
-Section: Packaging
-Description: A modern APT package manager frontend
-Author: Amy While <me@anamy.gay>
-Icon: https://getsileo.app/img/icon.png
-Name: Sileo
-Sileodepiction: https://featuredpage.getsileo.app/depiction.json
-
-Package: org.coolstar.sileo
 Version: 2.5-11
 Architecture: iphoneos-arm64e
 Maintainer: Amy While <me@anamy.gay>
@@ -11088,6 +11071,23 @@ Size: 3875244
 MD5sum: 673c577701cc08e35ffed8e885c50656
 SHA1: d3dd705426ce1b2b0c60f3f651c71a7b78c73430
 SHA256: ccdac45b4fd36d5d3a35fc8a35f705c24128bd290141ca7eb0f956d15055d809
+Section: Packaging
+Description: A modern APT package manager frontend
+Author: Amy While <me@anamy.gay>
+Icon: https://getsileo.app/img/icon.png
+Name: Sileo
+Sileodepiction: https://featuredpage.getsileo.app/depiction.json
+
+Package: org.coolstar.sileo
+Version: 2.5.1-15
+Architecture: iphoneos-arm64e
+Maintainer: Amy While <me@anamy.gay>
+Depends: firmware (>= 11.0), firmware(>=12.2) | org.swift.libswift (>=5.0), coreutils (>= 8.30-1), dpkg (>= 1.19.4-1), apt (>= 1.8.2), libzstd1
+Filename: ./debs/org.coolstar.sileo_2.5.1-15_iphoneos-arm64e.deb
+Size: 3020756
+MD5sum: ccc56474ccd7aad2edb727181aab7091
+SHA1: d23a8ef2ea6ee29c131b43e1f021238c5fb36c3a
+SHA256: e636dbd937aa49be9e15271324a9090003db5016577cf4b06d3e281b290210e0
 Section: Packaging
 Description: A modern APT package manager frontend
 Author: Amy While <me@anamy.gay>
