@@ -11044,6 +11044,28 @@ Author: Nightwind <nightwinddev@gmail.com>
 Icon: https://img.chariz.cloud/icon/onesettings/icon@3x.png
 Name: OneSettings
 
+Package: org.coolstar.libhooker
+Version: 1.6.9-22+roothide
+Architecture: iphoneos-arm64e
+Maintainer: libhooker roothide port contributors
+Installed-Size: 580
+Depends: firmware (>= 16.0), firmware (<< 18.0), roothide
+Conflicts: ellekit, mobilesubstrate, com.ex.substitute, science.xnu.substitute, com.saurik.substrate.safemode
+Replaces: ellekit, mobilesubstrate, com.ex.libsubstitute
+Provides: ellekit (= 1.2-3), mobilesubstrate (= 99)
+Filename: ./debs/org.coolstar.libhooker_1.6.9-22+roothide_iphoneos-arm64e.deb
+Size: 48464
+MD5sum: b3bc42142c17d8e6f90f83da7c7acf06
+SHA1: 99676d4a4e9e8c380e17f798f973ed2b495cff8c
+SHA256: ba6997d4492e66381d2e7d6bdf07e11a012b172a3a25134835f3f1b20d4a76cd
+Section: Tweak Injection
+Priority: optional
+Description: libhooker engine, tweak loader and safe mode for iOS 16+ roothide
+Author: CoolStar and contributors
+Icon: https://apt.002599.xyz/web/icon/org.coolstar.libhooker.png
+Name: libhooker (roothide port)
+Sileodepiction: https://apt.002599.xyz/web/org.coolstar.libhooker
+
 Package: org.coolstar.sileo
 Version: 2.5-11
 Architecture: iphoneos-arm64e
