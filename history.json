@@ -1,4 +1,5 @@
 {"events":[
+{"type":"added","date":"2026-11-03 01:02","package":"org.coolstar.sileo_2.5.1-15_iphoneos-arm64e","version":""},
 {"type":"added","date":"2026-11-03 00:53","package":"org.coolstar.sileo_2.5.1-15_iphoneos-arm64e","version":""},
 {"type":"added","date":"2026-11-03 00:40","package":"org.coolstar.sileo_2.5.1-15_iphoneos-arm64e","version":""},
 {"type":"added","date":"2026-11-03 00:19","package":"org.coolstar.sileo_2.5.1-15_iphoneos-arm64e","version":""},
@@ -47,6 +48,5 @@
 {"type":"added","date":"2026-11-02 03:36","package":"wiki.qaq.irisin_5.1.5_iphoneos-arm64","version":""},
 {"type":"added","date":"2026-11-02 03:36","package":"wiki.qaq.irisin_5.1.5_iphoneos-arm64e","version":""},
 {"type":"added","date":"2026-11-02 09:38","package":"grider_1.4.1_iphoneos-arm64","version":""},
-{"type":"removed","date":"2026-11-02 09:29","package":"grider_1.4_iphoneos-arm64","version":""},
-{"type":"added","date":"2026-11-02 09:27","package":"grider_1.4_iphoneos-arm64","version":""}
+{"type":"removed","date":"2026-11-02 09:29","package":"grider_1.4_iphoneos-arm64","version":""}
 ]}
