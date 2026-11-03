@@ -11218,10 +11218,10 @@ Architecture: iphoneos-arm64e
 Maintainer: Amy While <me@anamy.gay>
 Depends: firmware (>= 11.0), firmware(>=12.2) | org.swift.libswift (>=5.0), coreutils (>= 8.30-1), dpkg (>= 1.19.4-1), apt (>= 1.8.2), libzstd1
 Filename: ./debs/org.coolstar.sileo_2.5.1-15_iphoneos-arm64e.deb
-Size: 3064128
-MD5sum: ddc85f9a52feb99fb9b3e09773f8512d
-SHA1: b7f3dc2984bd3ff68302bf82d955288997363a33
-SHA256: ffb9cd236b6aca7020a791fbc4efd40f9d7ead179d25db67711368e07094a67f
+Size: 3064712
+MD5sum: a4d08e6598a2aa39b9bea6be4888973b
+SHA1: 6b9073c85835d6f45c7924853943cf5c67820d9c
+SHA256: ea09c1f9ce280192767f179435c2451e5e88c1a30d17d81e754409f0635a3d8e
 Section: Packaging
 Description: A modern APT package manager frontend
 Author: Amy While <me@anamy.gay>
