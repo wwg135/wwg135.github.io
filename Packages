@@ -9960,6 +9960,42 @@ Author: Hitori
 Icon: https://repo.cypwn.xyz/packages/Hikari-Rootless/icon.png
 Name: Hikari
 
+Package: hongguofn
+Version: 2.2.0
+Architecture: iphoneos-arm64
+Maintainer: Junhong
+Installed-Size: 5052
+Depends: firmware (>= 15.0), mobilesubstrate
+Filename: ./debs/红果净化_2.2.0_arm64.deb
+Size: 2197328
+MD5sum: fdc215d65e38d5a148d07b811c53ead7
+SHA1: ad4be7442dec56260cec222486f982e2dc782df0
+SHA256: faa0b5f9ecfc3d3d87da2bcff793f3e9153a833e1e3a411039fa5608725442a4
+Section: Tweaks
+Homepage: https://hongguo.goforit.si
+Description: 兼容红果短剧与红果漫剧 7.4.1，提供界面净化、广告控制、倍速清屏与视频保存。
+ 兼容红果短剧与红果漫剧，版本适配7.4.1，低版本可能存在兼容问题不再适配，请更新至7.4.1版本使用。
+Author: Junhong
+Name: 红果净化
+
+Package: hongguofn.roothide
+Version: 2.2.0
+Architecture: iphoneos-arm64e
+Maintainer: Junhong
+Installed-Size: 5068
+Depends: firmware (>= 15.0), mobilesubstrate
+Filename: ./debs/红果净化_2.2.0_arm64e.deb
+Size: 2192494
+MD5sum: 78f6b7e593cd13468d62c0bba242c401
+SHA1: 7809b9cddefed84932b41af44cc4741592330081
+SHA256: f39d8b7079c7dda9d7d6515503e3b994acb81a66f87a18ef1b7f9a594eab8f3f
+Section: Tweaks
+Homepage: https://hongguo.goforit.si
+Description: 兼容红果短剧与红果漫剧 7.4.1，提供界面净化、广告控制、倍速清屏与视频保存。
+ 兼容红果短剧与红果漫剧，版本适配7.4.1，低版本可能存在兼容问题不再适配，请更新至7.4.1版本使用。
+Author: Junhong
+Name: 红果净化 (Roothide)
+
 Package: hydra
 Version: 2.1
 Architecture: iphoneos-arm64
