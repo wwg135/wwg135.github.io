@@ -4422,6 +4422,42 @@ Description: 按应用开启的开屏广告自动跳过插件，支持 rootless 
 Author: M哥
 Name: 广告跳过
 
+Package: com.mg.adskip
+Version: 1.0.2
+Architecture: iphoneos-arm64e
+Maintainer: M哥
+Installed-Size: 532
+Depends: mobilesubstrate
+Filename: ./debs/com.mg.adskip_1.0.2_iphoneos-arm64e-roothide.deb
+Size: 75106
+MD5sum: 7b0c8567b48c502bd26c9d48b2c77c07
+SHA1: b6acb9029e212f4609a73d42a16d16bcf97a42c1
+SHA256: 77c05ec0209870bcb64baed891dd645c1faba535c50a6ac61dad327646ad37f6
+Section: Tweaks
+Description: 按应用开启的开屏广告自动跳过插件，支持 rootless / RootHide。
+ 在「设置 > 广告跳过」中为已安装的 App 单独开启，仅对开启的 App 生效，系统应用不受影响。
+ 自动识别开屏广告的跳过按钮并点击，支持总开关，新安装的 App 会自动出现在应用列表中。
+Author: M哥
+Name: 广告跳过
+
+Package: com.mg.adskip
+Version: 1.0.2
+Architecture: iphoneos-arm64
+Maintainer: M哥
+Installed-Size: 532
+Depends: mobilesubstrate
+Filename: ./debs/com.mg.adskip_1.0.2_iphoneos-arm64-rootless.deb
+Size: 75274
+MD5sum: d474d87c50479330803f4a4bd92797e4
+SHA1: a21373153b600264370389ea97a57c84aa177dc7
+SHA256: 48ad7371b3fb44d9dc581858fa850272a15d4ebf8c200c8625447e97b0f6134b
+Section: Tweaks
+Description: 按应用开启的开屏广告自动跳过插件，支持 rootless / RootHide。
+ 在「设置 > 广告跳过」中为已安装的 App 单独开启，仅对开启的 App 生效，系统应用不受影响。
+ 自动识别开屏广告的跳过按钮并点击，支持总开关，新安装的 App 会自动出现在应用列表中。
+Author: M哥
+Name: 广告跳过
+
 Package: com.mg.dsx
 Version: 0.5.8
 Architecture: iphoneos-arm64e
