@@ -4417,6 +4417,34 @@ Description: 跳过开屏广告，无黑名单·事件驱动秒跳·容器门控
 Author: M哥
 Name: 广告跳过
 
+Package: com.mg.adskip
+Version: 3.3.2
+Architecture: iphoneos-arm64e
+Maintainer: M哥
+Filename: ./debs/com.mg.adskip_3.3.2_iphoneos-arm64e.deb
+Size: 27102
+MD5sum: b4df1e6c3bb0e72fb5eb2b0d9b9cca60
+SHA1: 3ff1f7148b542ba0c8a5ed3105da44df13cee45d
+SHA256: bf0c2311933ef05b28057c543d4b52e471abf894471052da8d03e0f8937228cd
+Section: Tweaks
+Description: 跳过开屏广告，无黑名单·事件驱动秒跳·容器门控两级词表+防摇一摇+摇一摇带按钮秒跳+防误点广告主图+结构防自点，不影响无广告应用。
+Author: M哥
+Name: 广告跳过
+
+Package: com.mg.adskip
+Version: 3.3.2
+Architecture: iphoneos-arm64
+Maintainer: M哥
+Filename: ./debs/com.mg.adskip_3.3.2_iphoneos-arm64.deb
+Size: 27104
+MD5sum: dba9ff2670a93c5a2b26f262d62283bf
+SHA1: 9f5b7b54e0a8d12b47f7e09ebd6fe7ee9fabb7b3
+SHA256: f050570f9730dba5c21d9bebd3fdd44267411ca03c19b3c9fb7094de451f7400
+Section: Tweaks
+Description: 跳过开屏广告，无黑名单·事件驱动秒跳·容器门控两级词表+防摇一摇+摇一摇带按钮秒跳+防误点广告主图+结构防自点，不影响无广告应用。
+Author: M哥
+Name: 广告跳过
+
 Package: com.mg.dsx
 Version: 0.5.8
 Architecture: iphoneos-arm64e
