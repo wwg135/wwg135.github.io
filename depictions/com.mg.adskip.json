@@ -13,7 +13,7 @@
         },
         {
           "class": "DepictionMarkdownView",
-          "markdown": "按应用开启的开屏广告自动跳过插件，支持 rootless / RootHide。\n\n在「设置 > 广告跳过」中为已安装的 App 单独开启，仅对开启的 App 生效，系统应用不受影响。\n\n自动识别开屏广告的跳过按钮并点击，支持总开关，新安装的 App 会自动出现在应用列表中。",
+          "markdown": "在「设置 > 广告跳过」中为已安装的 App 单独开启，仅对开启的 App 生效，自动识别开屏广告的跳过按钮并点击，系统应用不受影响；此为通用规则跳过，仅支持大多数应用跳过开屏广告，未支持跳过的等待适配。支持 rootless / RootHide",
           "useSpacing": true
         },
         {
