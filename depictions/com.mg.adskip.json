@@ -37,7 +37,7 @@
       "views": [
         {
           "class": "DepictionHeaderView",
-          "title": "版本 1.0.6"
+          "title": "1.0.6"
         },
         {
           "class": "DepictionMarkdownView",
@@ -54,7 +54,7 @@
         },
         {
           "class": "DepictionHeaderView",
-          "title": "版本 1.0.5"
+          "title": "1.0.5"
         },
         {
           "class": "DepictionMarkdownView",
@@ -71,7 +71,7 @@
         },
         {
           "class": "DepictionHeaderView",
-          "title": "版本 1.0.4"
+          "title": "1.0.4"
         },
         {
           "class": "DepictionMarkdownView",
@@ -88,7 +88,7 @@
         },
         {
           "class": "DepictionHeaderView",
-          "title": "版本 1.0.2"
+          "title": "1.0.2"
         },
         {
           "class": "DepictionMarkdownView",
@@ -105,7 +105,7 @@
         },
         {
           "class": "DepictionHeaderView",
-          "title": "版本 1.0.1"
+          "title": "1.0.1"
         },
         {
           "class": "DepictionMarkdownView",
@@ -122,7 +122,7 @@
         },
         {
           "class": "DepictionHeaderView",
-          "title": "版本 1.0.0"
+          "title": "1.0.0"
         },
         {
           "class": "DepictionMarkdownView",
