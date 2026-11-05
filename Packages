@@ -4537,14 +4537,12 @@ Maintainer: M哥
 Installed-Size: 532
 Depends: mobilesubstrate
 Filename: ./debs/com.mg.adskip_1.0.6_iphoneos-arm64-rootless.deb
-Size: 78548
-MD5sum: 932c5e78ed063fd5940f18dfc9efa82a
-SHA1: da44014269b6c3f790a69a7bd1af4b0b3bea3fdb
-SHA256: d3b3cae92fc515d09ecfd0a3e31e537cbcb5261b34d4b6e6f35a7f4836abae2e
+Size: 78392
+MD5sum: 2c72d950816540aaf70a6b4ca0037c8c
+SHA1: 6f195fe1dd21d7a594003ad3b91a014526a2fdb4
+SHA256: c1d299457755e921abb8451e6352e4a586b66976dc3f299a8cf62e5ad7517a61
 Section: Tweaks
-Description: 按应用开启的开屏广告自动跳过插件，支持 rootless / RootHide。
- 在「设置 > 广告跳过」中为已安装的 App 单独开启，仅对开启的 App 生效，系统应用不受影响。
- 自动识别开屏广告的跳过按钮并点击，支持总开关，新安装的 App 会自动出现在应用列表中。
+Description: 在「设置 > 广告跳过」中为已安装的 App 单独开启，仅对开启的 App 生效，自动识别开屏广告的跳过按钮并点击，系统应用不受影响；此为通用规则跳过，仅支持大多数应用跳过开屏广告，未支持跳过的等待适配。支持 rootless / RootHide
 Author: M哥
 Name: 广告跳过
 Sileodepiction: https://wwg135.github.io/depictions/com.mg.adskip.json
@@ -4556,14 +4554,12 @@ Maintainer: M哥
 Installed-Size: 532
 Depends: mobilesubstrate
 Filename: ./debs/com.mg.adskip_1.0.6_iphoneos-arm64e-roothide.deb
-Size: 78184
-MD5sum: 25b3e882bb15923ade543b2536bfc7ec
-SHA1: f88b4917ae0e63cabfe34b1c7ed1fe701cd2b0e8
-SHA256: 7ab8c4de704fa00dbae2c6fff3d14fad85e9e80c72e6e0b81bd4243c9581e25d
+Size: 78118
+MD5sum: f1c2dec61ae4e9e5591c45310859ca4e
+SHA1: 4cc3e8b4f36d2a95502a592c14cf4d337da21228
+SHA256: 8403a218e7e9b4a91b5dec94e1d2549698d5430792d4e1180ea00e5946ca32d8
 Section: Tweaks
-Description: 按应用开启的开屏广告自动跳过插件，支持 rootless / RootHide。
- 在「设置 > 广告跳过」中为已安装的 App 单独开启，仅对开启的 App 生效，系统应用不受影响。
- 自动识别开屏广告的跳过按钮并点击，支持总开关，新安装的 App 会自动出现在应用列表中。
+Description: 在「设置 > 广告跳过」中为已安装的 App 单独开启，仅对开启的 App 生效，自动识别开屏广告的跳过按钮并点击，系统应用不受影响；此为通用规则跳过，仅支持大多数应用跳过开屏广告，未支持跳过的等待适配。支持 rootless / RootHide
 Author: M哥
 Name: 广告跳过
 Sileodepiction: https://wwg135.github.io/depictions/com.mg.adskip.json
