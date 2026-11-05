@@ -1,0 +1,140 @@
+{
+  "minVersion": "0.1",
+  "class": "DepictionTabView",
+  "tintColor": "#2E9F8E",
+  "tabs": [
+    {
+      "tabname": "详情",
+      "class": "DepictionStackView",
+      "views": [
+        {
+          "class": "DepictionHeaderView",
+          "title": "广告跳过"
+        },
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "按应用开启的开屏广告自动跳过插件，支持 rootless / RootHide。\n\n在「设置 > 广告跳过」中为已安装的 App 单独开启，仅对开启的 App 生效，系统应用不受影响。\n\n自动识别开屏广告的跳过按钮并点击，支持总开关，新安装的 App 会自动出现在应用列表中。",
+          "useSpacing": true
+        },
+        {
+          "class": "DepictionSeparatorView"
+        },
+        {
+          "class": "DepictionTableTextView",
+          "title": "当前版本",
+          "text": "1.0.6"
+        },
+        {
+          "class": "DepictionTableTextView",
+          "title": "开发者",
+          "text": "M哥"
+        }
+      ]
+    },
+    {
+      "tabname": "更新日志",
+      "class": "DepictionStackView",
+      "views": [
+        {
+          "class": "DepictionHeaderView",
+          "title": "版本 1.0.6"
+        },
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "- 新增 Sileo 更新日志页面，按版本显示更新内容和日期",
+          "useSpacing": true
+        },
+        {
+          "class": "DepictionSubheaderView",
+          "title": "更新日期：2026-11-05",
+          "useBoldText": false
+        },
+        {
+          "class": "DepictionSeparatorView"
+        },
+        {
+          "class": "DepictionHeaderView",
+          "title": "版本 1.0.5"
+        },
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "- 已开启开关的应用自动排到应用列表最前面\n- 关闭开关后，应用恢复到原来的位置",
+          "useSpacing": true
+        },
+        {
+          "class": "DepictionSubheaderView",
+          "title": "更新日期：2026-11-05",
+          "useBoldText": false
+        },
+        {
+          "class": "DepictionSeparatorView"
+        },
+        {
+          "class": "DepictionHeaderView",
+          "title": "版本 1.0.4"
+        },
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "- 搜索结果改为搜索框下方的弹窗，点击后自动定位到对应应用",
+          "useSpacing": true
+        },
+        {
+          "class": "DepictionSubheaderView",
+          "title": "更新日期：2026-11-04",
+          "useBoldText": false
+        },
+        {
+          "class": "DepictionSeparatorView"
+        },
+        {
+          "class": "DepictionHeaderView",
+          "title": "版本 1.0.2"
+        },
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "- 优化应用切到后台再回来时的开屏广告识别\n- 快速切换（少于 3 秒）不再误触发识别",
+          "useSpacing": true
+        },
+        {
+          "class": "DepictionSubheaderView",
+          "title": "更新日期：2026-11-04",
+          "useBoldText": false
+        },
+        {
+          "class": "DepictionSeparatorView"
+        },
+        {
+          "class": "DepictionHeaderView",
+          "title": "版本 1.0.1"
+        },
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "- 应用列表新增搜索框，输入应用名中的任意一个字即可匹配",
+          "useSpacing": true
+        },
+        {
+          "class": "DepictionSubheaderView",
+          "title": "更新日期：2026-11-04",
+          "useBoldText": false
+        },
+        {
+          "class": "DepictionSeparatorView"
+        },
+        {
+          "class": "DepictionHeaderView",
+          "title": "版本 1.0.0"
+        },
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "- 正式版发布，支持 rootless 和 RootHide\n- 按应用单独开启开屏广告自动跳过\n- 应用列表只显示商店安装的应用，新装应用自动加入\n- 设置页新增\"关于\"：反馈、添加越狱源、插件官网",
+          "useSpacing": true
+        },
+        {
+          "class": "DepictionSubheaderView",
+          "title": "更新日期：2026-11-04",
+          "useBoldText": false
+        }
+      ]
+    }
+  ]
+}
