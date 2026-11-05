@@ -2057,24 +2057,6 @@ Name: 微信广告净化助手_Crack
 
 Package: com.aronsz26.lockscreenrestore
 Version: 1.9.4
-Architecture: iphoneos-arm64
-Maintainer: aronsz26
-Installed-Size: 700
-Depends: mobilesubstrate (>= 0.9.5000), firmware (>= 16.0), preferenceloader
-Filename: ./debs/com.aronsz26.lockscreenrestore_1.9.4_iphoneos-arm64.deb
-Size: 112656
-MD5sum: 3607ae47c9a0fbd109ed2a99937bf06d
-SHA1: f3ce9aba3fc922931e197ee8c67e5582526bdfd1
-SHA256: af62ea53cfcd479dd920163732d6211b4ff0f86d135d86dbc5da942364babeb7
-Section: Tweaks
-Description: iOS 16上的iOS 15风格锁屏：时钟、日期、锁头、焦点药丸、顶部通知、iOS 15音乐播放器、解锁动画、实时和动态壁纸以及iOS 15设置>壁纸页面，可下载壁纸。每个部分都可以在设置中关闭。
-Author: aronsz26
-Icon: https://aronsz26.github.io/depictions/lockscreenrestore/depiction/icon.png
-Name: LockScreenRestore
-Sileodepiction: https://aronsz26.github.io/depictions/lockscreenrestore/depiction/sileo.json
-
-Package: com.aronsz26.lockscreenrestore
-Version: 1.9.4
 Architecture: iphoneos-arm64e
 Maintainer: aronsz26
 Installed-Size: 700
@@ -2085,6 +2067,24 @@ Size: 116148
 MD5sum: a90890c723aa65542e9bb669323de676
 SHA1: c3843a3a5373426fe5ff4f1f388b7caf8e180ffe
 SHA256: 2cf8126c3af4778112dd8722cd097b1b909f85b80b6e00787066c866adb0247d
+Section: Tweaks
+Description: iOS 16上的iOS 15风格锁屏：时钟、日期、锁头、焦点药丸、顶部通知、iOS 15音乐播放器、解锁动画、实时和动态壁纸以及iOS 15设置>壁纸页面，可下载壁纸。每个部分都可以在设置中关闭。
+Author: aronsz26
+Icon: https://aronsz26.github.io/depictions/lockscreenrestore/depiction/icon.png
+Name: LockScreenRestore
+Sileodepiction: https://aronsz26.github.io/depictions/lockscreenrestore/depiction/sileo.json
+
+Package: com.aronsz26.lockscreenrestore
+Version: 1.9.4
+Architecture: iphoneos-arm64
+Maintainer: aronsz26
+Installed-Size: 700
+Depends: mobilesubstrate (>= 0.9.5000), firmware (>= 16.0), preferenceloader
+Filename: ./debs/com.aronsz26.lockscreenrestore_1.9.4_iphoneos-arm64.deb
+Size: 112656
+MD5sum: 3607ae47c9a0fbd109ed2a99937bf06d
+SHA1: f3ce9aba3fc922931e197ee8c67e5582526bdfd1
+SHA256: af62ea53cfcd479dd920163732d6211b4ff0f86d135d86dbc5da942364babeb7
 Section: Tweaks
 Description: iOS 16上的iOS 15风格锁屏：时钟、日期、锁头、焦点药丸、顶部通知、iOS 15音乐播放器、解锁动画、实时和动态壁纸以及iOS 15设置>壁纸页面，可下载壁纸。每个部分都可以在设置中关闭。
 Author: aronsz26
@@ -3295,21 +3295,6 @@ Name: WCPulse
 
 Package: com.huami.WCPulse
 Version: 1.7-4
-Architecture: iphoneos-arm64e
-Maintainer: huami
-Depends: mobilesubstrate (>= 0.9.5000)
-Filename: ./debs/WCPulse_1.7-4-arm64e.deb
-Size: 4923614
-MD5sum: 1a64a71db28efced62b4b3acb848242f
-SHA1: 07ed6e8b12ec50440956e4baa8abf32757a64adb
-SHA256: a3a5c72962f55eadfd0e0781bf5b20ddece518392709bb7e15514e33cda27275
-Section: Tweaks
-Description: WCPulse
-Author: huami
-Name: WCPulse
-
-Package: com.huami.WCPulse
-Version: 1.7-4
 Architecture: iphoneos-arm64
 Maintainer: huami
 Depends: mobilesubstrate (>= 0.9.5000)
@@ -3318,6 +3303,21 @@ Size: 4923632
 MD5sum: 2ce264fc89faedf0091a37ff23e7f8f6
 SHA1: c9014e0c029b3f404bd210b988e89ad5117030b9
 SHA256: 67f93336b131f07eeac4505e3d45e28ed6be358ce45c884e2a40939e66b1e575
+Section: Tweaks
+Description: WCPulse
+Author: huami
+Name: WCPulse
+
+Package: com.huami.WCPulse
+Version: 1.7-4
+Architecture: iphoneos-arm64e
+Maintainer: huami
+Depends: mobilesubstrate (>= 0.9.5000)
+Filename: ./debs/WCPulse_1.7-4-arm64e.deb
+Size: 4923614
+MD5sum: 1a64a71db28efced62b4b3acb848242f
+SHA1: 07ed6e8b12ec50440956e4baa8abf32757a64adb
+SHA256: a3a5c72962f55eadfd0e0781bf5b20ddece518392709bb7e15514e33cda27275
 Section: Tweaks
 Description: WCPulse
 Author: huami
@@ -3769,25 +3769,6 @@ Name: DYYY
 
 Package: com.huami.dyyy
 Version: 2.2-9
-Architecture: iphoneos-arm64
-Maintainer: huami
-Installed-Size: 2980
-Depends: firmware (>= 5.0), mobilesubstrate
-Filename: ./debs/com.huami.dyyy_2.2-9_iphoneos-arm64-rootless.deb
-Size: 640768
-MD5sum: 3f3d1211411e16664073a9e43f7819bd
-SHA1: 79ce042550f7f423cd6181b9a58b480bfca300af
-SHA256: 225412fbb4f2c455f2dc3494ac3f2e2967243bb1802f58b7779763309333777e
-Section: Tweaks
-Priority: optional
-Homepage: https://github.com/huami1314/DYYY
-Description: 仅供学习交流，请在 24 小时内自觉删除。
-Author: huami
-Icon: https://Mieing.Github.io/repo/file/TikTok.png
-Name: DYYY
-
-Package: com.huami.dyyy
-Version: 2.2-9
 Architecture: iphoneos-arm64e
 Maintainer: huami
 Installed-Size: 2980
@@ -3806,16 +3787,16 @@ Icon: https://Mieing.Github.io/repo/file/TikTok.png
 Name: DYYY
 
 Package: com.huami.dyyy
-Version: 2.3-0
+Version: 2.2-9
 Architecture: iphoneos-arm64
 Maintainer: huami
-Installed-Size: 3208
+Installed-Size: 2980
 Depends: firmware (>= 5.0), mobilesubstrate
-Filename: ./debs/com.huami.dyyy_2.3-0_iphoneos-arm64-rootless.deb
-Size: 706018
-MD5sum: acac8ffaa1bc9d71be8b9c6552253b4c
-SHA1: e50dc1cb22a17828efe46103a667d4307431941e
-SHA256: 3ea7c03e37c0fb0602094127a8bd9c96c9867695bc56581d41fcb5b27eadafc6
+Filename: ./debs/com.huami.dyyy_2.2-9_iphoneos-arm64-rootless.deb
+Size: 640768
+MD5sum: 3f3d1211411e16664073a9e43f7819bd
+SHA1: 79ce042550f7f423cd6181b9a58b480bfca300af
+SHA256: 225412fbb4f2c455f2dc3494ac3f2e2967243bb1802f58b7779763309333777e
 Section: Tweaks
 Priority: optional
 Homepage: https://github.com/huami1314/DYYY
@@ -3835,6 +3816,25 @@ Size: 706524
 MD5sum: 77f0a60eca5eeef0c7d519eb76ee0cae
 SHA1: a320846fe4bdbaa81bb866d79a973647212d83bd
 SHA256: 597ee43ef39798f2f2d80a49da44c2cfc2611c9158e09173b7899c2b9eb15bae
+Section: Tweaks
+Priority: optional
+Homepage: https://github.com/huami1314/DYYY
+Description: 仅供学习交流，请在 24 小时内自觉删除。
+Author: huami
+Icon: https://Mieing.Github.io/repo/file/TikTok.png
+Name: DYYY
+
+Package: com.huami.dyyy
+Version: 2.3-0
+Architecture: iphoneos-arm64
+Maintainer: huami
+Installed-Size: 3208
+Depends: firmware (>= 5.0), mobilesubstrate
+Filename: ./debs/com.huami.dyyy_2.3-0_iphoneos-arm64-rootless.deb
+Size: 706018
+MD5sum: acac8ffaa1bc9d71be8b9c6552253b4c
+SHA1: e50dc1cb22a17828efe46103a667d4307431941e
+SHA256: 3ea7c03e37c0fb0602094127a8bd9c96c9867695bc56581d41fcb5b27eadafc6
 Section: Tweaks
 Priority: optional
 Homepage: https://github.com/huami1314/DYYY
@@ -4202,7 +4202,7 @@ Architecture: iphoneos-arm64
 Maintainer: BigBoss <bigboss@thebigboss.org>
 Installed-Size: 187
 Depends: mobilesubstrate (>= 0.9.5000), firmware (>= 11.0), com.opa334.ccsupport
-Filename: ./debs/ccvpn_1.0.6_iphoneos-arm64.deb
+Filename: ./debs/com.kingpuffdaddi.control-center.ccvpn_1.0.6_153282.deb
 Size: 15216
 MD5sum: 92b2ebe26ff0023b260c39413cffbe80
 SHA1: 881eaeb8f9c22be798e65478940783ad672b0753
@@ -4223,7 +4223,7 @@ Architecture: iphoneos-arm64
 Maintainer: BigBoss <bigboss@thebigboss.org>
 Installed-Size: 187
 Depends: mobilesubstrate (>= 0.9.5000), firmware (>= 11.0), com.opa334.ccsupport
-Filename: ./debs/com.kingpuffdaddi.control-center.ccvpn_1.0.6_153282.deb
+Filename: ./debs/ccvpn_1.0.6_iphoneos-arm64.deb
 Size: 15216
 MD5sum: 92b2ebe26ff0023b260c39413cffbe80
 SHA1: 881eaeb8f9c22be798e65478940783ad672b0753
@@ -4460,24 +4460,6 @@ Name: 广告跳过
 
 Package: com.mg.adskip
 Version: 1.0.4
-Architecture: iphoneos-arm64
-Maintainer: M哥
-Installed-Size: 532
-Depends: mobilesubstrate
-Filename: ./debs/com.mg.adskip_1.0.4_iphoneos-arm64-rootless.deb
-Size: 76616
-MD5sum: 4c4858c69d09989d62daae44a22a34c2
-SHA1: 6c786b0e831ea91a8ecd40227561863ee4f2ed69
-SHA256: 96cb36f61ef9d6a720773783a551dc647a603aedac4d3feca7d5dbe5fe11bc1e
-Section: Tweaks
-Description: 按应用开启的开屏广告自动跳过插件，支持 rootless / RootHide
- 在「设置 > 广告跳过」中为已安装的 App 单独开启，仅对开启的 App 生效，系统应用不受影响。
- 自动识别开屏广告的跳过按钮并点击，支持总开关，新安装的 App 会自动出现在应用列表中。
-Author: M哥
-Name: 广告跳过
-
-Package: com.mg.adskip
-Version: 1.0.4
 Architecture: iphoneos-arm64e
 Maintainer: M哥
 Installed-Size: 532
@@ -4495,18 +4477,18 @@ Author: M哥
 Name: 广告跳过
 
 Package: com.mg.adskip
-Version: 1.0.5
-Architecture: iphoneos-arm64e
+Version: 1.0.4
+Architecture: iphoneos-arm64
 Maintainer: M哥
 Installed-Size: 532
 Depends: mobilesubstrate
-Filename: ./debs/com.mg.adskip_1.0.5_iphoneos-arm64e-roothide.deb
-Size: 77440
-MD5sum: 91f8843e1a0e580bab1e693cd3c6663d
-SHA1: d30737f7716602167af7026d55e0b687dde1cb4f
-SHA256: 313fc06a240e1797c7450a679b3dbfa96958e2cf01b355f2b52afca66b671e73
+Filename: ./debs/com.mg.adskip_1.0.4_iphoneos-arm64-rootless.deb
+Size: 76616
+MD5sum: 4c4858c69d09989d62daae44a22a34c2
+SHA1: 6c786b0e831ea91a8ecd40227561863ee4f2ed69
+SHA256: 96cb36f61ef9d6a720773783a551dc647a603aedac4d3feca7d5dbe5fe11bc1e
 Section: Tweaks
-Description: 按应用开启的开屏广告自动跳过插件，支持 rootless / RootHide。
+Description: 按应用开启的开屏广告自动跳过插件，支持 rootless / RootHide
  在「设置 > 广告跳过」中为已安装的 App 单独开启，仅对开启的 App 生效，系统应用不受影响。
  自动识别开屏广告的跳过按钮并点击，支持总开关，新安装的 App 会自动出现在应用列表中。
 Author: M哥
@@ -4531,21 +4513,22 @@ Author: M哥
 Name: 广告跳过
 
 Package: com.mg.adskip
-Version: 1.0.6
-Architecture: iphoneos-arm64
+Version: 1.0.5
+Architecture: iphoneos-arm64e
 Maintainer: M哥
 Installed-Size: 532
 Depends: mobilesubstrate
-Filename: ./debs/com.mg.adskip_1.0.6_iphoneos-arm64-rootless.deb
-Size: 78230
-MD5sum: d0141cd77a541b6705251d1d837da808
-SHA1: 0c1d9ede0e091cd4207bf89eb376e774fd01b40e
-SHA256: 83dbc7a1ac3c016b36d8376b5dd10b2ec5a1af8d3d0d5c4175a01c6dd77452ac
+Filename: ./debs/com.mg.adskip_1.0.5_iphoneos-arm64e-roothide.deb
+Size: 77440
+MD5sum: 91f8843e1a0e580bab1e693cd3c6663d
+SHA1: d30737f7716602167af7026d55e0b687dde1cb4f
+SHA256: 313fc06a240e1797c7450a679b3dbfa96958e2cf01b355f2b52afca66b671e73
 Section: Tweaks
-Description: 在「设置 > 广告跳过」中为已安装的 App 单独开启，仅对开启的 App 生效，自动识别开屏广告跳过，系统应用不受影响；此为通用规则跳过，仅支持大多数应用跳过开屏广告，未支持跳过的等待适配。支持 rootless / RootHide
+Description: 按应用开启的开屏广告自动跳过插件，支持 rootless / RootHide。
+ 在「设置 > 广告跳过」中为已安装的 App 单独开启，仅对开启的 App 生效，系统应用不受影响。
+ 自动识别开屏广告的跳过按钮并点击，支持总开关，新安装的 App 会自动出现在应用列表中。
 Author: M哥
 Name: 广告跳过
-Sileodepiction: https://wwg135.github.io/depictions/com.mg.adskip.json
 
 Package: com.mg.adskip
 Version: 1.0.6
@@ -4565,16 +4548,16 @@ Name: 广告跳过
 Sileodepiction: https://wwg135.github.io/depictions/com.mg.adskip.json
 
 Package: com.mg.adskip
-Version: 1.0.7
-Architecture: iphoneos-arm64e
+Version: 1.0.6
+Architecture: iphoneos-arm64
 Maintainer: M哥
-Installed-Size: 548
+Installed-Size: 532
 Depends: mobilesubstrate
-Filename: ./debs/com.mg.adskip_1.0.7_iphoneos-arm64e-roothide.deb
-Size: 83054
-MD5sum: e5831fae93d2c1ab8dff5b2b74a3f314
-SHA1: 2db13282d923fa4a97ffa61d65ad262443c8d5d3
-SHA256: f9ed74e169087ad5f68e67622aec7eadd1f7b05fed499ff83f7f437654bdb29e
+Filename: ./debs/com.mg.adskip_1.0.6_iphoneos-arm64-rootless.deb
+Size: 78230
+MD5sum: d0141cd77a541b6705251d1d837da808
+SHA1: 0c1d9ede0e091cd4207bf89eb376e774fd01b40e
+SHA256: 83dbc7a1ac3c016b36d8376b5dd10b2ec5a1af8d3d0d5c4175a01c6dd77452ac
 Section: Tweaks
 Description: 在「设置 > 广告跳过」中为已安装的 App 单独开启，仅对开启的 App 生效，自动识别开屏广告跳过，系统应用不受影响；此为通用规则跳过，仅支持大多数应用跳过开屏广告，未支持跳过的等待适配。支持 rootless / RootHide
 Author: M哥
@@ -4599,16 +4582,33 @@ Name: 广告跳过
 Sileodepiction: https://wwg135.github.io/depictions/com.mg.adskip.json
 
 Package: com.mg.adskip
+Version: 1.0.7
+Architecture: iphoneos-arm64e
+Maintainer: M哥
+Installed-Size: 548
+Depends: mobilesubstrate
+Filename: ./debs/com.mg.adskip_1.0.7_iphoneos-arm64e-roothide.deb
+Size: 83054
+MD5sum: e5831fae93d2c1ab8dff5b2b74a3f314
+SHA1: 2db13282d923fa4a97ffa61d65ad262443c8d5d3
+SHA256: f9ed74e169087ad5f68e67622aec7eadd1f7b05fed499ff83f7f437654bdb29e
+Section: Tweaks
+Description: 在「设置 > 广告跳过」中为已安装的 App 单独开启，仅对开启的 App 生效，自动识别开屏广告跳过，系统应用不受影响；此为通用规则跳过，仅支持大多数应用跳过开屏广告，未支持跳过的等待适配。支持 rootless / RootHide
+Author: M哥
+Name: 广告跳过
+Sileodepiction: https://wwg135.github.io/depictions/com.mg.adskip.json
+
+Package: com.mg.adskip
 Version: 1.0.8
 Architecture: iphoneos-arm64
 Maintainer: M哥
 Installed-Size: 580
 Depends: mobilesubstrate
 Filename: ./debs/com.mg.adskip_1.0.8_iphoneos-arm64-rootless.deb
-Size: 89126
-MD5sum: d4cf116586f558c0604e9fa0a091870d
-SHA1: e651f82b49e9dafc02eeeacc9d8eac5758a17b8d
-SHA256: e05a7c422779045885ccf79ab4f0cd2bc8dccc6f046c65939f0791d62f908e2d
+Size: 89582
+MD5sum: 3b4ed3d0e31d1d93735f47f3c4b7ce2a
+SHA1: 9523c9aa1825e7831ea6d896cb99706a03ec635a
+SHA256: d38799e4d78210fe7c93926b33607011d11f8561a48077321f6871b3769da845
 Section: Tweaks
 Description: 在「设置 > 广告跳过」中为已安装的 App 单独开启，仅对开启的 App 生效，自动识别开屏广告跳过，系统应用不受影响；此为通用规则跳过，仅支持大多数应用跳过开屏广告，未支持跳过的等待适配。支持 rootless / RootHide
 Author: M哥
@@ -4622,10 +4622,10 @@ Maintainer: M哥
 Installed-Size: 580
 Depends: mobilesubstrate
 Filename: ./debs/com.mg.adskip_1.0.8_iphoneos-arm64e-roothide.deb
-Size: 89198
-MD5sum: 8b4637a65412f48fe9901d117fe275f0
-SHA1: 41fec9a92a1c1e1a14fe7c7257876805b7022101
-SHA256: 26076ba5855d30849092a5761df1bf72932cd1c6f6c3f4adc71da64df6d82098
+Size: 89432
+MD5sum: 31e5c0b821a05700b2b82ec2d950b3fc
+SHA1: 4e3f6695b459d727cfaf85fc2905bbbd11514da2
+SHA256: 1a3644844ba079ef03dd5ce7af490934d819d31f7022fee2eae2e8dcff3fca75
 Section: Tweaks
 Description: 在「设置 > 广告跳过」中为已安装的 App 单独开启，仅对开启的 App 生效，自动识别开屏广告跳过，系统应用不受影响；此为通用规则跳过，仅支持大多数应用跳过开屏广告，未支持跳过的等待适配。支持 rootless / RootHide
 Author: M哥
@@ -4688,24 +4688,6 @@ Name: 防杀后台
 
 Package: com.mg.iqiyi
 Version: 0.2.4
-Architecture: iphoneos-arm64
-Maintainer: M哥
-Installed-Size: 88
-Depends: firmware (>= 5.0), mobilesubstrate
-Filename: ./debs/com.mg.iqiyi_0.2.4_iphoneos-arm64.deb
-Size: 4796
-MD5sum: b38f3f7d11aa3ced10a6fbebd2fa2b3f
-SHA1: 1e43f943e9c5f9b978b7538dab16f16ae6b9d673
-SHA256: 8fdfd7b3b1d83662d011e556d06e93dcac6321f6f7b790119ec6c49dd065e755
-Section: Tweaks
-Priority: optional
-Homepage: https://github.com/wwg135
-Description: 爱奇艺开屏秒进 v0.2.3（正式版）。
-Author: M哥
-Name: 爱奇艺开屏秒进
-
-Package: com.mg.iqiyi
-Version: 0.2.4
 Architecture: iphoneos-arm64e
 Maintainer: M哥
 Installed-Size: 88
@@ -4715,6 +4697,24 @@ Size: 4738
 MD5sum: 721ab3001538540987f9b20a81b138df
 SHA1: 97ffe96d132c12a695d08053104030328a9210c0
 SHA256: a9004e5b3de96154dfa4f34b0919471b86eeb685ad6963eeef1db8e4dd75a943
+Section: Tweaks
+Priority: optional
+Homepage: https://github.com/wwg135
+Description: 爱奇艺开屏秒进 v0.2.3（正式版）。
+Author: M哥
+Name: 爱奇艺开屏秒进
+
+Package: com.mg.iqiyi
+Version: 0.2.4
+Architecture: iphoneos-arm64
+Maintainer: M哥
+Installed-Size: 88
+Depends: firmware (>= 5.0), mobilesubstrate
+Filename: ./debs/com.mg.iqiyi_0.2.4_iphoneos-arm64.deb
+Size: 4796
+MD5sum: b38f3f7d11aa3ced10a6fbebd2fa2b3f
+SHA1: 1e43f943e9c5f9b978b7538dab16f16ae6b9d673
+SHA256: 8fdfd7b3b1d83662d011e556d06e93dcac6321f6f7b790119ec6c49dd065e755
 Section: Tweaks
 Priority: optional
 Homepage: https://github.com/wwg135
@@ -4788,22 +4788,6 @@ Name: QMFree
 
 Package: com.mg.qmfree
 Version: 1.7.4
-Architecture: iphoneos-arm64
-Maintainer: M哥
-Depends: firmware (>= 14.0), mobilesubstrate
-Filename: ./debs/com.mg.qmfree_1.7.4_iphoneos-arm64.deb
-Size: 22248
-MD5sum: e4afbaf1d8049cfd0d9cd6a54989a624
-SHA1: 9e5a9f8888a4e6932a12e178de26640aabc4d87b
-SHA256: 85b0c62c71a814102105ef5ae5085eea274195916964faa977a58d01afafc0a9
-Section: Tweaks
-Priority: optional
-Description: 七猫小说去广告
-Author: M哥
-Name: QMFree
-
-Package: com.mg.qmfree
-Version: 1.7.4
 Architecture: iphoneos-arm64e
 Maintainer: M哥
 Depends: firmware (>= 14.0), mobilesubstrate
@@ -4818,23 +4802,21 @@ Description: 七猫小说去广告
 Author: M哥
 Name: QMFree
 
-Package: com.mg.zhihu
-Version: 0.4.1
+Package: com.mg.qmfree
+Version: 1.7.4
 Architecture: iphoneos-arm64
 Maintainer: M哥
-Installed-Size: 88
-Depends: firmware (>= 15.0), mobilesubstrate
-Filename: ./debs/com.mg.zhihu_0.4.1_iphoneos-arm64.deb
-Size: 4234
-MD5sum: fe0869c9da5909fa5166f0c12c40da6e
-SHA1: 4a224da01f45948c8927fb5dcb8578da97b92793
-SHA256: ffd747683c18e5d7a6836675d9edcc80c382eb2f61f74b2648215f8dec21b1ef
+Depends: firmware (>= 14.0), mobilesubstrate
+Filename: ./debs/com.mg.qmfree_1.7.4_iphoneos-arm64.deb
+Size: 22248
+MD5sum: e4afbaf1d8049cfd0d9cd6a54989a624
+SHA1: 9e5a9f8888a4e6932a12e178de26640aabc4d87b
+SHA256: 85b0c62c71a814102105ef5ae5085eea274195916964faa977a58d01afafc0a9
 Section: Tweaks
 Priority: optional
-Homepage: https://github.com/wwg135
-Description: 知乎开屏秒进 v0.4.0（轮询隐藏 LaunchAD 开屏窗口）。
+Description: 七猫小说去广告
 Author: M哥
-Name: 知乎
+Name: QMFree
 
 Package: com.mg.zhihu
 Version: 0.4.1
@@ -4847,6 +4829,24 @@ Size: 4182
 MD5sum: 7f9b7f2195cd58bcfd53af08e131d82c
 SHA1: 753eb0d1a442ec7fc93aa74bc2365482f69ea7c3
 SHA256: 458c8871f32564a5b4d2f4a26e8f15d2b7f1a4ac40678d25538e9b7b9b457889
+Section: Tweaks
+Priority: optional
+Homepage: https://github.com/wwg135
+Description: 知乎开屏秒进 v0.4.0（轮询隐藏 LaunchAD 开屏窗口）。
+Author: M哥
+Name: 知乎
+
+Package: com.mg.zhihu
+Version: 0.4.1
+Architecture: iphoneos-arm64
+Maintainer: M哥
+Installed-Size: 88
+Depends: firmware (>= 15.0), mobilesubstrate
+Filename: ./debs/com.mg.zhihu_0.4.1_iphoneos-arm64.deb
+Size: 4234
+MD5sum: fe0869c9da5909fa5166f0c12c40da6e
+SHA1: 4a224da01f45948c8927fb5dcb8578da97b92793
+SHA256: ffd747683c18e5d7a6836675d9edcc80c382eb2f61f74b2648215f8dec21b1ef
 Section: Tweaks
 Priority: optional
 Homepage: https://github.com/wwg135
@@ -12772,32 +12772,6 @@ Website: https://sailyteam.github.io/Saily/index.html
 
 Package: wiki.qaq.irisin
 Version: 4.2.10
-Architecture: iphoneos-arm64e
-Maintainer: OwnGoal Studio <no-reply@owngoal.dev>
-Installed-Size: 37180
-Depends: firmware (>= 16.0)
-Filename: ./debs/wiki.qaq.irisin_4.2.10_iphoneos-arm64e.deb
-Size: 10106372
-MD5sum: 4e4dfb5247c60a8401b7d25eb8d9e593
-SHA1: 6a0ef1f825745a2001f650743d9d69b3efd13bdd
-SHA256: eeaa4e3243b398901ac25530fff7655ed3533c73a8369d77dd78a453f123abc4
-Section: Applications
-Priority: optional
-Homepage: https://github.com/Lakr233/Irisin
-Description: Modern package manager for roothide custom firmware
- Browse your repositories, install and remove packages, keep tweaks updated
- and read every depiction, on iPhone and iPad. The app runs without root;
- installs go through a small on-demand root daemon whose helper installs
- packages natively and registers apps with LaunchServices itself. No dpkg,
- no uicache.
-Author: OwnGoal Studio <no-reply@owngoal.dev>
-Depiction: https://lakr233.github.io/Irisin/
-Icon: https://lakr233.github.io/Irisin/icon.png
-Name: Irisin
-Sileodepiction: https://lakr233.github.io/Irisin/depiction.json
-
-Package: wiki.qaq.irisin
-Version: 4.2.10
 Architecture: iphoneos-arm64
 Maintainer: OwnGoal Studio <no-reply@owngoal.dev>
 Installed-Size: 37180
@@ -12811,6 +12785,32 @@ Section: Applications
 Priority: optional
 Homepage: https://github.com/Lakr233/Irisin
 Description: Modern package manager for rootless custom firmware
+ Browse your repositories, install and remove packages, keep tweaks updated
+ and read every depiction, on iPhone and iPad. The app runs without root;
+ installs go through a small on-demand root daemon whose helper installs
+ packages natively and registers apps with LaunchServices itself. No dpkg,
+ no uicache.
+Author: OwnGoal Studio <no-reply@owngoal.dev>
+Depiction: https://lakr233.github.io/Irisin/
+Icon: https://lakr233.github.io/Irisin/icon.png
+Name: Irisin
+Sileodepiction: https://lakr233.github.io/Irisin/depiction.json
+
+Package: wiki.qaq.irisin
+Version: 4.2.10
+Architecture: iphoneos-arm64e
+Maintainer: OwnGoal Studio <no-reply@owngoal.dev>
+Installed-Size: 37180
+Depends: firmware (>= 16.0)
+Filename: ./debs/wiki.qaq.irisin_4.2.10_iphoneos-arm64e.deb
+Size: 10106372
+MD5sum: 4e4dfb5247c60a8401b7d25eb8d9e593
+SHA1: 6a0ef1f825745a2001f650743d9d69b3efd13bdd
+SHA256: eeaa4e3243b398901ac25530fff7655ed3533c73a8369d77dd78a453f123abc4
+Section: Applications
+Priority: optional
+Homepage: https://github.com/Lakr233/Irisin
+Description: Modern package manager for roothide custom firmware
  Browse your repositories, install and remove packages, keep tweaks updated
  and read every depiction, on iPhone and iPad. The app runs without root;
  installs go through a small on-demand root daemon whose helper installs
@@ -12876,32 +12876,6 @@ Sileodepiction: https://lakr233.github.io/Irisin/depiction.json
 
 Package: wiki.qaq.irisin
 Version: 4.3.0
-Architecture: iphoneos-arm64e
-Maintainer: OwnGoal Studio <no-reply@owngoal.dev>
-Installed-Size: 37180
-Depends: firmware (>= 16.0)
-Filename: ./debs/wiki.qaq.irisin_4.3.0_iphoneos-arm64e.deb
-Size: 10096800
-MD5sum: 31ec866182c20275dc0f19bbe6afdf4d
-SHA1: eda22519964f900d07f76a84d38ea8134ab546b9
-SHA256: dc90b47d87fe915d6b73dda538e8666f32357b92f680d9ad46fc2a09d69d67b1
-Section: Applications
-Priority: optional
-Homepage: https://github.com/Lakr233/Irisin
-Description: Modern package manager for roothide custom firmware
- Browse your repositories, install and remove packages, keep tweaks updated
- and read every depiction, on iPhone and iPad. The app runs without root;
- installs go through a small on-demand root daemon whose helper installs
- packages natively and registers apps with LaunchServices itself. No dpkg,
- no uicache.
-Author: OwnGoal Studio <no-reply@owngoal.dev>
-Depiction: https://lakr233.github.io/Irisin/
-Icon: https://lakr233.github.io/Irisin/icon.png
-Name: Irisin
-Sileodepiction: https://lakr233.github.io/Irisin/depiction.json
-
-Package: wiki.qaq.irisin
-Version: 4.3.0
 Architecture: iphoneos-arm64
 Maintainer: OwnGoal Studio <no-reply@owngoal.dev>
 Installed-Size: 37180
@@ -12915,6 +12889,32 @@ Section: Applications
 Priority: optional
 Homepage: https://github.com/Lakr233/Irisin
 Description: Modern package manager for rootless custom firmware
+ Browse your repositories, install and remove packages, keep tweaks updated
+ and read every depiction, on iPhone and iPad. The app runs without root;
+ installs go through a small on-demand root daemon whose helper installs
+ packages natively and registers apps with LaunchServices itself. No dpkg,
+ no uicache.
+Author: OwnGoal Studio <no-reply@owngoal.dev>
+Depiction: https://lakr233.github.io/Irisin/
+Icon: https://lakr233.github.io/Irisin/icon.png
+Name: Irisin
+Sileodepiction: https://lakr233.github.io/Irisin/depiction.json
+
+Package: wiki.qaq.irisin
+Version: 4.3.0
+Architecture: iphoneos-arm64e
+Maintainer: OwnGoal Studio <no-reply@owngoal.dev>
+Installed-Size: 37180
+Depends: firmware (>= 16.0)
+Filename: ./debs/wiki.qaq.irisin_4.3.0_iphoneos-arm64e.deb
+Size: 10096800
+MD5sum: 31ec866182c20275dc0f19bbe6afdf4d
+SHA1: eda22519964f900d07f76a84d38ea8134ab546b9
+SHA256: dc90b47d87fe915d6b73dda538e8666f32357b92f680d9ad46fc2a09d69d67b1
+Section: Applications
+Priority: optional
+Homepage: https://github.com/Lakr233/Irisin
+Description: Modern package manager for roothide custom firmware
  Browse your repositories, install and remove packages, keep tweaks updated
  and read every depiction, on iPhone and iPad. The app runs without root;
  installs go through a small on-demand root daemon whose helper installs
@@ -13032,32 +13032,6 @@ Sileodepiction: https://lakr233.github.io/Irisin/depiction.json
 
 Package: wiki.qaq.irisin
 Version: 4.3.6
-Architecture: iphoneos-arm64e
-Maintainer: OwnGoal Studio <no-reply@owngoal.dev>
-Installed-Size: 37204
-Depends: firmware (>= 16.0)
-Filename: ./debs/wiki.qaq.irisin_4.3.6_iphoneos-arm64e.deb
-Size: 10102576
-MD5sum: 700f7ae290992772db4db656622d013c
-SHA1: ae5662126acbef7e53567e262ff21bdcbd17d105
-SHA256: a2b6d37a6e80a4b6719836a7339a6670d6d67b4c4840bd87f1e63ab66e558265
-Section: Applications
-Priority: optional
-Homepage: https://github.com/Lakr233/Irisin
-Description: Modern package manager for roothide custom firmware
- Browse your repositories, install and remove packages, keep tweaks updated
- and read every depiction, on iPhone and iPad. The app runs without root;
- installs go through a small on-demand root daemon whose helper installs
- packages natively and registers apps with LaunchServices itself. No dpkg,
- no uicache.
-Author: OwnGoal Studio <no-reply@owngoal.dev>
-Depiction: https://lakr233.github.io/Irisin/
-Icon: https://lakr233.github.io/Irisin/icon.png
-Name: Irisin
-Sileodepiction: https://lakr233.github.io/Irisin/depiction.json
-
-Package: wiki.qaq.irisin
-Version: 4.3.6
 Architecture: iphoneos-arm64
 Maintainer: OwnGoal Studio <no-reply@owngoal.dev>
 Installed-Size: 37204
@@ -13071,6 +13045,32 @@ Section: Applications
 Priority: optional
 Homepage: https://github.com/Lakr233/Irisin
 Description: Modern package manager for rootless custom firmware
+ Browse your repositories, install and remove packages, keep tweaks updated
+ and read every depiction, on iPhone and iPad. The app runs without root;
+ installs go through a small on-demand root daemon whose helper installs
+ packages natively and registers apps with LaunchServices itself. No dpkg,
+ no uicache.
+Author: OwnGoal Studio <no-reply@owngoal.dev>
+Depiction: https://lakr233.github.io/Irisin/
+Icon: https://lakr233.github.io/Irisin/icon.png
+Name: Irisin
+Sileodepiction: https://lakr233.github.io/Irisin/depiction.json
+
+Package: wiki.qaq.irisin
+Version: 4.3.6
+Architecture: iphoneos-arm64e
+Maintainer: OwnGoal Studio <no-reply@owngoal.dev>
+Installed-Size: 37204
+Depends: firmware (>= 16.0)
+Filename: ./debs/wiki.qaq.irisin_4.3.6_iphoneos-arm64e.deb
+Size: 10102576
+MD5sum: 700f7ae290992772db4db656622d013c
+SHA1: ae5662126acbef7e53567e262ff21bdcbd17d105
+SHA256: a2b6d37a6e80a4b6719836a7339a6670d6d67b4c4840bd87f1e63ab66e558265
+Section: Applications
+Priority: optional
+Homepage: https://github.com/Lakr233/Irisin
+Description: Modern package manager for roothide custom firmware
  Browse your repositories, install and remove packages, keep tweaks updated
  and read every depiction, on iPhone and iPad. The app runs without root;
  installs go through a small on-demand root daemon whose helper installs
@@ -13240,32 +13240,6 @@ Sileodepiction: https://lakr233.github.io/Irisin/depiction.json
 
 Package: wiki.qaq.irisin
 Version: 4.5.11
-Architecture: iphoneos-arm64
-Maintainer: OwnGoal Studio <no-reply@owngoal.dev>
-Installed-Size: 18324
-Depends: firmware (>= 16.0)
-Filename: ./debs/wiki.qaq.irisin_4.5.11_iphoneos-arm64.deb
-Size: 5517904
-MD5sum: 9970b75ee83705f5a8327037ef632018
-SHA1: 6b5bdb1726f26eeaba50cffd574e9a5d166f1351
-SHA256: fc883347c04aa5198435a055d886c8fd0638c86d26ef3b573d420db7a2d9995c
-Section: Applications
-Priority: optional
-Homepage: https://github.com/Lakr233/Irisin
-Description: Modern package manager for rootless custom firmware
- Browse your repositories, install and remove packages, keep tweaks updated
- and read every depiction, on iPhone and iPad. The app runs without root;
- installs go through a small on-demand root daemon whose helper installs
- packages natively and registers apps with LaunchServices itself. No dpkg,
- no uicache.
-Author: OwnGoal Studio <no-reply@owngoal.dev>
-Depiction: https://lakr233.github.io/Irisin/
-Icon: https://lakr233.github.io/Irisin/icon.png
-Name: Irisin
-Sileodepiction: https://lakr233.github.io/Irisin/depiction.json
-
-Package: wiki.qaq.irisin
-Version: 4.5.11
 Architecture: iphoneos-arm64e
 Maintainer: OwnGoal Studio <no-reply@owngoal.dev>
 Installed-Size: 18324
@@ -13291,16 +13265,16 @@ Name: Irisin
 Sileodepiction: https://lakr233.github.io/Irisin/depiction.json
 
 Package: wiki.qaq.irisin
-Version: 4.5.14
+Version: 4.5.11
 Architecture: iphoneos-arm64
 Maintainer: OwnGoal Studio <no-reply@owngoal.dev>
 Installed-Size: 18324
 Depends: firmware (>= 16.0)
-Filename: ./debs/wiki.qaq.irisin_4.5.14_iphoneos-arm64.deb
-Size: 5523244
-MD5sum: 1e3ff311ca493404faf1d9b3e2f95e65
-SHA1: 7b8a83d39c9c03dbfd9a883b95d285621bdb9ef1
-SHA256: 17731ceba197190bd503bd0c96a536f2bc3c6cc5ed8b8e772780a474ba34aa43
+Filename: ./debs/wiki.qaq.irisin_4.5.11_iphoneos-arm64.deb
+Size: 5517904
+MD5sum: 9970b75ee83705f5a8327037ef632018
+SHA1: 6b5bdb1726f26eeaba50cffd574e9a5d166f1351
+SHA256: fc883347c04aa5198435a055d886c8fd0638c86d26ef3b573d420db7a2d9995c
 Section: Applications
 Priority: optional
 Homepage: https://github.com/Lakr233/Irisin
@@ -13331,6 +13305,32 @@ Section: Applications
 Priority: optional
 Homepage: https://github.com/Lakr233/Irisin
 Description: Modern package manager for roothide custom firmware
+ Browse your repositories, install and remove packages, keep tweaks updated
+ and read every depiction, on iPhone and iPad. The app runs without root;
+ installs go through a small on-demand root daemon whose helper installs
+ packages natively and registers apps with LaunchServices itself. No dpkg,
+ no uicache.
+Author: OwnGoal Studio <no-reply@owngoal.dev>
+Depiction: https://lakr233.github.io/Irisin/
+Icon: https://lakr233.github.io/Irisin/icon.png
+Name: Irisin
+Sileodepiction: https://lakr233.github.io/Irisin/depiction.json
+
+Package: wiki.qaq.irisin
+Version: 4.5.14
+Architecture: iphoneos-arm64
+Maintainer: OwnGoal Studio <no-reply@owngoal.dev>
+Installed-Size: 18324
+Depends: firmware (>= 16.0)
+Filename: ./debs/wiki.qaq.irisin_4.5.14_iphoneos-arm64.deb
+Size: 5523244
+MD5sum: 1e3ff311ca493404faf1d9b3e2f95e65
+SHA1: 7b8a83d39c9c03dbfd9a883b95d285621bdb9ef1
+SHA256: 17731ceba197190bd503bd0c96a536f2bc3c6cc5ed8b8e772780a474ba34aa43
+Section: Applications
+Priority: optional
+Homepage: https://github.com/Lakr233/Irisin
+Description: Modern package manager for rootless custom firmware
  Browse your repositories, install and remove packages, keep tweaks updated
  and read every depiction, on iPhone and iPad. The app runs without root;
  installs go through a small on-demand root daemon whose helper installs
@@ -13500,32 +13500,6 @@ Sileodepiction: https://lakr233.github.io/Irisin/depiction.json
 
 Package: wiki.qaq.irisin
 Version: 4.5.20
-Architecture: iphoneos-arm64
-Maintainer: OwnGoal Studio <no-reply@owngoal.dev>
-Installed-Size: 18776
-Depends: firmware (>= 16.0)
-Filename: ./debs/wiki.qaq.irisin_4.5.20_iphoneos-arm64.deb
-Size: 5672868
-MD5sum: 0b395c5d63a79fd4667e43747eca4261
-SHA1: 4788a2aabd8cb7abda229810b5937583a3d92fec
-SHA256: e2208ed37fe23e95f1b1ac860eb739e60c718f158bf2f0616a1ab1cb28c22113
-Section: Applications
-Priority: optional
-Homepage: https://github.com/Lakr233/Irisin
-Description: Modern package manager for rootless custom firmware
- Browse your repositories, install and remove packages, keep tweaks updated
- and read every depiction, on iPhone and iPad. The app runs without root;
- installs go through a small on-demand root daemon whose helper installs
- packages natively and registers apps with LaunchServices itself. No dpkg,
- no uicache.
-Author: OwnGoal Studio <no-reply@owngoal.dev>
-Depiction: https://lakr233.github.io/Irisin/
-Icon: https://lakr233.github.io/Irisin/icon.png
-Name: Irisin
-Sileodepiction: https://lakr233.github.io/Irisin/depiction.json
-
-Package: wiki.qaq.irisin
-Version: 4.5.20
 Architecture: iphoneos-arm64e
 Maintainer: OwnGoal Studio <no-reply@owngoal.dev>
 Installed-Size: 18776
@@ -13539,6 +13513,32 @@ Section: Applications
 Priority: optional
 Homepage: https://github.com/Lakr233/Irisin
 Description: Modern package manager for roothide custom firmware
+ Browse your repositories, install and remove packages, keep tweaks updated
+ and read every depiction, on iPhone and iPad. The app runs without root;
+ installs go through a small on-demand root daemon whose helper installs
+ packages natively and registers apps with LaunchServices itself. No dpkg,
+ no uicache.
+Author: OwnGoal Studio <no-reply@owngoal.dev>
+Depiction: https://lakr233.github.io/Irisin/
+Icon: https://lakr233.github.io/Irisin/icon.png
+Name: Irisin
+Sileodepiction: https://lakr233.github.io/Irisin/depiction.json
+
+Package: wiki.qaq.irisin
+Version: 4.5.20
+Architecture: iphoneos-arm64
+Maintainer: OwnGoal Studio <no-reply@owngoal.dev>
+Installed-Size: 18776
+Depends: firmware (>= 16.0)
+Filename: ./debs/wiki.qaq.irisin_4.5.20_iphoneos-arm64.deb
+Size: 5672868
+MD5sum: 0b395c5d63a79fd4667e43747eca4261
+SHA1: 4788a2aabd8cb7abda229810b5937583a3d92fec
+SHA256: e2208ed37fe23e95f1b1ac860eb739e60c718f158bf2f0616a1ab1cb28c22113
+Section: Applications
+Priority: optional
+Homepage: https://github.com/Lakr233/Irisin
+Description: Modern package manager for rootless custom firmware
  Browse your repositories, install and remove packages, keep tweaks updated
  and read every depiction, on iPhone and iPad. The app runs without root;
  installs go through a small on-demand root daemon whose helper installs
@@ -13604,32 +13604,6 @@ Sileodepiction: https://lakr233.github.io/Irisin/depiction.json
 
 Package: wiki.qaq.irisin
 Version: 4.5.22
-Architecture: iphoneos-arm64
-Maintainer: OwnGoal Studio <no-reply@owngoal.dev>
-Installed-Size: 18796
-Depends: firmware (>= 16.0)
-Filename: ./debs/wiki.qaq.irisin_4.5.22_iphoneos-arm64.deb
-Size: 5681904
-MD5sum: d86a532c0ee52552bdf3bbfc2d110b19
-SHA1: ddb7b8a1851f902f05f8addd894865882cf8d975
-SHA256: a03fd10b2e3e0e3ae658294e5490bdcf6852426e1acb31fda8d59437b5469b9a
-Section: Applications
-Priority: optional
-Homepage: https://github.com/Lakr233/Irisin
-Description: Modern package manager for rootless custom firmware
- Browse your repositories, install and remove packages, keep tweaks updated
- and read every depiction, on iPhone and iPad. The app runs without root;
- installs go through a small on-demand root daemon whose helper installs
- packages natively and registers apps with LaunchServices itself. No dpkg,
- no uicache.
-Author: OwnGoal Studio <no-reply@owngoal.dev>
-Depiction: https://lakr233.github.io/Irisin/
-Icon: https://lakr233.github.io/Irisin/icon.png
-Name: Irisin
-Sileodepiction: https://lakr233.github.io/Irisin/depiction.json
-
-Package: wiki.qaq.irisin
-Version: 4.5.22
 Architecture: iphoneos-arm64e
 Maintainer: OwnGoal Studio <no-reply@owngoal.dev>
 Installed-Size: 18796
@@ -13643,6 +13617,32 @@ Section: Applications
 Priority: optional
 Homepage: https://github.com/Lakr233/Irisin
 Description: Modern package manager for roothide custom firmware
+ Browse your repositories, install and remove packages, keep tweaks updated
+ and read every depiction, on iPhone and iPad. The app runs without root;
+ installs go through a small on-demand root daemon whose helper installs
+ packages natively and registers apps with LaunchServices itself. No dpkg,
+ no uicache.
+Author: OwnGoal Studio <no-reply@owngoal.dev>
+Depiction: https://lakr233.github.io/Irisin/
+Icon: https://lakr233.github.io/Irisin/icon.png
+Name: Irisin
+Sileodepiction: https://lakr233.github.io/Irisin/depiction.json
+
+Package: wiki.qaq.irisin
+Version: 4.5.22
+Architecture: iphoneos-arm64
+Maintainer: OwnGoal Studio <no-reply@owngoal.dev>
+Installed-Size: 18796
+Depends: firmware (>= 16.0)
+Filename: ./debs/wiki.qaq.irisin_4.5.22_iphoneos-arm64.deb
+Size: 5681904
+MD5sum: d86a532c0ee52552bdf3bbfc2d110b19
+SHA1: ddb7b8a1851f902f05f8addd894865882cf8d975
+SHA256: a03fd10b2e3e0e3ae658294e5490bdcf6852426e1acb31fda8d59437b5469b9a
+Section: Applications
+Priority: optional
+Homepage: https://github.com/Lakr233/Irisin
+Description: Modern package manager for rootless custom firmware
  Browse your repositories, install and remove packages, keep tweaks updated
  and read every depiction, on iPhone and iPad. The app runs without root;
  installs go through a small on-demand root daemon whose helper installs
@@ -13708,32 +13708,6 @@ Sileodepiction: https://lakr233.github.io/Irisin/depiction.json
 
 Package: wiki.qaq.irisin
 Version: 4.5.24
-Architecture: iphoneos-arm64e
-Maintainer: OwnGoal Studio <no-reply@owngoal.dev>
-Installed-Size: 18908
-Depends: firmware (>= 16.0)
-Filename: ./debs/wiki.qaq.irisin_4.5.24_iphoneos-arm64e.deb
-Size: 5714472
-MD5sum: e4b07b063d4b08ee97bb0c50b53b8029
-SHA1: ad8987b370a7644206959a1952a709e00ed329f5
-SHA256: 9b679e9a35a7ad4057f805602b4b6a0a0e9556ab164ba6be98ba9f9e43ddca4f
-Section: Applications
-Priority: optional
-Homepage: https://github.com/Lakr233/Irisin
-Description: Modern package manager for roothide custom firmware
- Browse your repositories, install and remove packages, keep tweaks updated
- and read every depiction, on iPhone and iPad. The app runs without root;
- installs go through a small on-demand root daemon whose helper installs
- packages natively and registers apps with LaunchServices itself. No dpkg,
- no uicache.
-Author: OwnGoal Studio <no-reply@owngoal.dev>
-Depiction: https://lakr233.github.io/Irisin/
-Icon: https://lakr233.github.io/Irisin/icon.png
-Name: Irisin
-Sileodepiction: https://lakr233.github.io/Irisin/depiction.json
-
-Package: wiki.qaq.irisin
-Version: 4.5.24
 Architecture: iphoneos-arm64
 Maintainer: OwnGoal Studio <no-reply@owngoal.dev>
 Installed-Size: 18908
@@ -13747,6 +13721,32 @@ Section: Applications
 Priority: optional
 Homepage: https://github.com/Lakr233/Irisin
 Description: Modern package manager for rootless custom firmware
+ Browse your repositories, install and remove packages, keep tweaks updated
+ and read every depiction, on iPhone and iPad. The app runs without root;
+ installs go through a small on-demand root daemon whose helper installs
+ packages natively and registers apps with LaunchServices itself. No dpkg,
+ no uicache.
+Author: OwnGoal Studio <no-reply@owngoal.dev>
+Depiction: https://lakr233.github.io/Irisin/
+Icon: https://lakr233.github.io/Irisin/icon.png
+Name: Irisin
+Sileodepiction: https://lakr233.github.io/Irisin/depiction.json
+
+Package: wiki.qaq.irisin
+Version: 4.5.24
+Architecture: iphoneos-arm64e
+Maintainer: OwnGoal Studio <no-reply@owngoal.dev>
+Installed-Size: 18908
+Depends: firmware (>= 16.0)
+Filename: ./debs/wiki.qaq.irisin_4.5.24_iphoneos-arm64e.deb
+Size: 5714472
+MD5sum: e4b07b063d4b08ee97bb0c50b53b8029
+SHA1: ad8987b370a7644206959a1952a709e00ed329f5
+SHA256: 9b679e9a35a7ad4057f805602b4b6a0a0e9556ab164ba6be98ba9f9e43ddca4f
+Section: Applications
+Priority: optional
+Homepage: https://github.com/Lakr233/Irisin
+Description: Modern package manager for roothide custom firmware
  Browse your repositories, install and remove packages, keep tweaks updated
  and read every depiction, on iPhone and iPad. The app runs without root;
  installs go through a small on-demand root daemon whose helper installs
@@ -13812,32 +13812,6 @@ Sileodepiction: https://lakr233.github.io/Irisin/depiction.json
 
 Package: wiki.qaq.irisin
 Version: 4.5.27
-Architecture: iphoneos-arm64
-Maintainer: OwnGoal Studio <no-reply@owngoal.dev>
-Installed-Size: 17416
-Depends: firmware (>= 16.0)
-Filename: ./debs/wiki.qaq.irisin_4.5.27_iphoneos-arm64.deb
-Size: 4951240
-MD5sum: 2a597478d63862cbf28a751a5719fe85
-SHA1: 0cc3f383a5b70c039adc12c668dba28b710dde31
-SHA256: 841db446153c832fb3fc88ee7b49611e529462c57f66f4a5d8a82bbb7d670884
-Section: Applications
-Priority: optional
-Homepage: https://github.com/Lakr233/Irisin
-Description: Modern package manager for rootless custom firmware
- Browse your repositories, install and remove packages, keep tweaks updated
- and read every depiction, on iPhone and iPad. The app runs without root;
- installs go through a small on-demand root daemon whose helper installs
- packages natively and registers apps with LaunchServices itself. No dpkg,
- no uicache.
-Author: OwnGoal Studio <no-reply@owngoal.dev>
-Depiction: https://lakr233.github.io/Irisin/
-Icon: https://lakr233.github.io/Irisin/icon.png
-Name: Irisin
-Sileodepiction: https://lakr233.github.io/Irisin/depiction.json
-
-Package: wiki.qaq.irisin
-Version: 4.5.27
 Architecture: iphoneos-arm64e
 Maintainer: OwnGoal Studio <no-reply@owngoal.dev>
 Installed-Size: 17416
@@ -13863,20 +13837,20 @@ Name: Irisin
 Sileodepiction: https://lakr233.github.io/Irisin/depiction.json
 
 Package: wiki.qaq.irisin
-Version: 4.5.3
-Architecture: iphoneos-arm64e
+Version: 4.5.27
+Architecture: iphoneos-arm64
 Maintainer: OwnGoal Studio <no-reply@owngoal.dev>
-Installed-Size: 18024
+Installed-Size: 17416
 Depends: firmware (>= 16.0)
-Filename: ./debs/wiki.qaq.irisin_4.5.3_iphoneos-arm64e.deb
-Size: 5400828
-MD5sum: 3b657eba46e6078925dc991bd68e63c3
-SHA1: 359b4c84450f71538971b004819a9d4aa0ff14b7
-SHA256: 8e26d83cb4909c2bbf533e29e213af97a5f9abc0a40a562c0c0ceb2adabcb313
+Filename: ./debs/wiki.qaq.irisin_4.5.27_iphoneos-arm64.deb
+Size: 4951240
+MD5sum: 2a597478d63862cbf28a751a5719fe85
+SHA1: 0cc3f383a5b70c039adc12c668dba28b710dde31
+SHA256: 841db446153c832fb3fc88ee7b49611e529462c57f66f4a5d8a82bbb7d670884
 Section: Applications
 Priority: optional
 Homepage: https://github.com/Lakr233/Irisin
-Description: Modern package manager for roothide custom firmware
+Description: Modern package manager for rootless custom firmware
  Browse your repositories, install and remove packages, keep tweaks updated
  and read every depiction, on iPhone and iPad. The app runs without root;
  installs go through a small on-demand root daemon whose helper installs
@@ -13903,6 +13877,32 @@ Section: Applications
 Priority: optional
 Homepage: https://github.com/Lakr233/Irisin
 Description: Modern package manager for rootless custom firmware
+ Browse your repositories, install and remove packages, keep tweaks updated
+ and read every depiction, on iPhone and iPad. The app runs without root;
+ installs go through a small on-demand root daemon whose helper installs
+ packages natively and registers apps with LaunchServices itself. No dpkg,
+ no uicache.
+Author: OwnGoal Studio <no-reply@owngoal.dev>
+Depiction: https://lakr233.github.io/Irisin/
+Icon: https://lakr233.github.io/Irisin/icon.png
+Name: Irisin
+Sileodepiction: https://lakr233.github.io/Irisin/depiction.json
+
+Package: wiki.qaq.irisin
+Version: 4.5.3
+Architecture: iphoneos-arm64e
+Maintainer: OwnGoal Studio <no-reply@owngoal.dev>
+Installed-Size: 18024
+Depends: firmware (>= 16.0)
+Filename: ./debs/wiki.qaq.irisin_4.5.3_iphoneos-arm64e.deb
+Size: 5400828
+MD5sum: 3b657eba46e6078925dc991bd68e63c3
+SHA1: 359b4c84450f71538971b004819a9d4aa0ff14b7
+SHA256: 8e26d83cb4909c2bbf533e29e213af97a5f9abc0a40a562c0c0ceb2adabcb313
+Section: Applications
+Priority: optional
+Homepage: https://github.com/Lakr233/Irisin
+Description: Modern package manager for roothide custom firmware
  Browse your repositories, install and remove packages, keep tweaks updated
  and read every depiction, on iPhone and iPad. The app runs without root;
  installs go through a small on-demand root daemon whose helper installs
@@ -13968,32 +13968,6 @@ Sileodepiction: https://lakr233.github.io/Irisin/depiction.json
 
 Package: wiki.qaq.irisin
 Version: 4.5.6
-Architecture: iphoneos-arm64e
-Maintainer: OwnGoal Studio <no-reply@owngoal.dev>
-Installed-Size: 18124
-Depends: firmware (>= 16.0)
-Filename: ./debs/wiki.qaq.irisin_4.5.6_iphoneos-arm64e.deb
-Size: 5436316
-MD5sum: 1f6582251e198be18fdfac2be7dbeab2
-SHA1: 12b363529c6db78b8be1f9e946fd9fac3afdf9dc
-SHA256: 541a11fad480517e772cb5cb5e554341a4db68f291aa583b7723b0e8f69ce891
-Section: Applications
-Priority: optional
-Homepage: https://github.com/Lakr233/Irisin
-Description: Modern package manager for roothide custom firmware
- Browse your repositories, install and remove packages, keep tweaks updated
- and read every depiction, on iPhone and iPad. The app runs without root;
- installs go through a small on-demand root daemon whose helper installs
- packages natively and registers apps with LaunchServices itself. No dpkg,
- no uicache.
-Author: OwnGoal Studio <no-reply@owngoal.dev>
-Depiction: https://lakr233.github.io/Irisin/
-Icon: https://lakr233.github.io/Irisin/icon.png
-Name: Irisin
-Sileodepiction: https://lakr233.github.io/Irisin/depiction.json
-
-Package: wiki.qaq.irisin
-Version: 4.5.6
 Architecture: iphoneos-arm64
 Maintainer: OwnGoal Studio <no-reply@owngoal.dev>
 Installed-Size: 18124
@@ -14007,6 +13981,32 @@ Section: Applications
 Priority: optional
 Homepage: https://github.com/Lakr233/Irisin
 Description: Modern package manager for rootless custom firmware
+ Browse your repositories, install and remove packages, keep tweaks updated
+ and read every depiction, on iPhone and iPad. The app runs without root;
+ installs go through a small on-demand root daemon whose helper installs
+ packages natively and registers apps with LaunchServices itself. No dpkg,
+ no uicache.
+Author: OwnGoal Studio <no-reply@owngoal.dev>
+Depiction: https://lakr233.github.io/Irisin/
+Icon: https://lakr233.github.io/Irisin/icon.png
+Name: Irisin
+Sileodepiction: https://lakr233.github.io/Irisin/depiction.json
+
+Package: wiki.qaq.irisin
+Version: 4.5.6
+Architecture: iphoneos-arm64e
+Maintainer: OwnGoal Studio <no-reply@owngoal.dev>
+Installed-Size: 18124
+Depends: firmware (>= 16.0)
+Filename: ./debs/wiki.qaq.irisin_4.5.6_iphoneos-arm64e.deb
+Size: 5436316
+MD5sum: 1f6582251e198be18fdfac2be7dbeab2
+SHA1: 12b363529c6db78b8be1f9e946fd9fac3afdf9dc
+SHA256: 541a11fad480517e772cb5cb5e554341a4db68f291aa583b7723b0e8f69ce891
+Section: Applications
+Priority: optional
+Homepage: https://github.com/Lakr233/Irisin
+Description: Modern package manager for roothide custom firmware
  Browse your repositories, install and remove packages, keep tweaks updated
  and read every depiction, on iPhone and iPad. The app runs without root;
  installs go through a small on-demand root daemon whose helper installs
@@ -14176,32 +14176,6 @@ Sileodepiction: https://lakr233.github.io/Irisin/depiction.json
 
 Package: wiki.qaq.irisin
 Version: 4.7.2
-Architecture: iphoneos-arm64
-Maintainer: OwnGoal Studio <no-reply@owngoal.dev>
-Installed-Size: 17748
-Depends: firmware (>= 15.0)
-Filename: ./debs/wiki.qaq.irisin_4.7.2_iphoneos-arm64.deb
-Size: 5109272
-MD5sum: 77a2402c7e3713745db8961c190d4d25
-SHA1: 8acb93b5b2b7df9de8d20c0529869a149d70a0f7
-SHA256: 30e5033b6eeabe33446f5fd243174d2ef271df70bf9fbd4b83ddf21a1347cc5f
-Section: Applications
-Priority: optional
-Homepage: https://github.com/Lakr233/Irisin
-Description: Modern package manager for rootless custom firmware
- Browse your repositories, install and remove packages, keep tweaks updated
- and read every depiction, on iPhone and iPad. The app runs without root;
- installs go through a small on-demand root daemon whose helper installs
- packages natively and registers apps with LaunchServices itself. No dpkg,
- no uicache.
-Author: OwnGoal Studio <no-reply@owngoal.dev>
-Depiction: https://lakr233.github.io/Irisin/
-Icon: https://lakr233.github.io/Irisin/icon.png
-Name: Irisin
-Sileodepiction: https://lakr233.github.io/Irisin/depiction.json
-
-Package: wiki.qaq.irisin
-Version: 4.7.2
 Architecture: iphoneos-arm64e
 Maintainer: OwnGoal Studio <no-reply@owngoal.dev>
 Installed-Size: 17748
@@ -14227,20 +14201,20 @@ Name: Irisin
 Sileodepiction: https://lakr233.github.io/Irisin/depiction.json
 
 Package: wiki.qaq.irisin
-Version: 4.7.4
-Architecture: iphoneos-arm64e
+Version: 4.7.2
+Architecture: iphoneos-arm64
 Maintainer: OwnGoal Studio <no-reply@owngoal.dev>
-Installed-Size: 22784
+Installed-Size: 17748
 Depends: firmware (>= 15.0)
-Filename: ./debs/wiki.qaq.irisin_4.7.4_iphoneos-arm64e.deb
-Size: 6253072
-MD5sum: fdefb5f84ae61cac740b4cab2fd131f8
-SHA1: f068520cb19de4d45615206d447a0b5a72b7088a
-SHA256: d4f6096a6dc57496e9689cec3e5df417aae4bd7ad3a4b77aa1373b1af1cd113f
+Filename: ./debs/wiki.qaq.irisin_4.7.2_iphoneos-arm64.deb
+Size: 5109272
+MD5sum: 77a2402c7e3713745db8961c190d4d25
+SHA1: 8acb93b5b2b7df9de8d20c0529869a149d70a0f7
+SHA256: 30e5033b6eeabe33446f5fd243174d2ef271df70bf9fbd4b83ddf21a1347cc5f
 Section: Applications
 Priority: optional
 Homepage: https://github.com/Lakr233/Irisin
-Description: Modern package manager for roothide custom firmware
+Description: Modern package manager for rootless custom firmware
  Browse your repositories, install and remove packages, keep tweaks updated
  and read every depiction, on iPhone and iPad. The app runs without root;
  installs go through a small on-demand root daemon whose helper installs
@@ -14267,6 +14241,32 @@ Section: Applications
 Priority: optional
 Homepage: https://github.com/Lakr233/Irisin
 Description: Modern package manager for rootless custom firmware
+ Browse your repositories, install and remove packages, keep tweaks updated
+ and read every depiction, on iPhone and iPad. The app runs without root;
+ installs go through a small on-demand root daemon whose helper installs
+ packages natively and registers apps with LaunchServices itself. No dpkg,
+ no uicache.
+Author: OwnGoal Studio <no-reply@owngoal.dev>
+Depiction: https://lakr233.github.io/Irisin/
+Icon: https://lakr233.github.io/Irisin/icon.png
+Name: Irisin
+Sileodepiction: https://lakr233.github.io/Irisin/depiction.json
+
+Package: wiki.qaq.irisin
+Version: 4.7.4
+Architecture: iphoneos-arm64e
+Maintainer: OwnGoal Studio <no-reply@owngoal.dev>
+Installed-Size: 22784
+Depends: firmware (>= 15.0)
+Filename: ./debs/wiki.qaq.irisin_4.7.4_iphoneos-arm64e.deb
+Size: 6253072
+MD5sum: fdefb5f84ae61cac740b4cab2fd131f8
+SHA1: f068520cb19de4d45615206d447a0b5a72b7088a
+SHA256: d4f6096a6dc57496e9689cec3e5df417aae4bd7ad3a4b77aa1373b1af1cd113f
+Section: Applications
+Priority: optional
+Homepage: https://github.com/Lakr233/Irisin
+Description: Modern package manager for roothide custom firmware
  Browse your repositories, install and remove packages, keep tweaks updated
  and read every depiction, on iPhone and iPad. The app runs without root;
  installs go through a small on-demand root daemon whose helper installs
@@ -14332,32 +14332,6 @@ Sileodepiction: https://lakr233.github.io/Irisin/depiction.json
 
 Package: wiki.qaq.irisin
 Version: 5.0.0
-Architecture: iphoneos-arm64
-Maintainer: OwnGoal Studio <no-reply@owngoal.dev>
-Installed-Size: 20544
-Depends: firmware (>= 15.0)
-Filename: ./debs/wiki.qaq.irisin_5.0.0_iphoneos-arm64.deb
-Size: 5264280
-MD5sum: f9f6d6b5f3735ea4ff687be31b3602ff
-SHA1: 393c9b33dfbd9b66c5de0ea9316b6a96f805c154
-SHA256: bde1b7c5c213256dd71aa1873599647916ab20959a45422eefc3eda6a523ff53
-Section: Applications
-Priority: optional
-Homepage: https://github.com/Lakr233/Irisin
-Description: Modern package manager for rootless custom firmware
- Browse your repositories, install and remove packages, keep tweaks updated
- and read every depiction, on iPhone and iPad. The app runs without root;
- installs go through a small on-demand root daemon whose helper installs
- packages natively and registers apps with LaunchServices itself. No dpkg,
- no uicache.
-Author: OwnGoal Studio <no-reply@owngoal.dev>
-Depiction: https://lakr233.github.io/Irisin/
-Icon: https://lakr233.github.io/Irisin/icon.png
-Name: Irisin
-Sileodepiction: https://lakr233.github.io/Irisin/depiction.json
-
-Package: wiki.qaq.irisin
-Version: 5.0.0
 Architecture: iphoneos-arm64e
 Maintainer: OwnGoal Studio <no-reply@owngoal.dev>
 Installed-Size: 20544
@@ -14383,20 +14357,20 @@ Name: Irisin
 Sileodepiction: https://lakr233.github.io/Irisin/depiction.json
 
 Package: wiki.qaq.irisin
-Version: 5.0.2
-Architecture: iphoneos-arm64e
+Version: 5.0.0
+Architecture: iphoneos-arm64
 Maintainer: OwnGoal Studio <no-reply@owngoal.dev>
-Installed-Size: 21104
+Installed-Size: 20544
 Depends: firmware (>= 15.0)
-Filename: ./debs/wiki.qaq.irisin_5.0.2_iphoneos-arm64e.deb
-Size: 5414480
-MD5sum: 2973cdd0f7edbaa6b35be848fd6c64c8
-SHA1: 59b36e5d24a12acad13011540575b1e902c714a3
-SHA256: c058248ddebdc19533c1b0f7b5a9431bbdd076299269b86b76bc3f8d43ab938c
+Filename: ./debs/wiki.qaq.irisin_5.0.0_iphoneos-arm64.deb
+Size: 5264280
+MD5sum: f9f6d6b5f3735ea4ff687be31b3602ff
+SHA1: 393c9b33dfbd9b66c5de0ea9316b6a96f805c154
+SHA256: bde1b7c5c213256dd71aa1873599647916ab20959a45422eefc3eda6a523ff53
 Section: Applications
 Priority: optional
 Homepage: https://github.com/Lakr233/Irisin
-Description: Modern package manager for roothide custom firmware
+Description: Modern package manager for rootless custom firmware
  Browse your repositories, install and remove packages, keep tweaks updated
  and read every depiction, on iPhone and iPad. The app runs without root;
  installs go through a small on-demand root daemon whose helper installs
@@ -14423,6 +14397,32 @@ Section: Applications
 Priority: optional
 Homepage: https://github.com/Lakr233/Irisin
 Description: Modern package manager for rootless custom firmware
+ Browse your repositories, install and remove packages, keep tweaks updated
+ and read every depiction, on iPhone and iPad. The app runs without root;
+ installs go through a small on-demand root daemon whose helper installs
+ packages natively and registers apps with LaunchServices itself. No dpkg,
+ no uicache.
+Author: OwnGoal Studio <no-reply@owngoal.dev>
+Depiction: https://lakr233.github.io/Irisin/
+Icon: https://lakr233.github.io/Irisin/icon.png
+Name: Irisin
+Sileodepiction: https://lakr233.github.io/Irisin/depiction.json
+
+Package: wiki.qaq.irisin
+Version: 5.0.2
+Architecture: iphoneos-arm64e
+Maintainer: OwnGoal Studio <no-reply@owngoal.dev>
+Installed-Size: 21104
+Depends: firmware (>= 15.0)
+Filename: ./debs/wiki.qaq.irisin_5.0.2_iphoneos-arm64e.deb
+Size: 5414480
+MD5sum: 2973cdd0f7edbaa6b35be848fd6c64c8
+SHA1: 59b36e5d24a12acad13011540575b1e902c714a3
+SHA256: c058248ddebdc19533c1b0f7b5a9431bbdd076299269b86b76bc3f8d43ab938c
+Section: Applications
+Priority: optional
+Homepage: https://github.com/Lakr233/Irisin
+Description: Modern package manager for roothide custom firmware
  Browse your repositories, install and remove packages, keep tweaks updated
  and read every depiction, on iPhone and iPad. The app runs without root;
  installs go through a small on-demand root daemon whose helper installs
@@ -14488,32 +14488,6 @@ Sileodepiction: https://lakr233.github.io/Irisin/depiction.json
 
 Package: wiki.qaq.irisin
 Version: 5.0.4
-Architecture: iphoneos-arm64e
-Maintainer: OwnGoal Studio <no-reply@owngoal.dev>
-Installed-Size: 23540
-Depends: firmware (>= 15.0)
-Filename: ./debs/wiki.qaq.irisin_5.0.4_iphoneos-arm64e.deb
-Size: 6458608
-MD5sum: 6b7685bca2087634ae8b188d8a45ead5
-SHA1: 27b5e7709f85dbbc368e1801d2d429f310378643
-SHA256: 7290454380d0c0756001b3f307e6c35a055ba557c1a7e00fd995acf668621d1a
-Section: Applications
-Priority: optional
-Homepage: https://github.com/Lakr233/Irisin
-Description: Modern package manager for roothide custom firmware
- Browse your repositories, install and remove packages, keep tweaks updated
- and read every depiction, on iPhone and iPad. The app runs without root;
- installs go through a small on-demand root daemon whose helper installs
- packages natively and registers apps with LaunchServices itself. No dpkg,
- no uicache.
-Author: OwnGoal Studio <no-reply@owngoal.dev>
-Depiction: https://lakr233.github.io/Irisin/
-Icon: https://lakr233.github.io/Irisin/icon.png
-Name: Irisin
-Sileodepiction: https://lakr233.github.io/Irisin/depiction.json
-
-Package: wiki.qaq.irisin
-Version: 5.0.4
 Architecture: iphoneos-arm64
 Maintainer: OwnGoal Studio <no-reply@owngoal.dev>
 Installed-Size: 23540
@@ -14539,20 +14513,20 @@ Name: Irisin
 Sileodepiction: https://lakr233.github.io/Irisin/depiction.json
 
 Package: wiki.qaq.irisin
-Version: 5.1.1
-Architecture: iphoneos-arm64
+Version: 5.0.4
+Architecture: iphoneos-arm64e
 Maintainer: OwnGoal Studio <no-reply@owngoal.dev>
-Installed-Size: 23104
+Installed-Size: 23540
 Depends: firmware (>= 15.0)
-Filename: ./debs/wiki.qaq.irisin_5.1.1_iphoneos-arm64.deb
-Size: 6301028
-MD5sum: 92239931c6948698de1a9f232769fc0d
-SHA1: 14b2fc193412af7535deb19a04b27b7d3a22b7c1
-SHA256: 985d1ecacea37f3682beec55cbac0d984aaf154c308475d744843881305a4436
+Filename: ./debs/wiki.qaq.irisin_5.0.4_iphoneos-arm64e.deb
+Size: 6458608
+MD5sum: 6b7685bca2087634ae8b188d8a45ead5
+SHA1: 27b5e7709f85dbbc368e1801d2d429f310378643
+SHA256: 7290454380d0c0756001b3f307e6c35a055ba557c1a7e00fd995acf668621d1a
 Section: Applications
 Priority: optional
 Homepage: https://github.com/Lakr233/Irisin
-Description: Modern package manager for rootless custom firmware
+Description: Modern package manager for roothide custom firmware
  Browse your repositories, install and remove packages, keep tweaks updated
  and read every depiction, on iPhone and iPad. The app runs without root;
  installs go through a small on-demand root daemon whose helper installs
@@ -14579,6 +14553,32 @@ Section: Applications
 Priority: optional
 Homepage: https://github.com/Lakr233/Irisin
 Description: Modern package manager for roothide custom firmware
+ Browse your repositories, install and remove packages, keep tweaks updated
+ and read every depiction, on iPhone and iPad. The app runs without root;
+ installs go through a small on-demand root daemon whose helper installs
+ packages natively and registers apps with LaunchServices itself. No dpkg,
+ no uicache.
+Author: OwnGoal Studio <no-reply@owngoal.dev>
+Depiction: https://lakr233.github.io/Irisin/
+Icon: https://lakr233.github.io/Irisin/icon.png
+Name: Irisin
+Sileodepiction: https://lakr233.github.io/Irisin/depiction.json
+
+Package: wiki.qaq.irisin
+Version: 5.1.1
+Architecture: iphoneos-arm64
+Maintainer: OwnGoal Studio <no-reply@owngoal.dev>
+Installed-Size: 23104
+Depends: firmware (>= 15.0)
+Filename: ./debs/wiki.qaq.irisin_5.1.1_iphoneos-arm64.deb
+Size: 6301028
+MD5sum: 92239931c6948698de1a9f232769fc0d
+SHA1: 14b2fc193412af7535deb19a04b27b7d3a22b7c1
+SHA256: 985d1ecacea37f3682beec55cbac0d984aaf154c308475d744843881305a4436
+Section: Applications
+Priority: optional
+Homepage: https://github.com/Lakr233/Irisin
+Description: Modern package manager for rootless custom firmware
  Browse your repositories, install and remove packages, keep tweaks updated
  and read every depiction, on iPhone and iPad. The app runs without root;
  installs go through a small on-demand root daemon whose helper installs
@@ -14644,32 +14644,6 @@ Sileodepiction: https://lakr233.github.io/Irisin/depiction.json
 
 Package: wiki.qaq.irisin
 Version: 5.1.4
-Architecture: iphoneos-arm64e
-Maintainer: OwnGoal Studio <no-reply@owngoal.dev>
-Installed-Size: 23192
-Depends: firmware (>= 15.0)
-Filename: ./debs/wiki.qaq.irisin_5.1.4_iphoneos-arm64e.deb
-Size: 6333836
-MD5sum: 4999f598c655477ce3cc9efddb6ae33a
-SHA1: 40cded5bb5652bb86700cb28b9a38a7a38d4a840
-SHA256: 0686d9924cfde3a1efc6b37fff4b839e547c3c01631f9f67e41806fd00c9d7dc
-Section: Applications
-Priority: optional
-Homepage: https://github.com/Lakr233/Irisin
-Description: Modern package manager for roothide custom firmware
- Browse your repositories, install and remove packages, keep tweaks updated
- and read every depiction, on iPhone and iPad. The app runs without root;
- installs go through a small on-demand root daemon whose helper installs
- packages natively and registers apps with LaunchServices itself. No dpkg,
- no uicache.
-Author: OwnGoal Studio <no-reply@owngoal.dev>
-Depiction: https://lakr233.github.io/Irisin/
-Icon: https://lakr233.github.io/Irisin/icon.png
-Name: Irisin
-Sileodepiction: https://lakr233.github.io/Irisin/depiction.json
-
-Package: wiki.qaq.irisin
-Version: 5.1.4
 Architecture: iphoneos-arm64
 Maintainer: OwnGoal Studio <no-reply@owngoal.dev>
 Installed-Size: 23192
@@ -14683,6 +14657,32 @@ Section: Applications
 Priority: optional
 Homepage: https://github.com/Lakr233/Irisin
 Description: Modern package manager for rootless custom firmware
+ Browse your repositories, install and remove packages, keep tweaks updated
+ and read every depiction, on iPhone and iPad. The app runs without root;
+ installs go through a small on-demand root daemon whose helper installs
+ packages natively and registers apps with LaunchServices itself. No dpkg,
+ no uicache.
+Author: OwnGoal Studio <no-reply@owngoal.dev>
+Depiction: https://lakr233.github.io/Irisin/
+Icon: https://lakr233.github.io/Irisin/icon.png
+Name: Irisin
+Sileodepiction: https://lakr233.github.io/Irisin/depiction.json
+
+Package: wiki.qaq.irisin
+Version: 5.1.4
+Architecture: iphoneos-arm64e
+Maintainer: OwnGoal Studio <no-reply@owngoal.dev>
+Installed-Size: 23192
+Depends: firmware (>= 15.0)
+Filename: ./debs/wiki.qaq.irisin_5.1.4_iphoneos-arm64e.deb
+Size: 6333836
+MD5sum: 4999f598c655477ce3cc9efddb6ae33a
+SHA1: 40cded5bb5652bb86700cb28b9a38a7a38d4a840
+SHA256: 0686d9924cfde3a1efc6b37fff4b839e547c3c01631f9f67e41806fd00c9d7dc
+Section: Applications
+Priority: optional
+Homepage: https://github.com/Lakr233/Irisin
+Description: Modern package manager for roothide custom firmware
  Browse your repositories, install and remove packages, keep tweaks updated
  and read every depiction, on iPhone and iPad. The app runs without root;
  installs go through a small on-demand root daemon whose helper installs
@@ -14748,32 +14748,6 @@ Sileodepiction: https://lakr233.github.io/Irisin/depiction.json
 
 Package: wiki.qaq.irisin
 Version: 5.1.6
-Architecture: iphoneos-arm64e
-Maintainer: OwnGoal Studio <no-reply@owngoal.dev>
-Installed-Size: 23480
-Depends: firmware (>= 15.0)
-Filename: ./debs/wiki.qaq.irisin_5.1.6_iphoneos-arm64e.deb
-Size: 6439472
-MD5sum: 5a166d213f41bbb2f7b23f76c871f363
-SHA1: 12aec1bc8c5d9777c769eaff546727d9586a4b17
-SHA256: d83948dd99d4f517d143e82a659ee8f60ec494347429672008c7091b8ae052c9
-Section: Applications
-Priority: optional
-Homepage: https://github.com/Lakr233/Irisin
-Description: Modern package manager for roothide custom firmware
- Browse your repositories, install and remove packages, keep tweaks updated
- and read every depiction, on iPhone and iPad. The app runs without root;
- installs go through a small on-demand root daemon whose helper installs
- packages natively and registers apps with LaunchServices itself. No dpkg,
- no uicache.
-Author: OwnGoal Studio <no-reply@owngoal.dev>
-Depiction: https://lakr233.github.io/Irisin/
-Icon: https://lakr233.github.io/Irisin/icon.png
-Name: Irisin
-Sileodepiction: https://lakr233.github.io/Irisin/depiction.json
-
-Package: wiki.qaq.irisin
-Version: 5.1.6
 Architecture: iphoneos-arm64
 Maintainer: OwnGoal Studio <no-reply@owngoal.dev>
 Installed-Size: 23480
@@ -14787,6 +14761,32 @@ Section: Applications
 Priority: optional
 Homepage: https://github.com/Lakr233/Irisin
 Description: Modern package manager for rootless custom firmware
+ Browse your repositories, install and remove packages, keep tweaks updated
+ and read every depiction, on iPhone and iPad. The app runs without root;
+ installs go through a small on-demand root daemon whose helper installs
+ packages natively and registers apps with LaunchServices itself. No dpkg,
+ no uicache.
+Author: OwnGoal Studio <no-reply@owngoal.dev>
+Depiction: https://lakr233.github.io/Irisin/
+Icon: https://lakr233.github.io/Irisin/icon.png
+Name: Irisin
+Sileodepiction: https://lakr233.github.io/Irisin/depiction.json
+
+Package: wiki.qaq.irisin
+Version: 5.1.6
+Architecture: iphoneos-arm64e
+Maintainer: OwnGoal Studio <no-reply@owngoal.dev>
+Installed-Size: 23480
+Depends: firmware (>= 15.0)
+Filename: ./debs/wiki.qaq.irisin_5.1.6_iphoneos-arm64e.deb
+Size: 6439472
+MD5sum: 5a166d213f41bbb2f7b23f76c871f363
+SHA1: 12aec1bc8c5d9777c769eaff546727d9586a4b17
+SHA256: d83948dd99d4f517d143e82a659ee8f60ec494347429672008c7091b8ae052c9
+Section: Applications
+Priority: optional
+Homepage: https://github.com/Lakr233/Irisin
+Description: Modern package manager for roothide custom firmware
  Browse your repositories, install and remove packages, keep tweaks updated
  and read every depiction, on iPhone and iPad. The app runs without root;
  installs go through a small on-demand root daemon whose helper installs
