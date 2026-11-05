@@ -18,7 +18,7 @@
         {
           "class": "DepictionTableTextView",
           "title": "当前版本",
-          "text": "1.0.6"
+          "text": "1.0.7"
         },
         {
           "class": "DepictionTableTextView",
@@ -31,6 +31,23 @@
       "tabname": "更新日志",
       "class": "DepictionStackView",
       "views": [
+        {
+          "class": "DepictionHeaderView",
+          "title": "1.0.7"
+        },
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "- 新增：跳过开屏广告后，自动识别并关闭接连弹出的弹窗广告（带 ✕ / 关闭 按钮的遮罩弹窗）",
+          "useSpacing": true
+        },
+        {
+          "class": "DepictionSubheaderView",
+          "title": "更新日期：2026-11-05",
+          "useBoldText": false
+        },
+        {
+          "class": "DepictionSeparatorView"
+        },
         {
           "class": "DepictionHeaderView",
           "title": "1.0.6"
