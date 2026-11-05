@@ -18,7 +18,7 @@
         {
           "class": "DepictionTableTextView",
           "title": "当前版本",
-          "text": "1.0.7"
+          "text": "1.0.8"
         },
         {
           "class": "DepictionTableTextView",
@@ -31,6 +31,23 @@
       "tabname": "更新日志",
       "class": "DepictionStackView",
       "views": [
+        {
+          "class": "DepictionHeaderView",
+          "title": "1.0.8"
+        },
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "- 优化弹窗广告识别：支持关闭按钮在卡片外侧四角的弹窗，并通过\"广告\"标签定位关闭按钮",
+          "useSpacing": true
+        },
+        {
+          "class": "DepictionSubheaderView",
+          "title": "更新日期：2026-11-05",
+          "useBoldText": false
+        },
+        {
+          "class": "DepictionSeparatorView"
+        },
         {
           "class": "DepictionHeaderView",
           "title": "1.0.7"
